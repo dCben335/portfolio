@@ -7,7 +7,7 @@ import Error from '@/components/organisms/404/404';
 
 
 export default function Page ({params} : { 
-    params: {project_name : string, category_name : string}
+    params: {project_name : string}
 }) {
     const [projectDatas, setProjectDatas] = useState<Project>(projects.filter((el) => 
         el.project_name.split(' ').join('_') == params.project_name

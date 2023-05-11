@@ -19,7 +19,6 @@ export default function({
             style={active && activeColor ? activeColor : {}}
             className={`${styles.btn} ${active ? styles.active : ''}`} 
             onClick={() => clicked && clicked()}
-
         >{ text }</button>
     )
 }

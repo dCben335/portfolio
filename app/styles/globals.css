@@ -6,9 +6,12 @@
 
 :root {
   --primary-color: #050505;
+  --primary-color-variant: #101010;
   --secondary-color: #ffffff;
+  --secondary-color-variant: #ffffff26;
   --accent-color: rgba(1, 65, 255, 0.15);
-  --border-radius: 5px;
+  
+  --basic-radius: 5px;
 }
 
 

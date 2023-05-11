@@ -8,15 +8,15 @@ import Button from '@/components/atoms/Button/Button';
 import { IndexInfo } from 'typescript';
 
 
-export default function Page () {
+export default function Page ({params}) {
 
     const [projectList, setProjectList] = useState<Array<Project>>(projects)
     const [activeCategory, setActiveCategory] = useState<Number>()
 
     const categories:Array<string> = projects.map((project) => project.category_name).filter((item, idx, arr) => arr.indexOf(item) == idx)
-    const [categoriesColors, setCategoriesColor]  = useState<Array<string>>(categories.map(() => `#${Math.floor(Math.random()*16777215).toString(16)}`))
+    const [categoriesColors, setCategoriesColor]  = useState<Array<string>>(categories.map((el, idx) => `#${Math.floor(((idx + 1) * 0.85/categories.length) * 16777215).toString(16)}`))
     
-    console.log(categoriesColors)
+    console.log(params)
 
     const handleClick = (index: number) => {
         if ( activeCategory !== index ) {
@@ -32,9 +32,9 @@ export default function Page () {
         <main>
             <h1>Works</h1>
             
-            <section style={{color: "#fff"}}>
+            <section>
                 <nav>
-                    <ul style={{display: 'flex', gap: '10rem'}}>
+                    <ul>
                         {categories.map((category, idx) => 
                             <Button 
                                 key={idx} 
@@ -42,7 +42,7 @@ export default function Page () {
                                 clicked={() => handleClick(idx)} 
                                 active={activeCategory === idx}
                                 activeColor={{backgroundColor : categoriesColors[idx]}} 
-                                />
+                            />
                         )}                  
                     </ul>
                 </nav>

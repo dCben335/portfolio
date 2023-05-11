@@ -8,7 +8,7 @@ export default function Home() {
   const category_name = test.filter((x, i) => test.indexOf(x) === i);
 
   return (
-   <main className={styles.main}>
+   <main className={styles.index}>
 
    </main>
   )
