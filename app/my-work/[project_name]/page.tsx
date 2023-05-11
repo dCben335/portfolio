@@ -1,9 +1,9 @@
 "use client"
 import { useState } from 'react';
 import { notFound } from 'next/navigation';
-import Project  from '../../../types/project'
+
+import {Project}  from '../../../types/project'
 import projects from '../../../content/project.json';
-import Error from '@/components/organisms/404/404';
 
 
 export default function Page ({params} : { 
@@ -17,7 +17,7 @@ export default function Page ({params} : {
 
     return (
         <>
-            { !projectDatas ?  notFound()	 :
+            { !projectDatas ? notFound() :
                 <main>
                     <h1>{projectDatas.project_name}</h1>
                     <p>{projectDatas.desciption}</p>

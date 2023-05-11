@@ -1,22 +1,23 @@
 "use client"
 
 import projects from '../../content/project.json';
-import { useEffect, useState } from 'react';
-import Project from '@/types/project';
+import { usePathname  } from 'next/navigation'
+import { useState } from 'react';
+import {Project} from '@/types/project';
 import Link from 'next/link';
+import ProjectCard from '@/components/molecules/ProjectCard/ProjectCard';
 import Button from '@/components/atoms/Button/Button';
-import { IndexInfo } from 'typescript';
+import Wrapper from '@/components/organisms/Wrapper/Wrapper';
 
 
-export default function Page ({params}) {
-
+export default function Page () {
     const [projectList, setProjectList] = useState<Array<Project>>(projects)
     const [activeCategory, setActiveCategory] = useState<Number>()
 
     const categories:Array<string> = projects.map((project) => project.category_name).filter((item, idx, arr) => arr.indexOf(item) == idx)
     const [categoriesColors, setCategoriesColor]  = useState<Array<string>>(categories.map((el, idx) => `#${Math.floor(((idx + 1) * 0.85/categories.length) * 16777215).toString(16)}`))
     
-    console.log(params)
+    const pathname = usePathname()
 
     const handleClick = (index: number) => {
         if ( activeCategory !== index ) {
@@ -46,15 +47,19 @@ export default function Page ({params}) {
                         )}                  
                     </ul>
                 </nav>
-                <div>
+                <Wrapper>
                     {projectList.map((project, idx) => 
-                        <Link href={`/work/${project.project_name.split(' ').join('_')}`} key={idx}>
-                            <p>
-                                {project.project_name}
-                            </p>
-                        </Link>
+                        <ProjectCard 
+                            key={idx}
+                            path={`${pathname}/${project.project_name.split(' ').join('_')}`}
+                            image={{
+                                path: `https://picsum.photos/200/300?random=${idx}`,
+                                alt: "test"
+                            }}
+                            title={project.project_name}
+                        />
                     )}                
-                </div>
+                </Wrapper>
             </section>
         </main>
     )

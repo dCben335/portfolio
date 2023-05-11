@@ -5,7 +5,7 @@
 }
 
 :root {
-  --primary-color: #050505;
+  --primary-color: #070707;
   --primary-color-variant: #101010;
   --secondary-color: #ffffff;
   --secondary-color-variant: #ffffff26;
@@ -37,12 +37,13 @@ button {
   color: inherit;
 }
 
-main {
-  min-height: 100vh;
+img {
+  max-width: 100%;
 }
 
-.active {
-  background-color: red;
+main {
+  min-height: 100vh;
+  padding: 0 7.5vw;
 }
 
 
