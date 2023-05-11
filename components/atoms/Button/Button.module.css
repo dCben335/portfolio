@@ -1,0 +1,21 @@
+.btn {
+    padding: 0.4rem 1rem;  
+    border: 1px solid #101015;
+    background-color: #101015;
+    font-size: 1.1rem;
+    letter-spacing: 2px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px  rgba(1, 65, 255, 0.15);
+    box-shadow: 0 0 2px  rgb(255, 255, 255, 0.15);
+    border: 1px solid transparent;
+    opacity: .75;
+    margin: 1rem;
+    transform: skewX(5deg);
+    transition: all .3s ease-in-out;
+}
+
+.btn:is(.active, :hover, :focus) {
+    color: #fff;
+    opacity: 1;
+    border-color: rgb(255, 255, 255, 0.3);
+}
