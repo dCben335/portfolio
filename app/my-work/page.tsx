@@ -5,13 +5,15 @@ export default function Page () {
 
     return (         
         <main>
-            <h1>Works</h1>
-            <ProjectWrapper 
-                projects={projects}
-                categorieFilters={true}      
-                rows={false}
-            />
 
+            <section>
+                <h1>Project</h1>
+                <ProjectWrapper 
+                    projects={projects}
+                    categorieFilters={true}      
+                    rows={false}
+                />
+            </section>
         </main>
     )
 }

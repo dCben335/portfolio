@@ -9,8 +9,8 @@
   --primary-color-variant: #101010;
   --secondary-color: #ffffff;
   --secondary-color-variant: #ffffff26;
-  --accent-color: rgba(1, 65, 255, 0.15);
-  
+  --accent-color: rgb(123 45 195);
+
   --basic-radius: 5px;
 }
 
@@ -43,7 +43,7 @@ img {
 
 main {
   min-height: 100vh;
-  padding: 0 7.5vw;
+  padding: 0 7.5vw 10vh 7.5vw;
 }
 
 

@@ -1,6 +1,6 @@
 "use client"
 
-import { useEffect, useState, useRef, MutableRefObject, RefObject } from "react";
+import { useEffect, useState, useRef } from "react";
 import { Project } from "@/types/project"
 import styles from "./ProjectWrapper.module.css"
 import ProjectCard from "@/components/molecules/ProjectCard/ProjectCard";
@@ -18,6 +18,7 @@ export default function ProjectWrapper({
     rows: boolean,
     nbOfRows?: number
 }) {
+    
     const projectWrapper = useRef<any>()
     const [projectList, setProjectList] = useState<Array<Project>>();
     const [activeCategory, setActiveCategory]:any = useState<Number>();
@@ -25,7 +26,6 @@ export default function ProjectWrapper({
     const categories:Array<string>|undefined = categorieFilters 
         ? projects.map((project) => project.category_name).filter((item, idx, arr) => arr.indexOf(item) == idx)
         : undefined
-
 
     const handleClick = categories ? (index: number) => {    
         if ( activeCategory !== index ) {
@@ -57,7 +57,6 @@ export default function ProjectWrapper({
         }
     }, [projectWrapper.current])
 
-
     return (
         <>
             { categories && 
@@ -69,8 +68,7 @@ export default function ProjectWrapper({
             }
             <div className={styles.projectWrapper} ref={projectWrapper}>
                 {projectList && projectList.map((project, idx) => 
-                    <ProjectCard 
-                        
+                    <ProjectCard      
                         key={idx}
                         path={`my-work/${project.project_name.split(' ').join('_')}`}
                         image={{
