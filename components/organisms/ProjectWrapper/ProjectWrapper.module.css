@@ -3,3 +3,9 @@
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 1.5rem;
 }
+
+@media screen and (min-width: 1875px) {
+    .projectWrapper {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}

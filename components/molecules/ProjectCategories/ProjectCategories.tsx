@@ -7,7 +7,7 @@ export default function ProjectCategories({
     activeCategory
 } : {
     categories: Array<string>,
-    clicked: Function,
+    clicked: Function| undefined,
     activeCategory: number
 }) {
 
@@ -20,7 +20,7 @@ export default function ProjectCategories({
                     <Button 
                         key={idx} 
                         text={category}
-                        clicked={() => clicked(idx)} 
+                        clicked={() => clicked && clicked(idx)} 
                         active={activeCategory === idx}
                         activeColor={{backgroundColor : categoriesColors[idx]}} 
                     />
