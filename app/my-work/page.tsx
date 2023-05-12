@@ -11,11 +11,14 @@ import Wrapper from '@/components/organisms/Wrapper/Wrapper';
 
 
 export default function Page () {
-    const [projectList, setProjectList] = useState<Array<Project>>(projects)
+    const [projectList, setProjectList] = useState<Array<Project>>(projects);
     const [activeCategory, setActiveCategory] = useState<Number>()
 
     const categories:Array<string> = projects.map((project) => project.category_name).filter((item, idx, arr) => arr.indexOf(item) == idx)
-    const [categoriesColors, setCategoriesColor]  = useState<Array<string>>(categories.map((el, idx) => `#${Math.floor(((idx + 1) * 0.85/categories.length) * 16777215).toString(16)}`))
+    const [categoriesColors, setCategoriesColor]  = useState<Array<string>>(
+        categories.map((el, idx) => `#${Math.floor(((idx + 1) * 0.85/categories.length) * 16777215).toString(16)}`)
+    )
+        // const yu = 0xffffff * idx
     
     const pathname = usePathname()
 

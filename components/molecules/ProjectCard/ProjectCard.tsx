@@ -1,7 +1,5 @@
-import { Image } from "@/types/project";
+import { Img } from "@/types/project";
 import Link from "next/link";
-import { Path } from "typescript";
-
 import styles from './ProjectCard.module.css'
 
 export default function ProjectCard({
@@ -9,7 +7,7 @@ export default function ProjectCard({
     title,
     path,
 }: {
-    image: Image
+    image: Img
     title: string
     path: string
 }) {

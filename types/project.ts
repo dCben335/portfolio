@@ -3,12 +3,12 @@ interface Project {
     category_name: string,
     desciption: string,
 }
-interface Image {
+interface Img {
     path: string,
     alt: string
 }
 
 export type {
     Project,
-    Image,
+    Img,
 }

@@ -2,16 +2,17 @@
 import { CSSProperties } from 'react'
 import styles from './Button.module.css'
 
-export default function({
+export default function Button({
     text, 
     clicked,
     active,
     activeColor
 } : {
-    text: String, 
+    // text: String, 
+    text: string, 
     clicked: Function,
-    active: Boolean,
-    activeColor: CSSProperties
+    active?: boolean, 
+    activeColor?: CSSProperties
 }) {
 
     return (
