@@ -6,12 +6,14 @@ import ProjectWrapper from '@/components/organisms/ProjectWrapper/ProjectWrapper
 export default function Home() {
   return (
     <main className={styles.index}>
-      <ProjectWrapper 
-        projects={projects}
-        categorieFilters={false}
-        rows={true}
-        nbOfRows={2}
-      />
+      <section>
+        <ProjectWrapper 
+          projects={projects}
+          categorieFilters={false}
+          rows={true}
+          nbOfRows={2}
+        />
+      </section>
     </main>
   )
 }

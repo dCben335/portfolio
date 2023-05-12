@@ -14,7 +14,7 @@ export default function Custom404() {
             <div>
                 <Button 
                     text="go home"
-                    clicked={() => router.push('/')}
+                    clicked={() => router.replace('')}
                 />   
                 <Button 
                     text="go back"

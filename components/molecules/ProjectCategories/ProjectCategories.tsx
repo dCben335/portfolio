@@ -1,5 +1,6 @@
 import Button from "@/components/atoms/Button/Button"
 import styles from './ProjectCategories.module.css'
+import { useState } from "react"
 
 export default function ProjectCategories({
     categories,
@@ -11,12 +12,22 @@ export default function ProjectCategories({
     activeCategory: number
 }) {
 
+    const [opened, setOpened] = useState(false)
+
+    const handleClick = () => {
+        setOpened(!opened)
+    }
+
     const categoriesColors:Array<string>  = categories.map((el, idx) => `#${Math.floor(((idx + 1) * 0.85/categories.length) * 16777215).toString(16)}`)
-    
+
     return (
         <nav className={styles.categories}>
-            <ul>
-                {categories.map((category, idx) => 
+            <Button 
+                text={"filters"}
+                clicked={() => handleClick()}
+            />
+            <ul className={opened ? styles.opened : ''}>
+                {categories.sort().map((category, idx) => 
                     <Button 
                         key={idx} 
                         text={category}
