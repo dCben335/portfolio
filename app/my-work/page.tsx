@@ -12,7 +12,7 @@ export default function Page () {
                     categorieFilters={true}      
                     rowLimit={false}
                     pagination={true}
-                    nbOfRows={4}
+                    nbOfRows={2}
                 />
             </section>
         </main>
