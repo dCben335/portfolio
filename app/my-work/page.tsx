@@ -5,7 +5,6 @@ export default function Page () {
 
     return (         
         <main>
-
             <section>
                 <h1>Project</h1>
                 <ProjectWrapper 
