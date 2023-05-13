@@ -5,27 +5,34 @@ import { Project } from "@/types/project"
 import styles from "./ProjectWrapper.module.css"
 import ProjectCard from "@/components/molecules/ProjectCard/ProjectCard";
 import ProjectCategories from "@/components/molecules/ProjectCategories/ProjectCategories";
+import Pagination from "@/components/molecules/Pagination/Pagination";
 
 
 export default function ProjectWrapper({
     projects,
     categorieFilters,
     rows,
+    pagination,
     nbOfRows = 1
 } : {
     projects: Array<Project>,
     categorieFilters: boolean,
     rows: boolean,
+    pagination: boolean,
     nbOfRows?: number
 }) {
     
     const projectWrapper = useRef<any>()
+
     const [projectList, setProjectList] = useState<Array<Project>>();
-    const [activeCategory, setActiveCategory]:any = useState<Number>();
+    const [activeCategory, setActiveCategory]:any = useState<number>();
+    const [currentPage, setCurrentPage] = useState<number>(1);
+    const [nbOfProjectPerPage, setNbOfProjectPerPage] = useState<number>()
 
     const categories:Array<string>|undefined = categorieFilters 
         ? projects.map((project) => project.category_name).filter((item, idx, arr) => arr.indexOf(item) == idx)
         : undefined
+
 
     const handleClick = categories ? (index: number) => {    
         if ( activeCategory !== index ) {
@@ -49,13 +56,22 @@ export default function ProjectWrapper({
         }
     }
 
+    const handlePagination = (pageNumber: number) => {
+        setCurrentPage(pageNumber);
+    }
+
+    const indexOfLastPost = currentPage * 4;
+    const indexOfFirstPost = indexOfLastPost - 4;
+    const currentPosts = projectList && projectList.slice(indexOfFirstPost, indexOfLastPost);
+
     useEffect(() => {
         setProjectList(projects)
-        if (rows) {
+        if (rows || pagination) {
             handleRows()
             window.addEventListener('resize', () =>  handleRows())
         }
     }, [projectWrapper.current])
+    
 
     return (
         <>
@@ -67,7 +83,7 @@ export default function ProjectWrapper({
                 />
             }
             <div className={styles.projectWrapper} ref={projectWrapper}>
-                {projectList && projectList.map((project, idx) => 
+                {currentPosts && currentPosts.map((project, idx) => 
                     <ProjectCard      
                         key={idx}
                         path={`my-work/${project.project_name.split(' ').join('_')}`}
@@ -79,6 +95,13 @@ export default function ProjectWrapper({
                     />
                 )}  
             </div>
+            {projectList &&
+                <Pagination 
+                    postsPerPage={4}
+                    totalPosts={projectList.length -1}
+                    paginate={handlePagination}
+                />
+            }
         </>
     )
 }
