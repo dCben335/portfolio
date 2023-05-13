@@ -111,7 +111,7 @@ export default function ProjectWrapper({
                     clicked={handleClick}
                 />
             }
-            <div className={styles.projectWrapperContainer}>
+            <div className={pagination ? styles.projectWrapperContainer : ''}>
                 <div className={styles.projectWrapper} ref={projectWrapper}>
                     {currentProjects && currentProjects.map((project, idx) => 
                         <ProjectCard      
