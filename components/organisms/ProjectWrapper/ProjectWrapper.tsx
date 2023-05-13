@@ -24,11 +24,11 @@ export default function ProjectWrapper({
     
     const projectWrapper = useRef<any>()
 
+    const [ProjectList, setProjectList] = useState<Array<Project>>([...projects])
     const [currentProjects, setCurrentProjects] = useState<Array<Project>>();
     const [activeCategory, setActiveCategory]:any = useState<number>();
     const [currentPage, setCurrentPage] = useState<number>(1);
     const [nbOfProjectPerPages, setNbOfProjectPerPages] = useState<number>()
-    const [ProjectList, setProjectList] = useState<Array<Project>>([...projects])
 
 
     const categories:Array<string>|undefined = categorieFilters 
@@ -72,7 +72,6 @@ export default function ProjectWrapper({
 
     const handlePagination = () => {
         if (nbOfProjectPerPages) {
-            
             const indexOfLastPost = currentPage * nbOfProjectPerPages;
             const indexOfFirstPost = indexOfLastPost - nbOfProjectPerPages;
             setCurrentProjects(ProjectList.slice(indexOfFirstPost, indexOfLastPost))
