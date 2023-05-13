@@ -12,10 +12,10 @@
   --secondary-color-variant: #ffffff26;
   --accent-color: rgb(123 45 195);
 
+  --website-padding: 7.5vw;
+
   --basic-radius: 5px;
 }
-
-
 
 html {
    scroll-behavior: smooth;
@@ -28,7 +28,7 @@ body {
 
 main {
   min-height: 100vh;
-  padding: 0 7.5vw 10vh 7.5vw;
+  padding: 0 var(--website-padding) 10vh var(--website-padding);
 }
 
 a {

@@ -3,6 +3,8 @@
     border: inset 1px transparent;
     transition: border-color .3s ease-in-out;
     box-shadow: 0 0 2px  var(--secondary-color-variant);
+    max-width: calc(100vw - var(--website-padding) * 2);
+
 }
 
 .card .link {

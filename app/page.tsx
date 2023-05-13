@@ -2,7 +2,7 @@ import styles from './styles/modules/index.module.css'
 import projects from '../content/project.json'
 import ProjectWrapper from '@/components/organisms/ProjectWrapper/ProjectWrapper';
 import ThreeDText from '@/components/atoms/3dText/ThreeDText';
-
+import Link from 'next/link';
 
 export default function Home() {
   return (
@@ -12,8 +12,7 @@ export default function Home() {
           <span>Hi, I'm </span>
           <ThreeDText text='Ben' smaller={false}/>
           <br />
-          <ThreeDText text='Full stack' smaller={true}/>
-          <span> developper junior</span>
+          <span className={styles.subtitle}>A <ThreeDText text='Full stack ' smaller={true}/> developer</span>
         </h1>
       </section>
       <section>
@@ -24,6 +23,7 @@ export default function Home() {
           nbOfRows={2}
           pagination={false}
         />
+        <Link href="/my-work">see more</Link>
       </section>
     </main>
   )

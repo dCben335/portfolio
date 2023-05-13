@@ -1,6 +1,5 @@
 .threeDText {
     font-family: verdana;
-    font-size: 6rem;
     font-weight: 700;
     color: var(--accent-color);
     position: relative;
@@ -8,6 +7,5 @@
 }
 
 .smaller {
-    font-size: 3.1rem;
     text-shadow: -1px 2px var(--secondary-color);
 }

@@ -8,8 +8,8 @@ export default function ThreeDText({
     smaller: boolean
 }) {
     return (
-        <span className={`${styles.threeDText} ${smaller ? styles.smaller : ''}`}>
+        <strong className={`${styles.threeDText} ${smaller ? styles.smaller : ''}`}>
             {text}
-        </span>
+        </strong>
     )
 }
