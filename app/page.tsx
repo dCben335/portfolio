@@ -20,8 +20,9 @@ export default function Home() {
         <ProjectWrapper 
           projects={projects}
           categorieFilters={false}
-          rows={true}
+          rowLimit={true}
           nbOfRows={2}
+          pagination={false}
         />
       </section>
     </main>

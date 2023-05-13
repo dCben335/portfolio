@@ -11,7 +11,9 @@ export default function Page () {
                 <ProjectWrapper 
                     projects={projects}
                     categorieFilters={true}      
-                    rows={false}
+                    rowLimit={false}
+                    pagination={true}
+                    nbOfRows={2}
                 />
             </section>
         </main>

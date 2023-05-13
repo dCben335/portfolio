@@ -10,17 +10,15 @@ export default function Pagination({
     totalPosts: number
     paginate: Function
 }) {
-
-
-    const [pageNumbers, setPageNumber] = useState<Array<number>>([])
-  
     
+  const [pageNumbers, setPageNumber] = useState<Array<number>>([])
+  
     useEffect(() => {
         setPageNumber([])
         for (let i = 1; i <= Math.ceil(totalPosts / postsPerPage); i++) {
             setPageNumber(oldArray => [...oldArray, i])
         }
-    }, [totalPosts])
+    }, [postsPerPage, totalPosts])
   
     return (
       <nav>
