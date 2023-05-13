@@ -12,8 +12,7 @@ export default function Page () {
                     projects={projects}
                     categorieFilters={true}      
                     rowLimit={false}
-                    pagination={true}
-                    nbOfRows={3}
+                    pagination={false}
                 />
             </section>
         </main>

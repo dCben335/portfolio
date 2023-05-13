@@ -28,6 +28,7 @@ export default function ProjectWrapper({
     const [activeCategory, setActiveCategory]:any = useState<number>();
     const [currentPage, setCurrentPage] = useState<number>(1);
     const [nbOfProjectPerPages, setNbOfProjectPerPages] = useState<number>()
+    const [ProjectList, setProjectList] = useState<Array<Project>>([...projects])
 
 
     const categories:Array<string>|undefined = categorieFilters 
@@ -37,14 +38,20 @@ export default function ProjectWrapper({
 
     const handleClick = categories ? (index: number) => {    
         if ( activeCategory !== index ) {
-            setCurrentProjects(projects.filter((project) => project.category_name === categories[index]))
+            setProjectList(projects.filter((project) => project.category_name === categories[index]))
             setActiveCategory(index)
+            pagination && setCurrentPage(1)
         }  else {
-            setCurrentProjects(projects)
-            pagination && handlePagination()
+            setProjectList(projects)
             setActiveCategory(undefined)
+            if (pagination) {
+                setCurrentPage(1)
+                handlePagination()
+            }
         } 
     } : undefined
+
+
 
     const handleRows = () => {
         if(projectWrapper.current && projectWrapper.current.children[0]) {
@@ -65,11 +72,10 @@ export default function ProjectWrapper({
 
     const handlePagination = () => {
         if (nbOfProjectPerPages) {
+            
             const indexOfLastPost = currentPage * nbOfProjectPerPages;
             const indexOfFirstPost = indexOfLastPost - nbOfProjectPerPages;
-            setCurrentProjects(projects.slice(indexOfFirstPost, indexOfLastPost))
-            console.log('test')
-
+            setCurrentProjects(ProjectList.slice(indexOfFirstPost, indexOfLastPost))
         }
     }
 
@@ -77,7 +83,6 @@ export default function ProjectWrapper({
 
         if (nbOfProjectPerPages && currentPage) {
             if(pagination) {
-                console.log(nbOfProjectPerPages)
                 handlePagination() 
             } else if(rowLimit) setCurrentProjects(projects.filter((project, idx) => idx < nbOfProjectPerPages ));
         }
@@ -87,9 +92,16 @@ export default function ProjectWrapper({
         setCurrentProjects(projects)
         if (rowLimit || pagination) {
             handleRows()
-            window.addEventListener('resize', () =>  handleRows())
+            window.addEventListener('resize', () =>  {
+                handleRows()
+                setCurrentPage(1)
+            })
         }
-    }, [projectWrapper.current])
+    }, [projectWrapper.current, nbOfRows])
+
+    useEffect(() => {
+        pagination && nbOfProjectPerPages ? handlePagination() :setCurrentProjects(ProjectList)
+    }, [ProjectList])
 
     return (
         <>
@@ -113,13 +125,12 @@ export default function ProjectWrapper({
                     />
                 )}  
             </div>
-            {pagination && nbOfProjectPerPages && currentProjects &&
+            {pagination && nbOfProjectPerPages && currentProjects && ProjectList &&
                 <Pagination 
                     postsPerPage={nbOfProjectPerPages}
-                    totalPosts={activeCategory !== undefined ? currentProjects.length : projects.length}
+                    totalPosts={ProjectList.length}
                     paginate={handlePaginationClick}
-                />
-               
+                />  
             }
         </>
     )

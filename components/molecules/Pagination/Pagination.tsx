@@ -18,6 +18,7 @@ export default function Pagination({
         for (let i = 1; i <= Math.ceil(totalPosts / postsPerPage); i++) {
             setPageNumber(oldArray => [...oldArray, i])
         }
+        console.log(totalPosts)
     }, [postsPerPage, totalPosts])
   
     return (
