@@ -1,4 +1,4 @@
-import { Img } from "@/types/project";
+import { Img, accentsTidy } from "@/types/project";
 import Link from "next/link";
 import styles from './ProjectCard.module.css'
 
@@ -11,9 +11,12 @@ export default function ProjectCard({
     title: string
     path: string
 }) {
+
+
+
     return (
         <article className={styles.card}>
-            <Link href={path} className={styles.link}>
+            <Link href={accentsTidy(path)} className={styles.link}>
                 <img src={image.path} alt={image.alt} />
                 <h3>{title}</h3>
             </Link>

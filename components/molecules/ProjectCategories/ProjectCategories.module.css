@@ -1,5 +1,6 @@
 .categories {
     padding: 1rem;
+    position: relative;
 }
 
 .categories > :first-child {
@@ -22,9 +23,7 @@
     opacity: 1;
     transform: scaleY(1);
 }
-.categories {
-    position: relative;
-}
+
 
 @media screen and (max-width: 800px) {
     .categories > :first-child {

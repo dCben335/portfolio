@@ -2,7 +2,7 @@
 import { useState } from 'react';
 import { notFound } from 'next/navigation';
 
-import {Project}  from '../../../types/project'
+import {Project, accentsTidy}  from '../../../types/project'
 import projects from '../../../content/project.json';
 
 
@@ -10,7 +10,7 @@ export default function Page ({params} : {
     params: {project_name : string}
 }) {
     const [projectDatas, setProjectDatas] = useState<Project>(projects.filter((el) => 
-        el.project_name.split(' ').join('_') == params.project_name
+        accentsTidy(el.project_name.split(' ').join('_')) == params.project_name
     )[0])
 
    

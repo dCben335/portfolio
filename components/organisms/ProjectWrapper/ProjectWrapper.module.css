@@ -1,4 +1,9 @@
-.projectWrapper {
+.projectWrapperContainer {
+    min-height: 65vh;
+    padding: 1rem 0;
+}
+
+.projectWrapperContainer .projectWrapper {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 1.5rem;

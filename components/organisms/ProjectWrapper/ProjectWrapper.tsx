@@ -58,8 +58,8 @@ export default function ProjectWrapper({
             const nbOfProjectPerRow = 
                 Math.min(Math.floor(
                     projectWrapper.current.clientWidth
-                    / Number(projectWrapper.current.children[0].offsetWidth))
-                , 4);            
+                    / Number(projectWrapper.current.children[0].offsetWidth)
+                ), 4);            
             nbOfProjectPerRow !== 0 
                 ? setNbOfProjectPerPages(nbOfProjectPerRow * nbOfRows)
                 : setNbOfProjectPerPages(1 * nbOfRows)
@@ -100,7 +100,7 @@ export default function ProjectWrapper({
     }, [projectWrapper.current, nbOfRows])
 
     useEffect(() => {
-        pagination && nbOfProjectPerPages ? handlePagination() :setCurrentProjects(ProjectList)
+        pagination && nbOfProjectPerPages ? handlePagination() : setCurrentProjects(ProjectList)
     }, [ProjectList])
 
     return (
@@ -112,24 +112,27 @@ export default function ProjectWrapper({
                     clicked={handleClick}
                 />
             }
-            <div className={styles.projectWrapper} ref={projectWrapper}>
-                {currentProjects && currentProjects.map((project, idx) => 
-                    <ProjectCard      
-                        key={idx}
-                        path={`my-work/${project.project_name.split(' ').join('_')}`}
-                        image={{
-                            path: `https://picsum.photos/200/300?random=${idx}`,
-                            alt: "test"
-                        }}
-                        title={project.project_name}
-                    />
-                )}  
+            <div className={styles.projectWrapperContainer}>
+                <div className={styles.projectWrapper} ref={projectWrapper}>
+                    {currentProjects && currentProjects.map((project, idx) => 
+                        <ProjectCard      
+                            key={idx}
+                            path={`my-work/${project.project_name.split(' ').join('_')}`}
+                            image={{
+                                path: `https://picsum.photos/200/300?random=${idx}`,
+                                alt: "test"
+                            }}
+                            title={project.project_name}
+                        />
+                    )}  
+                </div>
             </div>
             {pagination && nbOfProjectPerPages && currentProjects && ProjectList &&
                 <Pagination 
                     postsPerPage={nbOfProjectPerPages}
                     totalPosts={ProjectList.length}
                     paginate={handlePaginationClick}
+                    activePage={currentPage}
                 />  
             }
         </>
