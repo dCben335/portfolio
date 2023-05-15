@@ -1,4 +1,4 @@
-import styles from './styles/modules/index.module.sass'
+import styles from './styles/modules/index.module.scss'
 import projects from '../content/project.json'
 import ProjectWrapper from '@/components/organisms/ProjectWrapper/ProjectWrapper';
 import ThreeDText from '@/components/atoms/3dText/ThreeDText';

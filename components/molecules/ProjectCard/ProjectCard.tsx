@@ -1,6 +1,6 @@
 import { Img, accentsTidy } from "@/types/project";
 import Link from "next/link";
-import styles from './ProjectCard.module.css'
+import styles from './ProjectCard.module.scss'
 
 export default function ProjectCard({
     image,

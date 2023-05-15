@@ -15,6 +15,7 @@ export default function Page () {
                     nbOfRows={2}
                 />
             </section>
+            
         </main>
     )
 }

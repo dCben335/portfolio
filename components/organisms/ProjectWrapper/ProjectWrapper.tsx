@@ -2,7 +2,7 @@
 
 import { useEffect, useState, useRef } from "react";
 import { Project } from "@/types/project"
-import styles from "./ProjectWrapper.module.css"
+import styles from "./ProjectWrapper.module.scss"
 import ProjectCard from "@/components/molecules/ProjectCard/ProjectCard";
 import ProjectCategories from "@/components/molecules/ProjectCategories/ProjectCategories";
 import Pagination from "@/components/molecules/Pagination/Pagination";
@@ -24,7 +24,7 @@ export default function ProjectWrapper({
     
     const projectWrapper = useRef<any>()
 
-    const [ProjectList, setProjectList] = useState<Array<Project>>([...projects])
+    const [projectList, setProjectList] = useState<Array<Project>>([...projects])
     const [currentProjects, setCurrentProjects] = useState<Array<Project>>();
     const [activeCategory, setActiveCategory]:any = useState<number>();
     const [currentPage, setCurrentPage] = useState<number>(1);
@@ -51,8 +51,6 @@ export default function ProjectWrapper({
         } 
     } : undefined
 
-
-
     const handleRows = () => {
         if(projectWrapper.current && projectWrapper.current.children[0]) {
             const nbOfProjectPerRow = 
@@ -74,7 +72,7 @@ export default function ProjectWrapper({
         if (nbOfProjectPerPages) {
             const indexOfLastPost = currentPage * nbOfProjectPerPages;
             const indexOfFirstPost = indexOfLastPost - nbOfProjectPerPages;
-            setCurrentProjects(ProjectList.slice(indexOfFirstPost, indexOfLastPost))
+            setCurrentProjects(projectList.slice(indexOfFirstPost, indexOfLastPost))
         }
     }
 
@@ -99,8 +97,8 @@ export default function ProjectWrapper({
     }, [projectWrapper.current, nbOfRows])
 
     useEffect(() => {
-        pagination && nbOfProjectPerPages ? handlePagination() : setCurrentProjects(ProjectList)
-    }, [ProjectList])
+        pagination && nbOfProjectPerPages ? handlePagination() : setCurrentProjects(projectList)
+    }, [projectList])
 
     return (
         <>
@@ -126,10 +124,10 @@ export default function ProjectWrapper({
                     )}  
                 </div>
             </div>
-            {pagination && nbOfProjectPerPages && currentProjects && ProjectList &&
+            {pagination && nbOfProjectPerPages && currentProjects && projectList &&
                 <Pagination 
                     postsPerPage={nbOfProjectPerPages}
-                    totalPosts={ProjectList.length}
+                    totalPosts={projectList.length}
                     paginate={handlePaginationClick}
                     activePage={currentPage}
                 />  

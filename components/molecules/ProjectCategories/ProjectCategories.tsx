@@ -1,5 +1,5 @@
 import Button from "@/components/atoms/Button/Button"
-import styles from './ProjectCategories.module.css'
+import styles from './ProjectCategories.module.scss'
 import { useState } from "react"
 
 export default function ProjectCategories({

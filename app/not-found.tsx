@@ -1,6 +1,6 @@
 "use client"
 
-import styles from './styles/modules/not-found.module.sass'
+import styles from './styles/modules/not-found.module.scss'
 import Button from '@/components/atoms/Button/Button'
 import { useRouter } from 'next/navigation'
 

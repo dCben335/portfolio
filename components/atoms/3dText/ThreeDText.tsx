@@ -1,4 +1,4 @@
-import styles from "./ThreeDText.module.sass"
+import styles from "./ThreeDText.module.scss"
 
 export default function ThreeDText({
     text,

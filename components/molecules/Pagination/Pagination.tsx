@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import Button from "@/components/atoms/Button/Button";
-import styles from './Pagination.module.css'
+import styles from './Pagination.module.scss'
 
 export default function Pagination({ 
     postsPerPage,
@@ -32,7 +32,7 @@ export default function Pagination({
                     text={`${number}`}
                     clicked={() => paginate(number)} 
                     active={number === activePage ? true : false}
-                    activeColor={{backgroundColor: "var(--accent-color)"}}
+                    activeColor={{backgroundColor: "red"}}
                 />
             </li>
           ))}
