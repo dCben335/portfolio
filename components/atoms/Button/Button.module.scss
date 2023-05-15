@@ -10,10 +10,11 @@
     opacity: .75;
     transform: skewX(5deg);
     transition: all .3s ease-in-out;
+
+    &:is(.active, :hover, :focus) {
+        opacity: 1;
+        color: var(--secondary-color);
+        border-color: var(--secondary-color-variant);
+    } 
 }
 
-.btn:is(.active, :hover, :focus) {
-    opacity: 1;
-    color: var(--secondary-color);
-    border-color: var(--secondary-color-variant);
-}
