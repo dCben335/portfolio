@@ -77,7 +77,6 @@ export default function ProjectWrapper({
     }
 
     useEffect(() => {
-
         if (nbOfProjectPerPages && currentPage) {
             if(pagination) {
                 handlePagination() 
@@ -93,11 +92,15 @@ export default function ProjectWrapper({
                 handleRows()
                 setCurrentPage(1)
             })
+            return () => window.removeEventListener('resize', () => {
+                handleRows()
+                setCurrentPage(1)
+            });
         }
     }, [projectWrapper.current, nbOfRows])
 
     useEffect(() => {
-        pagination && nbOfProjectPerPages ? handlePagination() : setCurrentProjects(projectList)
+        pagination || rowLimit && nbOfProjectPerPages ? handlePagination() : setCurrentProjects(projectList)
     }, [projectList])
 
     return (

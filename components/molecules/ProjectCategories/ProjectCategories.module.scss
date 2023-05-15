@@ -31,10 +31,10 @@
                 right: 0;
                 top: 100%;
                 transform-origin: top right;
-                box-shadow: 0 0 2px var(--secondary-color-variant);
+                box-shadow: 0 0 2px $secondary-color-variant;
                 padding: 1rem;
-                background-color: var(--primary-color);
-                border-radius: var(--basic-radius);
+                background-color: $primary-color;
+                border-radius: $basic-radius;
                 opacity: 0;
                 flex-direction: column;
             }

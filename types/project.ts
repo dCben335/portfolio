@@ -23,6 +23,7 @@ interface Project {
     project_name: string,
     category_name: string,
     desciption: string,
+    images: Array<Img>
 }
 interface Img {
     path: string,

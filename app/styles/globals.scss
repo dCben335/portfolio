@@ -10,12 +10,13 @@ html {
 }
 
 body {
-  background: $primaryColor;
-  color: $secondaryColor;
+  background: $primary-color;
+  color: $secondary-color;
 }
 main { 
   min-height: 100vh;
-  padding: 0 $websitePadding 10vh $websitePadding;
+  padding: 0 $website-padding 10vh $website-padding;
+  overflow-x: hidden;
 }
 a {
   color: inherit;

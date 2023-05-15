@@ -1,0 +1,11 @@
+$slider-width: clamp(300px - 6rem, 100vw - (2 * $website-padding)  - 6rem, 800px  - 6rem);
+
+.slider {
+    display: grid;
+    place-items: center;
+    width: $slider-width;
+}
+
+:export {
+    sliderWidth: $slider-width;
+}

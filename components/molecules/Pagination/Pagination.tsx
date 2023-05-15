@@ -32,7 +32,6 @@ export default function Pagination({
                     text={`${number}`}
                     clicked={() => paginate(number)} 
                     active={number === activePage ? true : false}
-                    activeColor={{backgroundColor: "red"}}
                 />
             </li>
           ))}

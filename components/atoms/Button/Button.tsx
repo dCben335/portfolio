@@ -6,20 +6,23 @@ export default function Button({
     text, 
     clicked,
     active,
-    activeColor
+    activeColor,
+    classes
 } : {
     // text: String, 
     text: string, 
     clicked: Function,
     active?: boolean, 
     activeColor?: CSSProperties
+    classes?: string
 }) {
 
     return (
        <button 
             style={active && activeColor ? activeColor : {}}
-            className={`${styles.btn} ${active ? styles.active : ''}`} 
+            className={`${styles.btn} ${active ? styles.active : ''} ${classes ? classes : ""}`} 
             onClick={() => clicked && clicked()}
+
         >{ text }</button>
     )
 }

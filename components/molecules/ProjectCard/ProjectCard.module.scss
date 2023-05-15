@@ -1,9 +1,9 @@
 .card {
-    border-radius: var(--basic-radius);
+    border-radius: $basic-radius;
     border: inset 1px transparent;
     transition: border-color .3s ease-in-out;
-    box-shadow: 0 0 2px  var(--secondary-color-variant);
-    max-width: calc(100vw - var(--website-padding) * 2);
+    box-shadow: 0 0 2px  $secondary-color-variant;
+    max-width: calc(100vw - $website-padding * 2);
 
     .link {
         display: grid;
@@ -41,7 +41,7 @@
         }
     }
     &:hover .link {
-        border-color: var(--secondary-color-variant);
+        border-color: $secondary-color-variant;
     }
 }
 
