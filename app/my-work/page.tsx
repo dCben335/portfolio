@@ -6,13 +6,13 @@ export default function Page () {
     return (         
         <main>
             <section>
-                <h1>Project</h1>
+                <h1>My</h1>
                 <ProjectWrapper 
                     projects={projects}
                     categorieFilters={true}      
                     rowLimit={false}
                     pagination={true}
-                    nbOfRows={3}
+                    nbOfRows={2}
                 />
             </section>
         </main>
