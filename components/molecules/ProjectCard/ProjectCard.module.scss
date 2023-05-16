@@ -1,10 +1,13 @@
 .card {
     border-radius: $basic-radius;
     border: inset 1px transparent;
-    transition: border-color .3s ease-in-out;
-    box-shadow: 0 0 2px  $secondary-color-variant;
     max-width: calc(100vw - $website-padding * 2);
+    box-shadow: 0 0 2px $secondary-color-variant;
+    transition: transform 1s cubic-bezier(.03,.98,.52,.99), border-color .3s ease-in-out;
 
+    &:hover {
+        border-color: $secondary-color-variant;
+    }
     .link {
         display: grid;
         overflow: hidden;
@@ -33,6 +36,7 @@
         &:is(:hover, :focus) img {
             filter: brightness(.3);
             transform: scaleX(1.05);
+            
         }
 
         &:is(:hover, :focus) h3 {
@@ -40,8 +44,6 @@
             transform: translateY(0);
         }
     }
-    &:hover .link {
-        border-color: $secondary-color-variant;
-    }
+   
 }
 

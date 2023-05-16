@@ -30,9 +30,20 @@ interface Img {
     alt: string
 }
 
+interface TransformPorperties {
+    perspective: number
+    maxAngle: number
+    scale: number
+}
+
+// interface test {
+//     [key: string]: string
+// }
+
 export type {
     Project,
     Img,
+    TransformPorperties,
 }
 
 export {
