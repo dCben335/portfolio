@@ -6,7 +6,7 @@ import Link from 'next/link';
 
 export default function Home() {
   return (
-    <main className={styles.index}>
+    <main>
       <section className={styles.hero}>
         <h1>
           <span>Hi, I'm </span>
@@ -15,7 +15,11 @@ export default function Home() {
           <span className={styles.subtitle}>A <ThreeDText text='Full stack ' smaller={true}/> developer</span>
         </h1>
       </section>
+      <section className={styles.about}>
+        <h2>About me</h2>
+      </section>
       <section>
+        <h2>My lastest Work</h2>
         <ProjectWrapper 
           projects={projects}
           categorieFilters={false}

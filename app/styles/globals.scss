@@ -35,11 +35,20 @@ img {
 ul { 
   list-style: none;
 }
+
 h1 {
   font-size: clamp(2.25rem , 2.25rem + 3.5vw, 5rem);
   transform: skewX(7.5deg);
   line-height: 0.8;
   padding: 1rem;
+}
+
+h2 {
+  font-size: clamp(2rem , 2rem + 2vw, 4.25rem);
+  transform: skewX(7.5deg);
+  line-height: 0.8;
+  padding: 1rem;
+  margin-left: 5vw;
 }
 
 
