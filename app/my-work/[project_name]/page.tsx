@@ -27,8 +27,8 @@ export default function Page ({params} : {
                     <div className={styles.slider}>
                         {projectDatas.images &&
                             <Slider sliderWidth={styles.sliderWidth}>
-                                {projectDatas.images.map((image) => 
-                                    <img src={image.path} alt={image.alt} />
+                                {projectDatas.images.map((image, idx) => 
+                                    <img src={image.path} alt={image.alt} key={idx}/>
                                 )}
                             </Slider>
                         }

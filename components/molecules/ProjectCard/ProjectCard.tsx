@@ -10,7 +10,7 @@ export default function ProjectCard({
     transformPorperties = {
         perspective: 1000,
         maxAngle: 3.5,
-        scale: 1.005,
+        scale: 1.01,
     }
 }: {
     image: Img
@@ -40,8 +40,6 @@ export default function ProjectCard({
     const mouseLeaveProject = () =>  {
         setTransform({transform: `perspective(${transformPorperties.perspective}px)`})
     }
-
-
 
     return (
         <article className={styles.card} ref={projectCard}

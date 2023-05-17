@@ -18,6 +18,8 @@ main {
   min-height: 100vh;
   padding: 0 $website-padding 10vh $website-padding;
   overflow-x: hidden;
+  display: grid;
+  gap: 15vh;
 }
 
 a {
@@ -54,7 +56,6 @@ h2 {
   padding: 1rem;
   margin-left: 5vw;
 }
-
 
 
 

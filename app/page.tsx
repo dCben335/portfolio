@@ -2,7 +2,7 @@ import styles from './styles/modules/index.module.scss'
 import projects from '../content/project.json'
 import ProjectWrapper from '@/components/organisms/ProjectWrapper/ProjectWrapper';
 import ThreeDText from '@/components/atoms/3dText/ThreeDText';
-import Link from 'next/link';
+import HyperLink from '@/components/atoms/HyperLink/HyperLink';
 
 export default function Home() {
   return (
@@ -16,7 +16,9 @@ export default function Home() {
         </h1>
       </section>
       <section className={styles.about}>
-        <h2>About me</h2>
+        <h2>Learn About me</h2>
+
+        <HyperLink path="/about">know more</HyperLink>
       </section>
       <section>
         <h2>My lastest Work</h2>
@@ -27,7 +29,10 @@ export default function Home() {
           nbOfRows={2}
           pagination={false}
         />
-        <Link href="/my-work">see more</Link>
+        <HyperLink path="/my-work">see more</HyperLink>
+      </section>
+      <section className={styles.contact}>
+        <h2>Contact me</h2>
       </section>
     </main>
   )
