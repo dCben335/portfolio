@@ -20,36 +20,66 @@ export default function ProjectCard({
 }) {
 
     const projectCard = useRef<HTMLElement | null>(null)
-    const [transform, setTransform] = useState<CSSProperties>({}) 
+    const [cardMouseHoverStyle, setCardMouseHoverStyle] = useState<CSSProperties>({}) 
+    const [cardMouseHoverTitleStyle, setCardMouseHoverTitleStyle] = useState<CSSProperties>({}) 
       
     const mouseOnProject = (event: MouseEvent) => {
         if (projectCard.current) {
             const projectCardHeight = projectCard.current.clientHeight;
             const projectCardWidth = projectCard.current.clientWidth;
-            const mouseX = event.pageX - (projectCard.current.offsetLeft + (projectCardWidth / 2));
-            const mouseY = event.pageY - (projectCard.current.offsetTop + (projectCardHeight / 2));
-            const projectCardRotateX = (-transformPorperties.maxAngle * mouseY) / (projectCardHeight / 2);
-            const projectCardRotateY = (transformPorperties.maxAngle * mouseX) / (projectCardWidth / 2);
+            const mouseX = event.pageX - projectCard.current.offsetLeft;
+            const mouseY = event.pageY - projectCard.current.offsetTop;
+
+            const mouseXFromCenter = (mouseX - projectCardWidth  / 2)
+            const mouseYFromCenter = (mouseY  - projectCardHeight / 2)
+            const projectCardRotateX = (-transformPorperties.maxAngle * mouseYFromCenter) / (projectCardHeight / 2);
+            const projectCardRotateY = (transformPorperties.maxAngle * mouseXFromCenter) / (projectCardWidth / 2);
             
-            setTransform({transform: 
-                `perspective(${transformPorperties.perspective}px) rotateX(${projectCardRotateX}deg) rotateY(${projectCardRotateY}deg) scale3d(${transformPorperties.scale}, ${transformPorperties.scale}, ${transformPorperties.scale})`
+            const distance =  Math.sqrt( mouseXFromCenter ** 2 + mouseYFromCenter ** 2)
+
+            const baseScale = 1
+            const maxScaling = 1.5;
+            const scalingFactor = 1.25;
+            
+            const adjustedScaling = maxScaling - ((distance / 1000) * scalingFactor)
+            const scale = adjustedScaling >= baseScale ? adjustedScaling : baseScale
+  
+
+            setCardMouseHoverStyle({transform: `
+                perspective(${transformPorperties.perspective}px) 
+                scale(${transformPorperties.scale})
+                rotateX(${projectCardRotateX}deg)
+                rotateY(${projectCardRotateY}deg)`,
+
+                "--data-light-x" : ` ${mouseX}px`,
+                "--data-light-y" : ` ${mouseY}px`,
+            } as React.CSSProperties)
+
+            setCardMouseHoverTitleStyle({
+                transform: `rotate(${(projectCardRotateX + projectCardRotateY) / -2}deg)
+                translateY(${(mouseY  - projectCardHeight / 2) * 0.05}px)
+                translateX(${(mouseX - projectCardWidth / 2) * 0.05}px)
+                scale(${scale})`,
             })
         }
     }
-    
+
     const mouseLeaveProject = () =>  {
-        setTransform({transform: `perspective(${transformPorperties.perspective}px)`})
+        setCardMouseHoverStyle({...cardMouseHoverStyle, transform: `perspective(${transformPorperties.perspective}px)`})
     }
 
     return (
         <article className={styles.card} ref={projectCard}
-            onMouseMove={(e) => mouseOnProject(e)}
+            onMouseMove={(e) =>  mouseOnProject(e)}
             onMouseLeave={() => mouseLeaveProject()} 
-            style={{...transform}}
-
-            ><Link href={accentsTidy(path)} className={styles.link}>
+            style={{...cardMouseHoverStyle}}
+            
+            >
+            <Link href={accentsTidy(path)} className={styles.link}>
                 <img src={image.path} alt={image.alt} />
-                <h3>{title}</h3>
+                <h3 >
+                    <span style={{...cardMouseHoverTitleStyle}}>{title}</span>
+                </h3>
             </Link> 
         </article>
     )

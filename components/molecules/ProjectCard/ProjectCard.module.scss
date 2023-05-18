@@ -1,19 +1,44 @@
+
 .card {
     border-radius: $basic-radius;
-    border: inset 1px transparent;
+    position: relative;
     max-width: calc(100vw - $website-padding * 2);
-    box-shadow: 0 0 2px $secondary-color-variant;
-    transition: transform 1s cubic-bezier(.03,.98,.52,.99), border-color .3s ease-in-out;
-
-    &:hover {
-        border-color: $secondary-color-variant;
+    transition: transform 1s cubic-bezier(.03,.98,.52,.99);
+    overflow: hidden;
+    
+    &::after, &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        user-select: none;
+        border-radius: inherit;
+        opacity: 0;
+        transition: opacity .4s ease;
     }
+    
+    &::after{
+        background: radial-gradient(500px circle at var(--data-light-x) var(--data-light-y), $accent-color-variant, transparent 70%);
+        z-index: 3;
+    }
+    &::before{
+        background: radial-gradient(200px circle at var(--data-light-x) var(--data-light-y), $secondary-color, transparent 70%);
+        z-index: 1;
+    }
+    
+    &:is(:hover, :focus-within) {        
+        &::after, &::before {
+            opacity: 1;
+        }
+    }
+
     .link {
         display: grid;
         overflow: hidden;
         place-items: center;
         position: relative;
-        border-radius: inherit;
+        margin: 1.5px;
+        z-index: 2;
 
         img {
             width: 100%;
@@ -22,7 +47,9 @@
             border: inherit;
             pointer-events: none;
             transform-origin: center;
-            transition: filter .4s cubic-bezier(0.39, 0.575, 0.565, 1), transform .3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            transition: 
+                filter .4s cubic-bezier(0.39, 0.575, 0.565, 1),
+                transform .3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
         }
 
         h3 {
@@ -31,19 +58,25 @@
             text-align: center;
             transform: translateY(25px);
             transition: all .3s ease-in-out;
+            z-index: 10;
+            
+            span {
+                font-size: 1.5rem;
+                display: block;
+            }
         }
     
-        &:is(:hover, :focus) img {
-            filter: brightness(.3);
-            transform: scaleX(1.035);
-            
-        }
+        &:is(:hover, :focus) {
+            img {
+                filter: brightness(.25);
+                transform: scaleX(1.035);
+            }
 
-        &:is(:hover, :focus) h3 {
-            opacity: 1;
-            transform: translateY(0);
+            h3 {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
     }
-   
 }
 
