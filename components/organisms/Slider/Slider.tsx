@@ -48,18 +48,20 @@ export default function Slider({
         setSliderWrapperWidth(slideWidth * children.length)
     }, [slideWidth])
 
-    return (
-        <div className={styles.slider}>
-            <div>
-                <div className={styles.slidesContainer} ref={slidesContainer} style={{width: sliderWidth}}>
+    return (         
+        <div className={styles.slider} >
+            <div style={{width: sliderWidth}}>
+                <div className={styles.slidesContainer} ref={slidesContainer} >
                     <div className={styles.sliderWrapper}
                         style={sliderWrapperWidth !== 0 ? { 
                                 width: `${sliderWrapperWidth}px`,
-                                height: sliderWidth,
                                 transform: `translateX(-${currentSlide * slideWidth}px)`
-                            } : {  height: sliderWidth }
-                        }
-                        > {children} </div>
+                            } : {width: `${100 * children.length}%`}
+                        }> 
+                        {children.map((child, idx) => 
+                            <figure key={idx}>{child}</figure>
+                        )} 
+                    </div>
                 </div>
                 <nav className={styles.controls}>
                     {currentSlide !== 0 && <Button 

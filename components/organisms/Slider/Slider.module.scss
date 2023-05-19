@@ -1,25 +1,20 @@
-.slider {
-    display: grid;
-    place-items: center;
-    width: 100%;
-    padding: 2.65rem;
-
-
+.slider {    
     & > div {
         position: relative;
-
+        padding: 0 5rem;
+        
         .slidesContainer {
             overflow: hidden;
-
+            
             .sliderWrapper {
                 display: flex;
-                overflow: hidden;
                 transition: transform .4s cubic-bezier(0.455, 0.03, 0.715, 0.95);
-
-                & > * {
+                
+                figure {
                     width: 100%;
-                    aspect-ratio: 1/1;
-                    display: block;
+                    display: grid;
+                    place-items: center;
+                    min-height: 35vh;
                 }
             }
         }
@@ -29,7 +24,7 @@
             left: 50%;
             top: 50%;
             transform: translate(-50%, -50%);
-            width: calc(100% + 7.5rem);
+            width: 95%;
             display: flex;
 
             & > .left {
@@ -41,6 +36,7 @@
         }
     }
 
+    
     ul {
         padding: 1rem;
         display: flex;
@@ -48,5 +44,4 @@
         flex-wrap: wrap;
         justify-content: center;
     }
-
 }

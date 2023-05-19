@@ -7,12 +7,12 @@
     box-shadow: 0 0 2px  $secondary-color-variant;
     border: 1px solid transparent;   
     text-shadow: 0 1.5px #101015;
-    opacity: .75;
+    filter: opacity(.5);
     transform: skewX(5deg);
     transition: all .3s ease-in-out;
 
     &:is(.active, :hover, :focus) {
-        opacity: 1;
+        filter: opacity(1);
         color: $secondary-color;
         border-color: $secondary-color-variant;
     } 

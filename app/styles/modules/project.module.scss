@@ -1,9 +1,16 @@
-$slider-width: clamp(300px - 6rem, 100vw - (2 * $website-padding)  - 6rem, 800px  - 6rem);
+$slider-width: clamp(300px, 100vw - (2 * $website-padding), 700px);
 
-.slider {
+.grid {
     display: grid;
+    min-height: 70vh;
     place-items: center;
-    width: $slider-width;
+
+    @media screen and (min-width: 1400px) {
+        & {
+            grid-template-columns: $slider-width 1fr;
+            gap: 2rem;
+        }
+    }
 }
 
 :export {
