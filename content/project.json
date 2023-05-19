@@ -1,5 +1,28 @@
 [
     {
+        "project_name": "penguin",
+        "category_name": "z",
+        "desciption": "découvrez la famille du Grand Z",
+        "images" : [
+            {
+                "path": "/projects/penguin/penguin.jpg",
+                "alt": "Z"
+            },
+            {
+                "path": "/projects/penguin/penguin.jpg",
+                "alt": "Z"
+            },
+            {
+                "path": "/projects/penguin/penguin.jpg",
+                "alt": "Z"
+            },
+            {
+                "path": "/projects/penguin/penguin.jpg",
+                "alt": "Z"
+            }
+        ]
+    },
+    {
         "project_name": "portfolio",
         "category_name": "dev",
         "desciption": "découvez mon porfolio",

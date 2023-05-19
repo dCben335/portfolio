@@ -119,8 +119,8 @@ export default function ProjectWrapper({
                             key={idx}
                             path={`my-work/${project.project_name.split(' ').join('_')}`}
                             image={{
-                                path: `https://picsum.photos/200/300?random=${idx}`,
-                                alt: "test"
+                                path: project.images[0].path,
+                                alt: project.images[0].alt,
                             }}
                             title={project.project_name}
                         />
