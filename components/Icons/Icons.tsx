@@ -1,5 +1,13 @@
 const icons = {
-   
+
 }
 
-export default icons;
+const frameworks = {
+    
+}
+
+
+
+export {
+    icons,
+} 

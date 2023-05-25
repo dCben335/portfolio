@@ -16,6 +16,8 @@ export default function Slider({
     const [sliderWrapperWidth, setSliderWrapperWidth] = useState<number>(0);
     const [slideWidth, setSlideWidth] = useState<number>(0);
 
+    let interval: Timer | undefined
+
     const setSlider = () => {
         if (slidesContainer.current) {
             setSlideWidth(slidesContainer.current.clientWidth); 
@@ -23,12 +25,14 @@ export default function Slider({
     }
 
     const prevSlide = () => {
+        setCheck(-1)
         if (currentSlide > 0) {
             setCurrentSlide(currentSlide - 1)
         }
     }
 
     const nextSlide = () => {
+        setCheck(-1)
         if (currentSlide < children.length - 1) {
             setCurrentSlide(currentSlide + 1)
         }
@@ -44,9 +48,22 @@ export default function Slider({
         return () => window.removeEventListener('resize', setSlider);
     }, [])
     
+    
     useEffect(() => {
         setSliderWrapperWidth(slideWidth * children.length)
     }, [slideWidth])
+
+    const [check, setCheck] = useState<number>(0)
+
+    useEffect(() => {
+        if (check !== -1) {
+            const test = setInterval(() => {
+                currentSlide < children.length - 1 ? nextSlide(): toSlide(0);
+                setCheck(check + 1);
+            }, 3000);
+            return () => clearInterval(test);
+        } 
+    }, [check])
 
     return (         
         <div className={styles.slider} >
