@@ -1,7 +1,7 @@
 "use client"
 
 import { useEffect, useState, useRef } from "react";
-import { Project } from "@/types/project"
+import { Project } from "@/utils/types"
 import styles from "./ProjectWrapper.module.scss"
 import ProjectCard from "@/components/molecules/ProjectCard/ProjectCard";
 import ProjectCategories from "@/components/molecules/ProjectCategories/ProjectCategories";

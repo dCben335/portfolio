@@ -1,20 +1,23 @@
 
-import { CSSProperties } from 'react'
+import { ButtonHTMLAttributes, CSSProperties, DetailedHTMLProps } from 'react'
 import styles from './Button.module.scss'
+import { types } from 'util'
 
 export default function Button({
     text, 
     clicked,
     active,
     activeColor,
-    classes
+    classes,
+    type,
 } : {
     // text: String, 
     text: string, 
-    clicked: Function,
+    clicked?: Function,
     active?: boolean, 
     activeColor?: CSSProperties
     classes?: string
+    type?: "button" | "reset" | "submit" | undefined
 }) {
 
     return (
@@ -22,6 +25,7 @@ export default function Button({
             style={active && activeColor ? activeColor : {}}
             className={`${styles.btn} ${active ? styles.active : ''} ${classes ? classes : ""}`} 
             onClick={() => clicked && clicked()}
+            type={type ? type : 'button'}
 
         >{ text }</button>
     )

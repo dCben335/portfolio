@@ -19,35 +19,6 @@ const accentsTidy = function(expression:string){
     return lower;
 };
 
-interface Project {
-    project_name: string,
-    category_name: string,
-    desciption: string,
-    images: Array<Img>
-}
-interface Img {
-    path: string,
-    alt: string
-}
-
-interface TransformPorperties {
-    perspective: number
-    maxAngle: number
-    scale: number
-}
-
-// interface test {
-//     [key: string]: string
-// }
-
-export type {
-    Project,
-    Img,
-    TransformPorperties,
-}
-
 export {
     accentsTidy,
 }
-
-

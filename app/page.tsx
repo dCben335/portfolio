@@ -3,13 +3,15 @@ import projects from '../content/project.json'
 import ProjectWrapper from '@/components/organisms/ProjectWrapper/ProjectWrapper';
 import ThreeDText from '@/components/atoms/3dText/ThreeDText';
 import HyperLink from '@/components/atoms/HyperLink/HyperLink';
+import Form from '@/components/molecules/Form/Form';
+import formDatas from "@/content/formDatas.json";
 
 export default function Home() {
   return (
     <main>
       <section className={styles.hero}>
         <h1>
-          <span>Hi, I'm </span>
+          <span>Hi, I&apos;m </span>
           <ThreeDText text='Ben' smaller={false}/>
           <br />
           <span className={styles.subtitle}>A <ThreeDText text='Full stack ' smaller={true}/> developer</span>
@@ -33,7 +35,15 @@ export default function Home() {
       </section>
       <section className={styles.contact}>
         <h2>Contact me</h2>
+        <div>
+          <Form 
+            title='Formulaire de contact'
+            groupForms={formDatas}
+          />
+        </div>
       </section>
+
+
     </main>
   )
 }

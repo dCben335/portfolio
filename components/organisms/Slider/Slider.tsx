@@ -15,8 +15,9 @@ export default function Slider({
     const [currentSlide, setCurrentSlide] = useState<number>(0);
     const [sliderWrapperWidth, setSliderWrapperWidth] = useState<number>(0);
     const [slideWidth, setSlideWidth] = useState<number>(0);
+    const [auto, setAuto] = useState<number>(0)
 
-    let interval: Timer | undefined
+
 
     const setSlider = () => {
         if (slidesContainer.current) {
@@ -25,20 +26,21 @@ export default function Slider({
     }
 
     const prevSlide = () => {
-        setCheck(-1)
+        auto !== -1 && setAuto(-1)
         if (currentSlide > 0) {
             setCurrentSlide(currentSlide - 1)
         }
     }
 
     const nextSlide = () => {
-        setCheck(-1)
+        auto !== -1 && setAuto(-1)
         if (currentSlide < children.length - 1) {
             setCurrentSlide(currentSlide + 1)
         }
     }
 
     const toSlide = (index: number) => {
+        auto !== -1 && setAuto(-1)
         setCurrentSlide(index)
     }
 
@@ -53,17 +55,16 @@ export default function Slider({
         setSliderWrapperWidth(slideWidth * children.length)
     }, [slideWidth])
 
-    const [check, setCheck] = useState<number>(0)
 
     useEffect(() => {
-        if (check !== -1) {
+        if (auto !== -1) {
             const test = setInterval(() => {
                 currentSlide < children.length - 1 ? nextSlide(): toSlide(0);
-                setCheck(check + 1);
+                setAuto(auto + 1);
             }, 3000);
             return () => clearInterval(test);
         } 
-    }, [check])
+    }, [auto])
 
     return (         
         <div className={styles.slider} >
@@ -102,7 +103,7 @@ export default function Slider({
                         <Button 
                             text={`${number + 1}`}
                             clicked={() => toSlide(number)} 
-                            active={number === currentSlide ? true : false}
+                            active={number === currentSlide}
                         />
                     </li>
                 ))}

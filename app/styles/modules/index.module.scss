@@ -22,4 +22,9 @@
 
 .contact {
     min-height: 100vh;
+
+    & > div {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
 }

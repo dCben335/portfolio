@@ -1,5 +1,5 @@
 import { ReactElement } from "react"
-import { accentsTidy } from "@/types/project"
+import { accentsTidy } from "@/utils/functions"
 import Link from "next/link"
 import styles from "./HyperLink.module.scss"
 

@@ -1,12 +1,12 @@
 "use client"
 import { useState } from 'react';
 import { notFound } from 'next/navigation';
+import {Project}  from '@/utils/types'
+import { accentsTidy } from '@/utils/functions';
 
-import {Img, Project, accentsTidy}  from '../../../types/project'
 import projects from '../../../content/project.json';
 import Slider from '../../../components/organisms/Slider/Slider'
 import styles from '../../styles/modules/project.module.scss'
-
 
 export default function Page ({params} : { 
     params: {project_name : string}

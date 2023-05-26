@@ -1,4 +1,5 @@
-import { Img, accentsTidy, TransformPorperties } from "@/types/project";
+import { Img, TransformPorperties } from "@/utils/types";
+import { accentsTidy } from "@/utils/functions";
 import Link from "next/link";
 import styles from './ProjectCard.module.scss'
 import { CSSProperties, useRef, useState, MouseEvent } from "react";

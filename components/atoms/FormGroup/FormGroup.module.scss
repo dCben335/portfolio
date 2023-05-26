@@ -1,0 +1,15 @@
+.label {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 100%;
+}
+
+.label > :is(input, textarea) {
+    background-color: $primary-color-variant;
+    color: $secondary-color;
+    border: 0;
+    padding: 0.5rem;
+    border-radius: $basic-radius;
+    resize: none;
+}
