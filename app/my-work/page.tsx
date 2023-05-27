@@ -1,9 +1,8 @@
-import projects from '../../content/project.json';
+import projects from '@/contents/project.json';
 import ProjectWrapper from '@/components/organisms/ProjectWrapper/ProjectWrapper';
 import ThreeDText from '@/components/atoms/3dText/ThreeDText';
 
 export default function Page () {
-
     return (         
         <main>
             <section>

@@ -4,7 +4,7 @@ import { notFound } from 'next/navigation';
 import {Project}  from '@/utils/types'
 import { accentsTidy } from '@/utils/functions';
 
-import projects from '../../../content/project.json';
+import projects from '@/contents/project.json';
 import Slider from '../../../components/organisms/Slider/Slider'
 import styles from '../../styles/modules/project.module.scss'
 

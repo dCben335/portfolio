@@ -1,10 +1,10 @@
-import styles from './styles/modules/index.module.scss'
-import projects from '../content/project.json'
+import styles from './styles/modules/index.module.scss';
+import projects from '@/contents/project.json';
 import ProjectWrapper from '@/components/organisms/ProjectWrapper/ProjectWrapper';
 import ThreeDText from '@/components/atoms/3dText/ThreeDText';
 import HyperLink from '@/components/atoms/HyperLink/HyperLink';
 import Form from '@/components/molecules/Form/Form';
-import formDatas from "@/content/formDatas.json";
+import formDatas from "@/contents/formDatas.json";
 
 export default function Home() {
   return (

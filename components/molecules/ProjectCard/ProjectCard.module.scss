@@ -1,5 +1,24 @@
+@mixin onCardHover() { 
+    &::after, &::before {
+        opacity: 1;
+    }
+    .link {
+        img {
+            filter: brightness(.25);
+            transform: scaleX(1.035);
+        }
+    
+        h3 {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+}
 
-.card {
+
+$after-size: 500px;
+
+.card { 
     border-radius: $basic-radius;
     position: relative;
     max-width: calc(100vw - $website-padding * 2);
@@ -18,21 +37,18 @@
     }
     
     &::after{
-        background: radial-gradient(500px circle at var(--data-light-x) var(--data-light-y), $accent-color-variant, transparent 70%);
+        background: radial-gradient($after-size circle at var(--data-light-x, 50%) var(--data-light-y, 50%), $accent-color-variant, transparent 70%);
         z-index: 3;
     }
     &::before{
-        background: radial-gradient(200px circle at var(--data-light-x) var(--data-light-y), $secondary-color, transparent 70%);
+        background: radial-gradient($after-size / 2 circle at var(--data-light-x, 50%) var(--data-light-y, 50%), $secondary-color, transparent 70%);
         z-index: 1;
     }
     
-    &:is(:hover, :focus-within) {        
-        &::after, &::before {
-            opacity: 1;
-        }
-    }
+ 
 
     .link {
+        outline: none;
         display: grid;
         overflow: hidden;
         place-items: center;
@@ -65,18 +81,14 @@
                 display: block;
             }
         }
-    
-        &:is(:hover, :focus) {
-            img {
-                filter: brightness(.25);
-                transform: scaleX(1.035);
-            }
+    }
 
-            h3 {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
+    &:is(:hover, :focus-within) {
+        @include onCardHover();
+    }
+
+    @media screen and (pointer: coarse) {
+        @include onCardHover();
     }
 }
 
