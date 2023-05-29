@@ -11,7 +11,7 @@ const non_asciis:any = {
     'y': '[ýÿ]'
 };
 
-const accentsTidy = function(expression:string){
+function accentsTidy(expression:string){
     var lower = expression.toLowerCase();
     for (let i in non_asciis) {
         lower = lower.replace(new RegExp(non_asciis[i], 'g'), i)
