@@ -32,13 +32,13 @@ export default function ProjectWrapper({
 
 
     const categories:Array<string>|undefined = categorieFilters 
-        ? projects.map((project) => project.category_name).filter((item, idx, arr) => arr.indexOf(item) == idx)
+        ? projects.flatMap((project) => project.category_name).filter((item, idx, arr) => arr.indexOf(item) == idx)
         : undefined
 
 
     const handleClick = categories ? (index: number) => {    
         if ( activeCategory !== index ) {
-            setProjectList(projects.filter((project) => project.category_name === categories[index]))
+            setProjectList(projects.filter((project) => project.category_name.includes(categories[index])))
             setActiveCategory(index)
             pagination && setCurrentPage(1)
         }  else {

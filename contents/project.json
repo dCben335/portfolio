@@ -1,7 +1,7 @@
 [
     {
         "project_name": "penguin",
-        "category_name": "z",
+        "category_name": ["z"],
         "desciption": "découvrez la famille du Grand Z",
         "images" : [
             {
@@ -24,7 +24,7 @@
     },
     {
         "project_name": "portfolio",
-        "category_name": "dev",
+        "category_name": ["dev"],
         "desciption": "découvez mon porfolio",
         "images" : [
             {
@@ -63,7 +63,7 @@
     },
     {
         "project_name": "react Test",
-        "category_name": "dev",
+        "category_name": ["dev"],
         "desciption": "découvez mes test React",
         "images" : [
             {
@@ -88,7 +88,7 @@
     },
     {
         "project_name": "3",
-        "category_name": "dev",
+        "category_name": ["dev"],
         "desciption": "découvez le black_M officiel",
         "images" : [
             {
@@ -112,7 +112,7 @@
     },
     {
         "project_name": "4",
-        "category_name": "dev",
+        "category_name": ["dev"],
         "desciption": "découvez ce gros noir",
         "images" : [
             {
@@ -298,7 +298,7 @@
     },
     {
         "project_name": "shrek4",
-        "category_name": "shrek",
+        "category_name": ["shrek"],
         "desciption": "découvez ce putain de shrek",
          "images" : [
             {
@@ -321,7 +321,7 @@
     },
     {
         "project_name": "sal",
-        "category_name": "ui ux",
+        "category_name": ["ui ux"],
         "desciption": "découvez ce putain de shrek",
          "images" : [
             {
@@ -344,7 +344,7 @@
     },
     {
         "project_name": "sal",
-        "category_name": "mini-games",
+        "category_name": [["mini-games"]],
         "desciption": "découvez ce putain de shrek",
          "images" : [
             {
@@ -390,7 +390,7 @@
     },
     {
         "project_name": "Heisenberg",
-        "category_name": "breaking-bad",
+        "category_name": ["breaking-bad"],
         "desciption": "découvez ce putain de shrek",
          "images" : [
             {
@@ -413,7 +413,7 @@
     },
     {
         "project_name": "Gus",
-        "category_name": "breaking-bad",
+        "category_name": ["breaking-bad"],
         "desciption": "découvez ce putain de shrek",
          "images" : [
             {
@@ -436,7 +436,7 @@
     },
     {
         "project_name": "Mike",
-        "category_name": "breaking-bad",
+        "category_name": ["breaking-bad"],
         "desciption": "découvez ce putain de shrek",
          "images" : [
             {
@@ -459,7 +459,7 @@
     },
     {
         "project_name": "Walt JR",
-        "category_name": "breaking-bad",
+        "category_name": ["breaking-bad"],
         "desciption": "découvez ce putain de shrek",
          "images" : [
             {
@@ -482,7 +482,7 @@
     },
     {
         "project_name": "Haaland",
-        "category_name": "football",
+        "category_name": ["football"],
         "desciption": "découvez ce putain de shrek",
          "images" : [
             {
@@ -505,7 +505,7 @@
     },
     {
         "project_name": "Ngolo Kanté",
-        "category_name": "football",
+        "category_name": ["football"],
         "desciption": "découvez ce putain de shrek",
          "images" : [
             {
@@ -528,7 +528,7 @@
     },
     {
         "project_name": "Amrabat",
-        "category_name": "football",
+        "category_name": ["football"],
         "desciption": "découvez ce putain de shrek",
          "images" : [
             {
@@ -551,7 +551,7 @@
     },
     {
         "project_name": "Mike Maignant",
-        "category_name": "football",
+        "category_name": ["football"],
         "desciption": "découvez ce putain de shrek",
          "images" : [
             {
@@ -574,7 +574,7 @@
     },
     {
         "project_name": "Pipi",
-        "category_name": "caca",
+        "category_name": ["caca"],
         "desciption": "découvez ce putain de shrek",
          "images" : [
             {
@@ -597,7 +597,7 @@
     },
     {
         "project_name": "Valerie",
-        "category_name": "bebête",
+        "category_name": ["bebête"],
         "desciption": "découvez ce putain de shrek",
          "images" : [
             {
