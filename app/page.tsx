@@ -31,13 +31,15 @@ export default function Home() {
       </section>
       <section>
         <h2>My lastest Work</h2>
-        <ProjectWrapper 
-          projects={projects}
-          categorieFilters={false}
-          rowLimit={true}
-          nbOfRows={2}
-          pagination={false}
-        />
+        {projects &&
+          <ProjectWrapper 
+            projects={projects}
+            categorieFilters={false}
+            rowLimit={true}
+            nbOfRows={2}
+            pagination={false}
+          />
+        }
         <HyperLink path="/my-work">see more</HyperLink>
       </section>
       <section className={styles.contact}>

@@ -3,7 +3,6 @@
     flex-direction: column;
     gap: 0.5rem;
     width: 100%;
-    box-shadow: $basic-shadow;
 }
 
 .label > :is(input, textarea) {
@@ -12,5 +11,6 @@
     border: 0;
     padding: 0.5rem;
     border-radius: $basic-radius;
+    box-shadow: $basic-shadow;
     resize: none;
 }

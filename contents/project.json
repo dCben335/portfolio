@@ -1,7 +1,151 @@
 [
     {
+        "name": "Iliyan Stoyanov porfolio",
+        "categories": ["front"],    
+        "desciption": "J'ai réalisé ce projet afin d'aider un de mes collaborateurs : Iliyan Stoyanov. Pour la création de ce site web, j'ai suivi les wireframes qu'il avait au préalable créé ainsi qu'écouté ses directives et effectué des ajustements afin de perfectionner le site web et finalement lui produire le site qu'il souhaitait réellement.",
+        
+        "images" : [
+            {
+                "path": "/projects/iliyan/accueil.png",
+                "alt": "Z"
+            },
+            {
+                "path": "/projects/iliyan/about.png",
+                "alt": "Z"
+            },
+            {
+                "path": "/projects/iliyan/projets.png",
+                "alt": "Z"
+            },
+            {
+                "path": "/projects/iliyan/comp.png",
+                "alt": "Z"
+            },
+            {
+                "path": "/projects/iliyan/contact.png",
+                "alt": "Z"
+            },
+            {
+                "path": "/projects/iliyan/modal.png",
+                "alt": "Z"
+            }
+        ]
+    },
+    {
+        "name": "Site Dune",
+        "categories": ["front"],    
+        "desciption": "Ce projet est la création d'un site vitrine sur l'univers de Dune. Le site web finalisé sera composé de 6 slides accessibles via le burger button ou simplement au scroll. Au scroll, on retrouvera un effet de parallax. Le but de celui-ci est de développer mes compétences front-end. Pour cela, dans ce projet, j'apprends les bases du JQuery afin d'être en capacité de l'utiliser si besoin. J'utilise également de nombreuses API telles que celle de Youtube pour pouvoir placer la bande-annonce du film Dune en haut à droite lors du scroll, ou encore Leaflet afin de placer une carte dans laquelle on peut retrouver les cinémas près de notre localisation. De plus afin de récupérer les cinémas, j'intéragis avec un geojson en javascript. Finalement la dernière slide va être créée en vue.js afin d'apprendre les bases de ce Framework pour être en mesure de par la suite, créer un site entier en utilisant Vue.",
+        
+        "images" : [
+            {
+                "path": "/projects/dune/accueil.JPG",
+                "alt": "Z"
+            },
+            {
+                "path": "/projects/dune/p_deux.JPG",
+                "alt": "Z"
+            },
+            {
+                "path": "/projects/dune/p_trois.JPG",
+                "alt": "Z"
+            },
+            {
+                "path": "/projects/dune/p_quatre.JPG",
+                "alt": "Z"
+            },
+            {
+                "path": "/projects/dune/p_cinq.JPG",
+                "alt": "Z"
+            }
+        ]
+    },
+    {
+        "name": "Concours photos",
+        "categories": ["back"],    
+        "desciption": "Le but de ce projet était de créer un site de création de concours. L'utilisateur ayant la possibilité de se connecter à son compte qu'il aurait enregistré précédemment. Avec ce compte, l'utilisateur pourrait organiser et participer à des concours ainsi que voter pour ceux-ci. Ce projet m'a permis d'apprendre les bases du back-end avec l'utilisation du php, de requêtes MySQL et d'une base de données. J'ai également porgressé en CSS et j'ai apris à mieux organiser l'arborescence de mes fichiers.",
+        
+        "images" : [
+            {
+                "path": "/projects/sae203/accueil.JPG",
+                "alt": "Z"
+            },
+            {
+                "path": "/projects/sae203/connexion.JPG",
+                "alt": "Z"
+            },
+            {
+                "path": "/projects/sae203/inscription.JPG",
+                "alt": "Z"
+            },
+            {
+                "path": "/projects/sae203/bdd.JPG'",
+                "alt": "Z"
+            }
+        ]
+    },
+    {
+        "name": "My first Website",
+        "categories": ["front"],    
+        "desciption": "Ce projet est un site web réalisé pendant le     premier semestre de ma formation. L'objectif de celui-ci était l'apprentissage des bases de différents languages de programmation : HTML, CSS et JavaScript. Pour ce site web, j'avais des wireframes précis à respecter selon les différents appareils. J'ai donc réalisé ce site web en commençant par l'affichage sur smartphone portrait. Par la suite, j'ai réalisé l'affichage sur téléphone paysage, tablette portrait, tablette paysage et pc. Pour cela j'ai eu recours à des Media queries ( @media ) malgré l'utilisation d'unités responsives telles que le vh et vw. Ce projet a été pour moi, une bonne expérience. Il m'a permis d'apprendre non seulement les bases des languages précédemment cités mais aussi les normes dans ce domaine.",
+        
+        "images" : [
+            {
+                "path": "/projects/first/tablette.png",
+                "alt": "Z"
+            },
+            {
+                "path": "/projects/first/tablette_portrait.jpg",
+                "alt": "Z"
+            },
+            {
+                "path": "/projects/first/phone.jpg",
+                "alt": "Z"
+            },
+            {
+                "path": "/projects/first/burger.jpg",
+                "alt": "Z"
+            }
+        ]
+    },
+    {
+        "name": "Septieme Dommage",
+        "categories": ["CMS"],    
+        "desciption": "Ce projet est un site web réalisé durant le second semestre de ma formation. Pour ce projet de groupe, nous avons pris relation avec un commanditaire et obtenu un cahier des charges. Ce commanditaire est une association du jeu de cartes Final Fantazy cherchant à développer leur portée sur Internet. Ce projet impliquait d'abord la création d'une identité visuelle bien distincte pour notre commanditaire. Pour cela, nous avons réalisé une veille ainsi qu'un benchmark. Cette association possédant déjà une version grande et une version petite sur fond blanc de leur logo; nous les avons adaptés en créant plusieurs autres versions notamment sur fond sombre; nous avons également réglé les différents problèmes de contraste présent dans leurs premières versions de leur logo. Par la suite, nous avons réalisé un diagramme de Gantt pour organiser le développement du site. Ensuite, nous avons préparé notre environnement de travail sur wordpress, réalisé des wireframes et suivi notre plan. Finalement nous avons créé un mode d'emploi du site web afin d'aider le commanditaire à reprendre le site. Ce projet m'a permis de m'intégrer aussein d'une équipe tout en ayant une approche professionnelle",
+        
+        "images" : [
+            {
+                "path": "/projects/septieme-dommage/pc.jpeg",
+                "alt": "Z"
+            },
+            {
+                "path": "/projects/septieme-dommage/accueil.jpg.jpeg",
+                "alt": "Z"
+            },
+            {
+                "path": "/projects/septieme-dommage/blog.jpg",
+                "alt": "Z"
+            },
+            {
+                "path": "/projects/septieme-dommage/logo.jpg",
+                "alt": "Z"
+            },
+            {
+                "path": "/projects/septieme-dommage/charte_graphique.png.png",
+                "alt": "Z"
+            },
+            {
+                "path": "/projects/septieme-dommage/charte_web.png",
+                "alt": "Z"
+            },
+            {
+                "path": "/projects/septieme-dommage/mode_emploi.jpg",
+                "alt": "Z"
+            }
+        ]
+    },
+    {
         "name": "penguin",
-        "categories": ["z"],
+        "categories": ["front", "back"],
         "desciption": "découvrez la famille du Grand Z",
         "images" : [
             {
@@ -277,328 +421,6 @@
         "name": "11",
         "categories": ["dev"],
         "desciption": "découvez ce gros noir",
-         "images" : [
-            {
-                "path": "https://picsum.photos/100/300?random=1",
-                "alt": "img 1"
-            },
-            {
-                "path": "https://picsum.photos/100/300?random=2",
-                "alt": "img 2"
-            },
-            {
-                "path": "https://picsum.photos/100/300?random=3",
-                "alt": "img 3"
-            },
-            {
-                "path": "https://picsum.photos/100/300?random=4",
-                "alt": "img 4"
-            }
-        ]
-    },
-    {
-        "name": "shrek4",
-        "categories": ["shrek"],
-        "desciption": "découvez ce putain de shrek",
-         "images" : [
-            {
-                "path": "https://picsum.photos/100/300?random=1",
-                "alt": "img 1"
-            },
-            {
-                "path": "https://picsum.photos/100/300?random=2",
-                "alt": "img 2"
-            },
-            {
-                "path": "https://picsum.photos/100/300?random=3",
-                "alt": "img 3"
-            },
-            {
-                "path": "https://picsum.photos/100/300?random=4",
-                "alt": "img 4"
-            }
-        ]
-    },
-    {
-        "name": "sal",
-        "categories": ["ui ux"],
-        "desciption": "découvez ce putain de shrek",
-         "images" : [
-            {
-                "path": "https://picsum.photos/100/300?random=1",
-                "alt": "img 1"
-            },
-            {
-                "path": "https://picsum.photos/100/300?random=2",
-                "alt": "img 2"
-            },
-            {
-                "path": "https://picsum.photos/100/300?random=3",
-                "alt": "img 3"
-            },
-            {
-                "path": "https://picsum.photos/100/300?random=4",
-                "alt": "img 4"
-            }
-        ]
-    },
-    {
-        "name": "sal",
-        "categories": ["mini-games"],
-        "desciption": "découvez ce putain de shrek",
-         "images" : [
-            {
-                "path": "https://picsum.photos/100/300?random=1",
-                "alt": "img 1"
-            },
-            {
-                "path": "https://picsum.photos/100/300?random=2",
-                "alt": "img 2"
-            },
-            {
-                "path": "https://picsum.photos/100/300?random=3",
-                "alt": "img 3"
-            },
-            {
-                "path": "https://picsum.photos/100/300?random=4",
-                "alt": "img 4"
-            }
-        ]
-    },
-    {
-        "name": "Grand",
-        "categories": ["z"],
-        "desciption": "découvez ce putain de shrek",
-         "images" : [
-            {
-                "path": "https://picsum.photos/100/300?random=1",
-                "alt": "img 1"
-            },
-            {
-                "path": "https://picsum.photos/100/300?random=2",
-                "alt": "img 2"
-            },
-            {
-                "path": "https://picsum.photos/100/300?random=3",
-                "alt": "img 3"
-            },
-            {
-                "path": "https://picsum.photos/100/300?random=4",
-                "alt": "img 4"
-            }
-        ]
-    },
-    {
-        "name": "Heisenberg",
-        "categories": ["breaking-bad"],
-        "desciption": "découvez ce putain de shrek",
-         "images" : [
-            {
-                "path": "https://picsum.photos/100/300?random=1",
-                "alt": "img 1"
-            },
-            {
-                "path": "https://picsum.photos/100/300?random=2",
-                "alt": "img 2"
-            },
-            {
-                "path": "https://picsum.photos/100/300?random=3",
-                "alt": "img 3"
-            },
-            {
-                "path": "https://picsum.photos/100/300?random=4",
-                "alt": "img 4"
-            }
-        ]
-    },
-    {
-        "name": "Gus",
-        "categories": ["breaking-bad"],
-        "desciption": "découvez ce putain de shrek",
-         "images" : [
-            {
-                "path": "https://picsum.photos/100/300?random=1",
-                "alt": "img 1"
-            },
-            {
-                "path": "https://picsum.photos/100/300?random=2",
-                "alt": "img 2"
-            },
-            {
-                "path": "https://picsum.photos/100/300?random=3",
-                "alt": "img 3"
-            },
-            {
-                "path": "https://picsum.photos/100/300?random=4",
-                "alt": "img 4"
-            }
-        ]
-    },
-    {
-        "name": "Mike",
-        "categories": ["breaking-bad"],
-        "desciption": "découvez ce putain de shrek",
-         "images" : [
-            {
-                "path": "https://picsum.photos/100/300?random=1",
-                "alt": "img 1"
-            },
-            {
-                "path": "https://picsum.photos/100/300?random=2",
-                "alt": "img 2"
-            },
-            {
-                "path": "https://picsum.photos/100/300?random=3",
-                "alt": "img 3"
-            },
-            {
-                "path": "https://picsum.photos/100/300?random=4",
-                "alt": "img 4"
-            }
-        ]
-    },
-    {
-        "name": "Walt JR",
-        "categories": ["breaking-bad"],
-        "desciption": "découvez ce putain de shrek",
-         "images" : [
-            {
-                "path": "https://picsum.photos/100/300?random=1",
-                "alt": "img 1"
-            },
-            {
-                "path": "https://picsum.photos/100/300?random=2",
-                "alt": "img 2"
-            },
-            {
-                "path": "https://picsum.photos/100/300?random=3",
-                "alt": "img 3"
-            },
-            {
-                "path": "https://picsum.photos/100/300?random=4",
-                "alt": "img 4"
-            }
-        ]
-    },
-    {
-        "name": "Haaland",
-        "categories": ["football"],
-        "desciption": "découvez ce putain de shrek",
-         "images" : [
-            {
-                "path": "https://picsum.photos/100/300?random=1",
-                "alt": "img 1"
-            },
-            {
-                "path": "https://picsum.photos/100/300?random=2",
-                "alt": "img 2"
-            },
-            {
-                "path": "https://picsum.photos/100/300?random=3",
-                "alt": "img 3"
-            },
-            {
-                "path": "https://picsum.photos/100/300?random=4",
-                "alt": "img 4"
-            }
-        ]
-    },
-    {
-        "name": "Ngolo Kanté",
-        "categories": ["football"],
-        "desciption": "découvez ce putain de shrek",
-         "images" : [
-            {
-                "path": "https://picsum.photos/100/300?random=1",
-                "alt": "img 1"
-            },
-            {
-                "path": "https://picsum.photos/100/300?random=2",
-                "alt": "img 2"
-            },
-            {
-                "path": "https://picsum.photos/100/300?random=3",
-                "alt": "img 3"
-            },
-            {
-                "path": "https://picsum.photos/100/300?random=4",
-                "alt": "img 4"
-            }
-        ]
-    },
-    {
-        "name": "Amrabat",
-        "categories": ["football"],
-        "desciption": "découvez ce putain de shrek",
-         "images" : [
-            {
-                "path": "https://picsum.photos/100/300?random=1",
-                "alt": "img 1"
-            },
-            {
-                "path": "https://picsum.photos/100/300?random=2",
-                "alt": "img 2"
-            },
-            {
-                "path": "https://picsum.photos/100/300?random=3",
-                "alt": "img 3"
-            },
-            {
-                "path": "https://picsum.photos/100/300?random=4",
-                "alt": "img 4"
-            }
-        ]
-    },
-    {
-        "name": "Mike Maignant",
-        "categories": ["football"],
-        "desciption": "découvez ce putain de shrek",
-         "images" : [
-            {
-                "path": "https://picsum.photos/100/300?random=1",
-                "alt": "img 1"
-            },
-            {
-                "path": "https://picsum.photos/100/300?random=2",
-                "alt": "img 2"
-            },
-            {
-                "path": "https://picsum.photos/100/300?random=3",
-                "alt": "img 3"
-            },
-            {
-                "path": "https://picsum.photos/100/300?random=4",
-                "alt": "img 4"
-            }
-        ]
-    },
-    {
-        "name": "Pipi",
-        "categories": ["caca"],
-        "desciption": "découvez ce putain de shrek",
-         "images" : [
-            {
-                "path": "https://picsum.photos/100/300?random=1",
-                "alt": "img 1"
-            },
-            {
-                "path": "https://picsum.photos/100/300?random=2",
-                "alt": "img 2"
-            },
-            {
-                "path": "https://picsum.photos/100/300?random=3",
-                "alt": "img 3"
-            },
-            {
-                "path": "https://picsum.photos/100/300?random=4",
-                "alt": "img 4"
-            }
-        ]
-    },
-    {
-        "name": "Valerie",
-        "categories": ["bebête"],
-        "desciption": "découvez ce putain de shrek",
          "images" : [
             {
                 "path": "https://picsum.photos/100/300?random=1",

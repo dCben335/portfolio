@@ -13,7 +13,13 @@
                     width: 100%;
                     display: grid;
                     place-items: center;
-                    min-height: 35vh;
+                    
+                    img {
+                        min-height: 45vh;
+                        max-height: 70vh;
+                        object-fit: contain;
+                        
+                    }
                 }
             }
         }
