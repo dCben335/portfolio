@@ -32,13 +32,13 @@ export default function ProjectWrapper({
 
 
     const categories:Array<string>|undefined = categorieFilters 
-        ? projects.flatMap((project) => project.category_name).filter((item, idx, arr) => arr.indexOf(item) == idx)
+        ? projects.flatMap((project) => project.categories).filter((item, idx, arr) => arr.indexOf(item) == idx)
         : undefined
 
 
     const handleClick = categories ? (index: number) => {    
         if ( activeCategory !== index ) {
-            setProjectList(projects.filter((project) => project.category_name.includes(categories[index])))
+            setProjectList(projects.filter((project) => project.categories.includes(categories[index])))
             setActiveCategory(index)
             pagination && setCurrentPage(1)
         }  else {
@@ -117,12 +117,12 @@ export default function ProjectWrapper({
                     {currentProjects && currentProjects.map((project, idx) => 
                         <ProjectCard      
                             key={idx}
-                            path={`my-work/${project.project_name.split(' ').join('_')}`}
+                            path={`my-work/${project.name.split(' ').join('_')}`}
                             image={{
                                 path: project.images[0].path,
                                 alt: project.images[0].alt,
                             }}
-                            title={project.project_name}
+                            title={project.name}
                         />
                     )}  
                 </div>

@@ -1,6 +1,6 @@
 interface Project {
-    project_name: string,
-    category_name: Array<string>,
+    name: string,
+    categories: Array<string>,
     desciption: string,
     images: Array<Img>
 }

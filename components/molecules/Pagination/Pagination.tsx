@@ -25,13 +25,13 @@ export default function Pagination({
   
     return (
       <nav className={styles.pagination}>
-        <ul className='pagination'>
+        <ul>
           {pageNumbers[0] && pageNumbers.map((number) => (
-            <li key={number} className='page-item'>
+            <li key={number}>
                 <Button 
                     text={`${number}`}
                     clicked={() => paginate(number)} 
-                    active={number === activePage ? true : false}
+                    active={number === activePage}
                 />
             </li>
           ))}

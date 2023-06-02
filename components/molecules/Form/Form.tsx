@@ -8,28 +8,40 @@ import styles from "./Form.module.scss"
 
 export default function Form({
     title,
-    groupForms
+    groupForms,
+    submitLink,
 } : {
     title: string,
-    groupForms : Array<GroupForm>
+    groupForms: Array<GroupForm>,
+    submitLink: string
 }) {
     const [formDatas, setFormDatas] = useState<Object>({})
+    const [submited, setSubmited] = useState<Number>(-1)
 
     const handleChange = (event: ChangeEvent<HTMLTextAreaElement | HTMLInputElement>) => {
-        console.log(event)
+        if (event.target.value === '') return 
         setFormDatas((prev) => {
             const newDatas : {[key: string] :Object} = {...prev}
             newDatas[event.target.name] = event.target.value
             return newDatas;
         })
-        console.log(formDatas)
     }
 
-    const handleSubmit = (event : SubmitEvent) => {
+    const handleSubmit = async (event : SubmitEvent) => {
         event.preventDefault()
+        if (submited === 1) return
         if (formDatas && Object.keys(formDatas).length === groupForms.length) {
-            console.log(formDatas)
-        }
+            try {
+                await fetch(submitLink, {
+                    method: 'POST',
+                    body: JSON.stringify(formDatas),
+                })
+                setSubmited(1)
+            } catch(err) {
+                setSubmited(0)
+            }
+        } 
+        
     }
 
     return (
@@ -42,7 +54,16 @@ export default function Form({
                     changed={(e : ChangeEvent<HTMLTextAreaElement | HTMLInputElement>) => handleChange(e)}
                 />
             )}
-            <Button text="Envoyer" type="submit"/>
+            {submited === 1 ? 
+                <p className={styles.failed}>Envoi réussi</p>
+                :
+                <>
+                    <Button text="Envoyer" type="submit"/>
+                    {submited === 0 &&
+                        <p className={styles.succeeded}>Réessayer plus tard</p>
+                    }
+                </>
+            }
         </form>
     )
 }

@@ -11,26 +11,26 @@ import styles from '../../styles/modules/project.module.scss'
 export default function Page ({params} : { 
     params: {project_name : string}
 }) {
-    const [projectDatas, setProjectDatas] = useState<Project>(projects.filter((el) => 
-        accentsTidy(el.project_name.split(' ').join('_')) == params.project_name
-    )[0])
+    const projectDatas: Project = projects.filter((el) => 
+        accentsTidy(el.name.split(' ').join('_')) == params.project_name
+    )[0]
 
     return (
         <>
             { !projectDatas ? notFound() :
                 <main>
                     <section>
-                    <h1>{projectDatas.project_name}</h1>
+                    <h1>{projectDatas.name}</h1>
                     <div className={styles.grid}>          
-                        <div>
-                            {projectDatas.images &&
+                        {projectDatas.images &&
+                            <div>
                                 <Slider sliderWidth={styles.sliderWidth}>
                                     {projectDatas.images.map((image, idx) => 
                                         <img src={image.path} alt={image.alt} key={idx}/>
                                     )}
                                 </Slider>
-                            }
-                        </div>
+                            </div>
+                        }
                         <div>
                             <p>{projectDatas.desciption}</p>
                             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus, sapiente quis. Consectetur sunt expedita, illo adipisci totam magni officiis dicta consequuntur placeat. Ipsa consectetur temporibus culpa est accusantium, dicta explicabo? Voluptas dolorum ullam fuga sunt voluptatem, eligendi minus incidunt eum numquam quas, a sapiente iste cum ratione commodi quibusdam! Nisi, voluptates ex in impedit illo repellat laborum quae repudiandae facilis a dolores optio quisquam eaque nam deleniti amet. Consectetur, minima nemo tenetur rem quo veniam. Pariatur, cum corporis reiciendis ratione provident impedit sapiente doloremque odio animi, explicabo eum! Veniam odio harum provident illum modi doloremque ratione sit amet doloribus obcaecati exercitationem accusantium libero adipisci saepe corporis quo voluptatem, eum distinctio aliquid facere sequi deleniti aliquam similique error? Est inventore non asperiores earum vitae nobis eius perferendis! Voluptate vero maxime mollitia officiis obcaecati error reprehenderit similique. Impedit dicta, optio, alias error fugiat quae corporis cum, rerum minus quibusdam facilis perspiciatis aliquam laudantium officia illum. Rerum fugit, sit perferendis esse ipsa, cupiditate voluptates distinctio omnis voluptatem explicabo quae asperiores nisi praesentium similique? Reiciendis veritatis ab totam ex nobis aliquid facilis similique iure sint cumque accusantium et libero, dolorum odio? Dicta earum eaque temporibus quisquam, beatae dignissimos voluptas recusandae molestiae sequi facere quos!

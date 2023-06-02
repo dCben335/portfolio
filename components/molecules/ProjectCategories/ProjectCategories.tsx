@@ -18,13 +18,14 @@ export default function ProjectCategories({
         setOpened(!opened)
     }
 
-    const categoriesColors:Array<string>  = categories.map((el, idx) => `#${Math.floor(((idx + 1) * 0.85/categories.length) * 16777215).toString(16)}`)
+    const categoriesColors:Array<string> = categories.map((el, idx) => `#${Math.floor(((idx + 1) * 0.85/categories.length) * 16777215).toString(16)}`)
 
     return (
         <nav className={styles.categories}>
             <Button 
                 text={"filters"}
                 clicked={() => handleClick()}
+                active={activeCategory !== undefined}
             />
             <ul className={opened ? styles.opened : ''}>
                 {categories.sort().map((category, idx) => 

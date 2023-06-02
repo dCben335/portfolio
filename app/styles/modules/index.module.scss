@@ -17,6 +17,17 @@
 
 .about {
     min-height: 100vh;
+
+    div {
+        display: flex;
+        flex-wrap: wrap;
+
+        .programming_languages svg{
+            height: 5vh;
+            fill: white;
+        }
+    }
+
 }
 
 .contact {

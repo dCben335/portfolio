@@ -1,7 +1,7 @@
 [
     {
-        "project_name": "penguin",
-        "category_name": ["z"],
+        "name": "penguin",
+        "categories": ["z"],
         "desciption": "découvrez la famille du Grand Z",
         "images" : [
             {
@@ -23,8 +23,8 @@
         ]
     },
     {
-        "project_name": "portfolio",
-        "category_name": ["dev"],
+        "name": "portfolio",
+        "categories": ["dev"],
         "desciption": "découvez mon porfolio",
         "images" : [
             {
@@ -62,8 +62,8 @@
         ]
     },
     {
-        "project_name": "react Test",
-        "category_name": ["dev"],
+        "name": "react Test",
+        "categories": ["dev"],
         "desciption": "découvez mes test React",
         "images" : [
             {
@@ -87,8 +87,8 @@
 
     },
     {
-        "project_name": "3",
-        "category_name": ["dev"],
+        "name": "3",
+        "categories": ["dev"],
         "desciption": "découvez le black_M officiel",
         "images" : [
             {
@@ -111,8 +111,8 @@
 
     },
     {
-        "project_name": "4",
-        "category_name": ["dev"],
+        "name": "4",
+        "categories": ["dev"],
         "desciption": "découvez ce gros noir",
         "images" : [
             {
@@ -134,8 +134,8 @@
         ]
     },
     {
-        "project_name": "5",
-        "category_name": "dev",
+        "name": "5",
+        "categories": ["dev"],
         "desciption": "découvez mon porfolio",
         "images" : [
             {
@@ -157,8 +157,8 @@
         ]
     },
     {
-        "project_name": "6",
-        "category_name": "dev",
+        "name": "6",
+        "categories": ["dev"],
         "desciption": "découvez mes test React",
         "images" : [
             {
@@ -181,8 +181,8 @@
 
     },
     {
-        "project_name": "7",
-        "category_name": "dev",
+        "name": "7",
+        "categories": ["dev"],
         "desciption": "découvez le black_M officiel",
         "images" : [
             {
@@ -205,8 +205,8 @@
 
     },
     {
-        "project_name": "8",
-        "category_name": "dev",
+        "name": "8",
+        "categories": ["dev"],
         "desciption": "découvez ce gros noir",
         "images" : [
             {
@@ -228,8 +228,8 @@
         ]
     },
     {
-        "project_name": "9",
-        "category_name": "dev",
+        "name": "9",
+        "categories": ["dev"],
         "desciption": "découvez ce gros noir",
          "images" : [
             {
@@ -251,8 +251,8 @@
         ]
     },
     {
-        "project_name": "10",
-        "category_name": "dev",
+        "name": "10",
+        "categories": ["dev"],
         "desciption": "découvez ce gros noir",
          "images" : [
             {
@@ -274,8 +274,8 @@
         ]
     },
     {
-        "project_name": "11",
-        "category_name": "dev",
+        "name": "11",
+        "categories": ["dev"],
         "desciption": "découvez ce gros noir",
          "images" : [
             {
@@ -297,8 +297,8 @@
         ]
     },
     {
-        "project_name": "shrek4",
-        "category_name": ["shrek"],
+        "name": "shrek4",
+        "categories": ["shrek"],
         "desciption": "découvez ce putain de shrek",
          "images" : [
             {
@@ -320,8 +320,8 @@
         ]
     },
     {
-        "project_name": "sal",
-        "category_name": ["ui ux"],
+        "name": "sal",
+        "categories": ["ui ux"],
         "desciption": "découvez ce putain de shrek",
          "images" : [
             {
@@ -343,8 +343,8 @@
         ]
     },
     {
-        "project_name": "sal",
-        "category_name": [["mini-games"]],
+        "name": "sal",
+        "categories": ["mini-games"],
         "desciption": "découvez ce putain de shrek",
          "images" : [
             {
@@ -366,8 +366,8 @@
         ]
     },
     {
-        "project_name": "Grand",
-        "category_name": "z",
+        "name": "Grand",
+        "categories": ["z"],
         "desciption": "découvez ce putain de shrek",
          "images" : [
             {
@@ -389,8 +389,8 @@
         ]
     },
     {
-        "project_name": "Heisenberg",
-        "category_name": ["breaking-bad"],
+        "name": "Heisenberg",
+        "categories": ["breaking-bad"],
         "desciption": "découvez ce putain de shrek",
          "images" : [
             {
@@ -412,8 +412,8 @@
         ]
     },
     {
-        "project_name": "Gus",
-        "category_name": ["breaking-bad"],
+        "name": "Gus",
+        "categories": ["breaking-bad"],
         "desciption": "découvez ce putain de shrek",
          "images" : [
             {
@@ -435,8 +435,8 @@
         ]
     },
     {
-        "project_name": "Mike",
-        "category_name": ["breaking-bad"],
+        "name": "Mike",
+        "categories": ["breaking-bad"],
         "desciption": "découvez ce putain de shrek",
          "images" : [
             {
@@ -458,8 +458,8 @@
         ]
     },
     {
-        "project_name": "Walt JR",
-        "category_name": ["breaking-bad"],
+        "name": "Walt JR",
+        "categories": ["breaking-bad"],
         "desciption": "découvez ce putain de shrek",
          "images" : [
             {
@@ -481,8 +481,8 @@
         ]
     },
     {
-        "project_name": "Haaland",
-        "category_name": ["football"],
+        "name": "Haaland",
+        "categories": ["football"],
         "desciption": "découvez ce putain de shrek",
          "images" : [
             {
@@ -504,8 +504,8 @@
         ]
     },
     {
-        "project_name": "Ngolo Kanté",
-        "category_name": ["football"],
+        "name": "Ngolo Kanté",
+        "categories": ["football"],
         "desciption": "découvez ce putain de shrek",
          "images" : [
             {
@@ -527,8 +527,8 @@
         ]
     },
     {
-        "project_name": "Amrabat",
-        "category_name": ["football"],
+        "name": "Amrabat",
+        "categories": ["football"],
         "desciption": "découvez ce putain de shrek",
          "images" : [
             {
@@ -550,8 +550,8 @@
         ]
     },
     {
-        "project_name": "Mike Maignant",
-        "category_name": ["football"],
+        "name": "Mike Maignant",
+        "categories": ["football"],
         "desciption": "découvez ce putain de shrek",
          "images" : [
             {
@@ -573,8 +573,8 @@
         ]
     },
     {
-        "project_name": "Pipi",
-        "category_name": ["caca"],
+        "name": "Pipi",
+        "categories": ["caca"],
         "desciption": "découvez ce putain de shrek",
          "images" : [
             {
@@ -596,8 +596,8 @@
         ]
     },
     {
-        "project_name": "Valerie",
-        "category_name": ["bebête"],
+        "name": "Valerie",
+        "categories": ["bebête"],
         "desciption": "découvez ce putain de shrek",
          "images" : [
             {

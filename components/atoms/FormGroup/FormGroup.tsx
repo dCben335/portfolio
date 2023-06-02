@@ -22,10 +22,10 @@ export default function FormGroup({
                 <textarea 
                     name={groupForm.name} 
                     placeholder={groupForm.placeholder} 
+                    onChange={changed && changed}
                     cols={30} 
                     rows={10}>
                 </textarea>
-
             }
         </label>
     )

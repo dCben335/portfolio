@@ -5,6 +5,7 @@ import ThreeDText from '@/components/atoms/3dText/ThreeDText';
 import HyperLink from '@/components/atoms/HyperLink/HyperLink';
 import Form from '@/components/molecules/Form/Form';
 import formDatas from "@/contents/formDatas.json";
+import { frameworks } from '@/components/Icons/PL/PL';
 
 export default function Home() {
   return (
@@ -19,7 +20,13 @@ export default function Home() {
       </section>
       <section className={styles.about}>
         <h2>Learn About me</h2>
-
+        <div>
+          {(Object.values(frameworks) ?? []).map((framework, idx) => 
+            <div key={idx} className={styles['programming_languages']}>
+              {framework}
+            </div>
+          )}
+        </div>
         <HyperLink path="/about">know more</HyperLink>
       </section>
       <section>
@@ -39,6 +46,7 @@ export default function Home() {
           <Form 
             title='Formulaire de contact'
             groupForms={formDatas}
+            submitLink="https://eo1za6eg6grst3h.m.pipedream.net"
           />
         </div>
       </section>
