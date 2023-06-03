@@ -1,0 +1,29 @@
+.header {
+    width: 100%;
+    background: linear-gradient(to top, #131019, #050505);
+    position: relative;  
+    border-right: 1px solid $secondary-color-variant;
+
+    ul {
+        position: sticky;
+        top:50%;
+        transform: translateY(-50%);
+        display: grid;
+        place-items: center;
+
+        a {
+            transform: skewX(0);
+            max-width: 100%;
+            display: block;
+            padding: .5rem;
+            aspect-ratio: 1/1;
+            border-radius: 0;
+            
+            svg {
+                width: 100%;
+                fill: $secondary-color;
+                stroke-width: .5;
+            }
+        }
+    }
+}

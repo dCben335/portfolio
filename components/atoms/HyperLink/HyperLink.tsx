@@ -6,13 +6,15 @@ import styles from "./HyperLink.module.scss"
 
 export default function HyperLink({
     path,
-    children
+    children,
+    active,
 } : {
     path : string
     children : ReactElement | string 
+    active?: boolean
 }) {
     return (
-        <Link href={accentsTidy(path)} className={styles.hyperLink}>
+        <Link href={accentsTidy(path)} className={`${styles.hyperLink} ${active ? styles.active : '' }`}>
             {children}
         </Link> 
     )

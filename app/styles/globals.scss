@@ -13,7 +13,10 @@ body {
   background: linear-gradient(to bottom, #131019 10%, #050505);
   color: $secondary-color;
   line-height: 1.5;
+}
 
+::-webkit-scrollbar {
+  display: none;
 }
 
 main { 
@@ -28,15 +31,15 @@ h1 {
   font-size: clamp(2.25rem , 2.25rem + 3.5vw, 5rem);
   transform: skewX(7.5deg);
   line-height: 0.8;
-  padding: 1rem;
+  padding: 1rem 0;
 }
 
 h2 {
   font-size: clamp(2rem , 2rem + 2vw, 4.25rem);
   transform: skewX(7.5deg);
   line-height: 0.8;
-  padding: 1rem;
-  margin-left: 5vw;
+  padding: 1rem 0;
+  margin-left: 2vw;
 }
 
 a {

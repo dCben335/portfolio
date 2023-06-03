@@ -4,11 +4,11 @@
 
 .projectWrapper {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     padding: 1rem 0;
     gap: 1.5rem;
 
-    @media screen and (min-width: 1875px) {
+    @media screen and (min-width: 1500px) {
         & {
             grid-template-columns: repeat(4, 1fr);
         }

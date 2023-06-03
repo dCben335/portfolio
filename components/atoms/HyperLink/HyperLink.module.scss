@@ -11,12 +11,12 @@
     transform: skewX(5deg);
     transition: all .3s ease-in-out;
 
-    &:is(:active, :hover, :focus) {
+    &:is(:active, :hover, :focus, .active) {
         opacity: 1;
         color: $secondary-color;
         border-color: $secondary-color-variant;
     } 
-    &:active {
+    &:active, &.active {
         background-color: $accent-color;
     }
 }

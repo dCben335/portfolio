@@ -1,6 +1,7 @@
 import './styles/globals.scss'
-import { Inter } from 'next/font/google'
+import styles from './styles/modules/RootLayout.module.scss'
 import Header from '@/components/organisms/Header/Header'
+import { Inter } from 'next/font/google'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -16,7 +17,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={`${styles.layout} ${inter.className}`}>
         <Header />
         {children}
       

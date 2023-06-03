@@ -1,4 +1,4 @@
-$slider-width: clamp(300px, 100vw - (2 * $website-padding), 700px);
+$slider-width: clamp(280px, 100vw - (2 * $website-padding) - 50px, 700px);
 
 .project section{
    @extend .section;
