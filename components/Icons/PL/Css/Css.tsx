@@ -1,11 +1,7 @@
 export default function Css() {
     return (
         
-<svg
-   width="102.3716mm"
-   height="144.49777mm"
-   viewBox="0 0 362.73401 511.99998"
-  >
+<svg viewBox="0 0 362.73401 511.99998" >
   <g transform="translate(-193.633,-276.3622)">
     <g transform="translate(119,276.3622)">
       <polygon

@@ -1,6 +1,4 @@
-$primary-color: #070707;
 $primary-color: #0f0f0f;
-$primary-color-variant: #101010;
 $primary-color-variant: #151515;;
 
 $secondary-color: #ffffff;
@@ -15,3 +13,10 @@ $basic-radius: 5px;
 $basic-shadow: 0 0 2px $secondary-color-variant;
 
 
+.section {
+    min-height: 90vh;
+    padding-top: 5vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}

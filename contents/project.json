@@ -61,7 +61,7 @@
     },
     {
         "name": "Concours photos",
-        "categories": ["back"],    
+        "categories": ["back", "front"],    
         "desciption": "Le but de ce projet était de créer un site de création de concours. L'utilisateur ayant la possibilité de se connecter à son compte qu'il aurait enregistré précédemment. Avec ce compte, l'utilisateur pourrait organiser et participer à des concours ainsi que voter pour ceux-ci. Ce projet m'a permis d'apprendre les bases du back-end avec l'utilisation du php, de requêtes MySQL et d'une base de données. J'ai également porgressé en CSS et j'ai apris à mieux organiser l'arborescence de mes fichiers.",
         
         "images" : [
@@ -78,7 +78,7 @@
                 "alt": "Z"
             },
             {
-                "path": "/projects/sae203/bdd.JPG'",
+                "path": "/projects/sae203/bdd.JPG",
                 "alt": "Z"
             }
         ]
@@ -118,7 +118,7 @@
                 "alt": "Z"
             },
             {
-                "path": "/projects/septieme-dommage/accueil.jpg.jpeg",
+                "path": "/projects/septieme-dommage/accueil.jpg",
                 "alt": "Z"
             },
             {
@@ -130,7 +130,7 @@
                 "alt": "Z"
             },
             {
-                "path": "/projects/septieme-dommage/charte_graphique.png.png",
+                "path": "/projects/septieme-dommage/charte_graphique.png",
                 "alt": "Z"
             },
             {
@@ -257,7 +257,7 @@
     {
         "name": "4",
         "categories": ["dev"],
-        "desciption": "découvez ce gros noir",
+        "desciption": "découvez ce projet",
         "images" : [
             {
                 "path": "https://picsum.photos/100/300?random=1",
@@ -351,7 +351,7 @@
     {
         "name": "8",
         "categories": ["dev"],
-        "desciption": "découvez ce gros noir",
+        "desciption": "découvez ce projet",
         "images" : [
             {
                 "path": "https://picsum.photos/100/300?random=1",
@@ -374,7 +374,7 @@
     {
         "name": "9",
         "categories": ["dev"],
-        "desciption": "découvez ce gros noir",
+        "desciption": "découvez ce projet",
          "images" : [
             {
                 "path": "https://picsum.photos/100/300?random=1",
@@ -397,7 +397,7 @@
     {
         "name": "10",
         "categories": ["dev"],
-        "desciption": "découvez ce gros noir",
+        "desciption": "découvez ce projet",
          "images" : [
             {
                 "path": "https://picsum.photos/100/300?random=1",
@@ -420,7 +420,7 @@
     {
         "name": "11",
         "categories": ["dev"],
-        "desciption": "découvez ce gros noir",
+        "desciption": "découvez ce projet",
          "images" : [
             {
                 "path": "https://picsum.photos/100/300?random=1",

@@ -11,42 +11,47 @@ import TypeScript from "./TypeScript/TypeScript"
 import SQL from "./SQL/SQL"
 import StoryBlok from "./StoryBlok/StoryBlok"
 import TailWind from "./Tailwind/Tailwind"
-import GitHub from "./GitHub/GitHub"
 import JavaScript from "./JavaScript/JavaScript"
+import { ReactNode } from "react"
 
-const frameworks: Object = {
+const frameworks: {[key: string] : ReactNode}  = {
+    "React" : <React />,
     "Nuxt" : <Nuxt />,
     "Next" : <Next />,
-    "React" : <React />,
 }
 
-const nativeLanguages: Object = {
+const nativeLanguages: {[key: string] : ReactNode}  = {
     "Html": <Html />,
     "Css" : <Css />,
+    "JavaScript" : <JavaScript />,
     "Php" : <Php />,
     "JQuery" : <JQuery />,
-    "JavaScript" : <JavaScript />
 }
 
-const CMS: Object = {
+const CMS: {[key: string] : ReactNode}  = {
     "WordPress" : <WordPress />,
     "StoryBlok" : <StoryBlok />,
 }
 
-const PL: Object = {
-    ...frameworks,
-    ...nativeLanguages,
-    ...CMS,
-    "Sass" : <Sass />,
-    "TypeScript" : <TypeScript />,
+const others: {[key: string] : ReactNode} = {
     "SQL" : <SQL />,
+    "Sass" : <Sass />,
     "TailWind" : <TailWind />,
-    "GitHub" : <GitHub />,
+    "TypeScript" : <TypeScript />,
+
+}
+const PL: {[key: string] : ReactNode} = {
+    ...nativeLanguages,
+    ...others,
+    ...frameworks,
+    ...CMS,
 }
 
+
 export {
+    PL,
     nativeLanguages,
     frameworks,
     CMS,
-    PL,
+    others
 }

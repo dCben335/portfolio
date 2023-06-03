@@ -1,11 +1,9 @@
 export default function GitHub() {
     return (
-        <svg xmlns="http://www.w3.org/2000/svg"
-            width="240.000000pt" height="240.000000pt" viewBox="0 0 240.000000 240.000000"
-            >
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240.000000 240.000000">
 
             <g transform="translate(0.000000,240.000000) scale(0.100000,-0.100000)"
-            fill="#000000" stroke="none">
+            fill="#000000">
             <path d="M970 2301 c-305 -68 -555 -237 -727 -493 -301 -451 -241 -1056 143
             -1442 115 -116 290 -228 422 -271 49 -16 55 -16 77 -1 24 16 25 20 25 135 l0
             118 -88 -5 c-103 -5 -183 13 -231 54 -17 14 -50 62 -73 106 -38 74 -66 108

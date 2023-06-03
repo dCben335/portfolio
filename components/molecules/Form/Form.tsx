@@ -1,5 +1,5 @@
 "use client"
-import { ChangeEvent, useState } from "react";
+import { ChangeEvent, Fragment, useState } from "react";
 import { GroupForm } from "@/utils/types";
 import FormGroup from "@/components/atoms/FormGroup/FormGroup";
 import Button from "@/components/atoms/Button/Button";
@@ -11,17 +11,17 @@ export default function Form({
     groupForms,
     submitLink,
 } : {
-    title: string,
+    title?: string,
     groupForms: Array<GroupForm>,
     submitLink: string
 }) {
-    const [formDatas, setFormDatas] = useState<Object>({})
+    const [formDatas, setFormDatas] = useState<{[key: string] :Object}>({})
     const [submited, setSubmited] = useState<Number>(-1)
 
     const handleChange = (event: ChangeEvent<HTMLTextAreaElement | HTMLInputElement>) => {
         if (event.target.value === '') return 
         setFormDatas((prev) => {
-            const newDatas : {[key: string] :Object} = {...prev}
+            const newDatas = {...prev}
             newDatas[event.target.name] = event.target.value
             return newDatas;
         })
@@ -31,6 +31,7 @@ export default function Form({
         event.preventDefault()
         if (submited === 1) return
         if (formDatas && Object.keys(formDatas).length === groupForms.length) {
+            formDatas["date"] = new Date()
             try {
                 await fetch(submitLink, {
                     method: 'POST',
@@ -40,13 +41,12 @@ export default function Form({
             } catch(err) {
                 setSubmited(0)
             }
-        } 
-        
+        }         
     }
 
     return (
-        <form onSubmit={(e) => handleSubmit(e)} className={styles.form}>
-            <h3>{title}</h3>
+        <form onSubmit={(e: any) => handleSubmit(e)} className={styles.form}>
+            {title && <h3>{title}</h3>}
             {groupForms && groupForms.map((groupForm, idx) => 
                 <FormGroup 
                     key={idx}
@@ -54,15 +54,18 @@ export default function Form({
                     changed={(e : ChangeEvent<HTMLTextAreaElement | HTMLInputElement>) => handleChange(e)}
                 />
             )}
-            {submited === 1 ? 
-                <p className={styles.failed}>Envoi réussi</p>
+            {submited === -1 ?
+                <Button type="submit">Envoyer</Button>
                 :
+                submited === 1 ?
                 <>
-                    <Button text="Envoyer" type="submit"/>
-                    {submited === 0 &&
-                        <p className={styles.succeeded}>Réessayer plus tard</p>
-                    }
-                </>
+                    <div className={styles.succeeded}></div>
+                    <small>Envoi réussi</small>
+                </> :
+                <>
+                    <div className={styles.failed}></div>
+                    <small>Réessayer plus tard</small>
+                </> 
             }
         </form>
     )

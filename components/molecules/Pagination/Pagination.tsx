@@ -29,10 +29,9 @@ export default function Pagination({
           {pageNumbers[0] && pageNumbers.map((number) => (
             <li key={number}>
                 <Button 
-                    text={`${number}`}
-                    clicked={() => paginate(number)} 
-                    active={number === activePage}
-                />
+                  clicked={() => paginate(number)} 
+                  active={number === activePage}
+                >{`${number}`}</Button>
             </li>
           ))}
         </ul>

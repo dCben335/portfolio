@@ -1,14 +1,18 @@
 $slider-width: clamp(300px, 100vw - (2 * $website-padding), 700px);
 
-.grid {
-    display: grid;
-    min-height: 70vh;
-    place-items: center;
+.project section{
+   @extend .section;
 
-    @media screen and (min-width: 1400px) {
-        & {
-            grid-template-columns: $slider-width 1fr;
-            gap: 2rem;
+    .grid {
+        display: grid;
+        min-height: 70vh;
+        place-items: center;
+    
+        @media screen and (min-width: 1400px) {
+            & {
+                grid-template-columns: $slider-width 1fr;
+                gap: 2rem;
+            }
         }
     }
 }

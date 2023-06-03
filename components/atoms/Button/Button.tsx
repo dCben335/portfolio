@@ -4,15 +4,14 @@ import styles from './Button.module.scss'
 import { types } from 'util'
 
 export default function Button({
-    text, 
+    children, 
     clicked,
     active,
     activeColor,
     classes,
     type,
 } : {
-    // text: String, 
-    text: string, 
+    children?: string, 
     clicked?: Function,
     active?: boolean, 
     activeColor?: CSSProperties
@@ -27,6 +26,6 @@ export default function Button({
             onClick={() => clicked && clicked()}
             type={type ? type : 'button'}
 
-        >{ text }</button>
+        >{ children }</button>
     )
 }

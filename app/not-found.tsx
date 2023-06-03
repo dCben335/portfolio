@@ -12,14 +12,8 @@ export default function Custom404() {
         <main className={styles.notFound}>
             <h1>404</h1>
             <div>
-                <Button 
-                    text="go home"
-                    clicked={() => router.replace('')}
-                />   
-                <Button 
-                    text="go back"
-                    clicked={() => router.back()}
-                />   
+                <Button clicked={() => router.replace('')}>go home</Button>  
+                <Button clicked={() => router.back()}> go back </Button>  
 
             </div>
         </main>

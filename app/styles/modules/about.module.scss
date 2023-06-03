@@ -1,0 +1,14 @@
+.about{
+    display: grid;
+    gap: 1rem;
+
+    .programming-languages {
+        margin: 5vh 0 0 5vw;
+        display: grid;
+        gap: 5rem;
+
+        article {
+            width: clamp(300px, 80vw , 800px);
+        }
+    }
+}

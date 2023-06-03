@@ -18,27 +18,24 @@ export default function Page ({params} : {
     return (
         <>
             { !projectDatas ? notFound() :
-                <main>
+                <main className={styles.project}>
                     <section>
-                    <h1>{projectDatas.name}</h1>
-                    <div className={styles.grid}>          
-                        {projectDatas.images &&
+                        <h1>{projectDatas.name}</h1>
+                        <div className={styles.grid}>          
+                            {projectDatas.images &&
+                                <div>
+                                    <Slider sliderWidth={styles.sliderWidth}>
+                                        {projectDatas.images.map((image, idx) => 
+                                            <img src={image.path} alt={image.alt} key={idx}/>
+                                        )}
+                                    </Slider>
+                                </div>
+                            }
                             <div>
-                                <Slider sliderWidth={styles.sliderWidth}>
-                                    {projectDatas.images.map((image, idx) => 
-                                        <img src={image.path} alt={image.alt} key={idx}/>
-                                    )}
-                                </Slider>
+                                <p>{projectDatas.desciption}</p>
                             </div>
-                        }
-                        <div>
-                            <p>{projectDatas.desciption}</p>
                         </div>
-
-                    </div>
-
                     </section>
-
                 </main>
             }
         </>

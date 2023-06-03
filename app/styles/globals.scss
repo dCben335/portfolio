@@ -12,6 +12,8 @@ html {
 body {
   background: linear-gradient(to bottom, #131019 10%, #050505);
   color: $secondary-color;
+  line-height: 1.5;
+
 }
 
 main { 
@@ -35,10 +37,6 @@ h2 {
   line-height: 0.8;
   padding: 1rem;
   margin-left: 5vw;
-}
-
-p {
-  line-height: 1.5;
 }
 
 a {

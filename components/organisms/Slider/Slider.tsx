@@ -82,17 +82,16 @@ export default function Slider({
                     </div>
                 </div>
                 <nav className={styles.controls}>
-                    {currentSlide !== 0 && <Button 
-                        text={`<`}
-                        clicked={() => prevSlide()} 
-                        classes={styles.left}
-                    /> }
+                    {currentSlide !== 0 && 
+                        <Button 
+                            clicked={() => prevSlide()} 
+                            classes={styles.left}
+                        >{`<`}</Button> }
                     {currentSlide < children.length - 1 && 
                         <Button 
-                            text={`>`}
                             clicked={() => nextSlide()} 
                             classes={styles.right}
-                        />
+                        >{`>`}</Button> 
                     }
                 </nav>
             </div>
@@ -101,10 +100,9 @@ export default function Slider({
                 {children && children[0] && children.map((child, number) => (
                     <li key={number} className='page-item'>
                         <Button 
-                            text={`${number + 1}`}
                             clicked={() => toSlide(number)} 
                             active={number === currentSlide}
-                        />
+                        ></Button>
                     </li>
                 ))}
                 </ul>

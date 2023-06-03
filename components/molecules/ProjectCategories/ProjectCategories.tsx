@@ -23,19 +23,17 @@ export default function ProjectCategories({
     return (
         <nav className={styles.categories}>
             <Button 
-                text={"filters"}
                 clicked={() => handleClick()}
                 active={activeCategory !== undefined}
-            />
+            >{"filters"}</Button>
             <ul className={opened ? styles.opened : ''}>
                 {categories.sort().map((category, idx) => 
                     <Button 
                         key={idx} 
-                        text={category}
                         clicked={() => clicked && clicked(idx)} 
                         active={activeCategory === idx}
                         activeColor={{backgroundColor : categoriesColors[idx]}} 
-                    />
+                    >{category}</Button>
                 )}                  
             </ul>
         </nav>  
