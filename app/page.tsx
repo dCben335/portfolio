@@ -2,13 +2,13 @@ import styles from './styles/modules/index.module.scss';
 import projects from '@/contents/project.json';
 import ProjectWrapper from '@/components/organisms/ProjectWrapper/ProjectWrapper';
 import ThreeDText from '@/components/atoms/3dText/ThreeDText';
-import HyperLink from '@/components/atoms/HyperLink/HyperLink';
 import Form from '@/components/molecules/Form/Form';
 import formDatas from "@/contents/formDatas.json";
 import { frameworks } from '@/components/Icons/PL/PL';
 
 import ProgLanguages from '@/components/molecules/ProgLanguages/ProgLanguages';
 import TypeScript from '@/components/Icons/PL/TypeScript/TypeScript';
+import Button from '@/components/atoms/Button/Button';
 
 
 export default function Home() {
@@ -26,18 +26,18 @@ export default function Home() {
       <section className={styles.about}>
         <h2>Learn About me</h2>
         <div className={styles.grid}>
-          <article>
-            <h3>Moi</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At ullam rerum ipsum totam harum voluptate obcaecati, labore quis, nesciunt vero ab. Numquam quisquam adipisci vitae sunt ipsa ullam, ratione fugit dolorum labore. Magnam atque totam et laboriosam nihil id expedita repellendus quaerat! Harum, totam dignissimos consectetur doloribus eum dolorum qui commodi nesciunt nihil fuga eveniet nostrum, consequatur saepe voluptatibus vitae error at. Dolorum maxime aut porro itaque reiciendis, deleniti suscipit voluptatibus a eius aperiam enim architecto temporibus libero quisquam, nisi nemo incidunt ipsa cumque quia, odio alias? Aliquam incidunt, nam cumque commodi quo, eum, sequi consequatur vitae quaerat vel omnis.</p>
-          </article>
+            <figure>
+              <img src="/assets/images/me.png" alt="" />
+            </figure>
           <div>
+          <p>Bonjour, je m&apos;appelle Benoit et je suis un étudiant français passionné des métiers de l&apos;internet et du multimédia. Mon objectif est de devenir un développeur web fullstack polyvalent et créatif. Actuellement en formation en BUT Métiers de l&apos;internet et du Multimédia, je suis constamment à la recherche de nouvelles opportunités pour développer mes compétences et ma compréhension des technologies web modernes.</p>
             <ProgLanguages 
               languages={{...frameworks, "TypeScript": <TypeScript />}}
             />
           </div>
         </div>
         <div className={styles.link}>
-          <HyperLink path="/about">know more</HyperLink>
+          <Button path="/about">know more</Button>
         </div>
       </section>
       <section>
@@ -52,7 +52,7 @@ export default function Home() {
           />
         }
         <div className={styles.link}>
-          <HyperLink path="/my-work">see more</HyperLink>
+          <Button path="/my-work">see more</Button>
         </div>
       </section>
       <section className={styles.contact}>
@@ -60,12 +60,10 @@ export default function Home() {
         <div>
           <Form 
             groupForms={formDatas}
-            submitLink="https://eo1za6eg6grst3h.m.pipedream.net"
+            submitLink="https://eo1za6eg6grst3h.m.pipedream.nett"
           />
         </div>
       </section>
-
-
     </main>
   )
 }

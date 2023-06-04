@@ -49,6 +49,10 @@
         &.failed::after {
             content: '\2717';
         }
+
+        & + small {
+            text-align: center;
+        }
     }
 }
 

@@ -10,7 +10,7 @@ html {
 }
 
 body {
-  background: linear-gradient(to bottom, #131019 10%, #050505);
+  background: linear-gradient(to bottom, $gradiant-color);
   color: $secondary-color;
   line-height: 1.5;
 }
@@ -20,11 +20,9 @@ body {
 }
 
 main { 
-  min-height: 100vh;
   padding: 0 $website-padding 10vh $website-padding;
   overflow-x: hidden;
   display: grid;
-  gap: 15vh;
 }
 
 h1 {

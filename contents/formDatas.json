@@ -13,13 +13,13 @@
     },
     {
       "placeholder": "jonah.dupont@gmail.com",
-      "label": "Email",
+      "label": "email",
       "type": "email",
       "name": "email"
     },
     {
       "placeholder": "Bonjour Monsieur",
-      "label": "Votre Message",
+      "label": "message",
       "type": "textarea",
       "name": "message"
     }

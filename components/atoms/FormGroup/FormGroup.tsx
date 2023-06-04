@@ -18,13 +18,15 @@ export default function FormGroup({
                     name={groupForm.name} 
                     placeholder={groupForm.placeholder} 
                     onChange={changed && changed}
+                    required
                 /> : 
                 <textarea 
                     name={groupForm.name} 
                     placeholder={groupForm.placeholder} 
                     onChange={changed && changed}
                     cols={30} 
-                    rows={10}>
+                    rows={10}
+                    required>
                 </textarea>
             }
         </label>

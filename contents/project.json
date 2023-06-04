@@ -6,27 +6,27 @@
         
         "images" : [
             {
-                "path": "/projects/iliyan/accueil.png",
+                "path": "/assets/images/projects/iliyan/accueil.png",
                 "alt": "Z"
             },
             {
-                "path": "/projects/iliyan/about.png",
+                "path": "/assets/images/projects/iliyan/about.png",
                 "alt": "Z"
             },
             {
-                "path": "/projects/iliyan/projets.png",
+                "path": "/assets/images/projects/iliyan/projets.png",
                 "alt": "Z"
             },
             {
-                "path": "/projects/iliyan/comp.png",
+                "path": "/assets/images/projects/iliyan/comp.png",
                 "alt": "Z"
             },
             {
-                "path": "/projects/iliyan/contact.png",
+                "path": "/assets/images/projects/iliyan/contact.png",
                 "alt": "Z"
             },
             {
-                "path": "/projects/iliyan/modal.png",
+                "path": "/assets/images/projects/iliyan/modal.png",
                 "alt": "Z"
             }
         ]
@@ -38,23 +38,23 @@
         
         "images" : [
             {
-                "path": "/projects/dune/accueil.JPG",
+                "path": "/assets/images/projects/dune/accueil.JPG",
                 "alt": "Z"
             },
             {
-                "path": "/projects/dune/p_deux.JPG",
+                "path": "/assets/images/projects/dune/p_deux.JPG",
                 "alt": "Z"
             },
             {
-                "path": "/projects/dune/p_trois.JPG",
+                "path": "/assets/images/projects/dune/p_trois.JPG",
                 "alt": "Z"
             },
             {
-                "path": "/projects/dune/p_quatre.JPG",
+                "path": "/assets/images/projects/dune/p_quatre.JPG",
                 "alt": "Z"
             },
             {
-                "path": "/projects/dune/p_cinq.JPG",
+                "path": "/assets/images/projects/dune/p_cinq.JPG",
                 "alt": "Z"
             }
         ]
@@ -66,19 +66,19 @@
         
         "images" : [
             {
-                "path": "/projects/sae203/accueil.JPG",
+                "path": "/assets/images/projects/sae203/accueil.JPG",
                 "alt": "Z"
             },
             {
-                "path": "/projects/sae203/connexion.JPG",
+                "path": "/assets/images/projects/sae203/connexion.JPG",
                 "alt": "Z"
             },
             {
-                "path": "/projects/sae203/inscription.JPG",
+                "path": "/assets/images/projects/sae203/inscription.JPG",
                 "alt": "Z"
             },
             {
-                "path": "/projects/sae203/bdd.JPG",
+                "path": "/assets/images/projects/sae203/bdd.JPG",
                 "alt": "Z"
             }
         ]
@@ -90,19 +90,19 @@
         
         "images" : [
             {
-                "path": "/projects/first/tablette.png",
+                "path": "/assets/images/projects/first/tablette.png",
                 "alt": "Z"
             },
             {
-                "path": "/projects/first/tablette_portrait.jpg",
+                "path": "/assets/images/projects/first/tablette_portrait.jpg",
                 "alt": "Z"
             },
             {
-                "path": "/projects/first/phone.jpg",
+                "path": "/assets/images/projects/first/phone.jpg",
                 "alt": "Z"
             },
             {
-                "path": "/projects/first/burger.jpg",
+                "path": "/assets/images/projects/first/burger.jpg",
                 "alt": "Z"
             }
         ]
@@ -114,31 +114,31 @@
         
         "images" : [
             {
-                "path": "/projects/septieme-dommage/pc.jpeg",
+                "path": "/assets/images/projects/septieme-dommage/pc.jpeg",
                 "alt": "Z"
             },
             {
-                "path": "/projects/septieme-dommage/accueil.jpg",
+                "path": "/assets/images/projects/septieme-dommage/accueil.jpg",
                 "alt": "Z"
             },
             {
-                "path": "/projects/septieme-dommage/blog.jpg",
+                "path": "/assets/images/projects/septieme-dommage/blog.jpg",
                 "alt": "Z"
             },
             {
-                "path": "/projects/septieme-dommage/logo.jpg",
+                "path": "/assets/images/projects/septieme-dommage/logo.jpg",
                 "alt": "Z"
             },
             {
-                "path": "/projects/septieme-dommage/charte_graphique.png",
+                "path": "/assets/images/projects/septieme-dommage/charte_graphique.png",
                 "alt": "Z"
             },
             {
-                "path": "/projects/septieme-dommage/charte_web.png",
+                "path": "/assets/images/projects/septieme-dommage/charte_web.png",
                 "alt": "Z"
             },
             {
-                "path": "/projects/septieme-dommage/mode_emploi.jpg",
+                "path": "/assets/images/projects/septieme-dommage/mode_emploi.jpg",
                 "alt": "Z"
             }
         ]
@@ -149,19 +149,19 @@
         "desciption": "découvrez la famille du Grand Z",
         "images" : [
             {
-                "path": "/projects/penguin/penguin.jpg",
+                "path": "/assets/images/projects/penguin/penguin.jpg",
                 "alt": "Z"
             },
             {
-                "path": "/projects/penguin/penguin.jpg",
+                "path": "/assets/images/projects/penguin/penguin.jpg",
                 "alt": "Z"
             },
             {
-                "path": "/projects/penguin/penguin.jpg",
+                "path": "/assets/images/projects/penguin/penguin.jpg",
                 "alt": "Z"
             },
             {
-                "path": "/projects/penguin/penguin.jpg",
+                "path": "/assets/images/projects/penguin/penguin.jpg",
                 "alt": "Z"
             }
         ]

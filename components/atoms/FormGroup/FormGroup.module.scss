@@ -13,4 +13,10 @@
     border-radius: $basic-radius;
     box-shadow: $basic-shadow;
     resize: none;
+    transition: background-color .3s ease-in-out;
+
+}
+
+.label > :is(input, textarea):is(:focus-within) {
+    background-color: $primary-color;
 }

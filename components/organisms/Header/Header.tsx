@@ -1,12 +1,12 @@
 "use client"
 
 import styles from './Header.module.scss'
-import HyperLink from '@/components/atoms/HyperLink/HyperLink'
 import Home from '@/components/Icons/pages/Home/Home'
 import About from '@/components/Icons/pages/About/About'
 import Work from '@/components/Icons/pages/Work/Work'
 
 import { useSelectedLayoutSegment } from 'next/navigation'
+import Button from '@/components/atoms/Button/Button'
 
 export default function Header () {
 
@@ -34,10 +34,10 @@ export default function Header () {
             <ul>
                 {links.map((link, index) => 
                     <li key={index}>
-                        <HyperLink
-                            path={link.path === null ? '' : `/${link.path}`}
+                        <Button
+                            path={link.path === null ? '/' : `/${link.path}`}
                             active={activeSegment === link.path} 
-                        >{link.children}</HyperLink>
+                        >{link.children}</Button>
                     </li>
                 )}
             </ul>

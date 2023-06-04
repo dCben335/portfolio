@@ -64,7 +64,7 @@ export default function Form({
                 </> :
                 <>
                     <div className={styles.failed}></div>
-                    <small>Réessayer plus tard</small>
+                    <small>Une erreur est survenue, Veuillez réessayer plus tard</small>
                 </> 
             }
         </form>

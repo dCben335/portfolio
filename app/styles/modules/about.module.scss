@@ -1,9 +1,12 @@
 .about{
     @extend .section;
+    
+    @include about();
 
     .programming-languages {
-        margin: 5vh 0 0 2vw;
+        margin-top: 5vh;
         display: grid;
+        place-items: center;
         gap: 5rem;
 
         article {

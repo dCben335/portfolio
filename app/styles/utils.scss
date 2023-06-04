@@ -1,16 +1,16 @@
-$primary-color: #0f0f0f;
+$primary-color: #050505;
 $primary-color-variant: #151515;;
-
 $secondary-color: #ffffff;
 $secondary-color-variant: #ffffff26;
-
 $accent-color: rgb(123 45 195);
 $accent-color-variant: rgb(123, 45,195, .3);
 
+$gradiant-color: #131019 10%, $primary-color;
+
 $website-padding: 5vw;
 $basic-radius: 5px;
-
 $basic-shadow: 0 0 2px $secondary-color-variant;
+
 
 
 .section {
@@ -44,3 +44,45 @@ $basic-shadow: 0 0 2px $secondary-color-variant;
     }
 }
 
+
+@mixin about() {
+    .grid {
+        display: grid;
+        gap: 5vh 3vw;
+        padding: 5vh 0;
+
+        figure img {
+            border-radius: 50%;
+            aspect-ratio: 1;
+            width: clamp(250px, 80%, 310px) ;
+            margin: 0 auto;
+            display: block;
+            object-fit: cover;
+        }
+
+        & > div > p{
+            margin-bottom: 3vh;
+        }
+
+        article {
+            width: 100%;
+        }
+        
+        @media screen and (min-width: 1000px) {
+            & {
+                grid-template-columns: 1.75fr 1fr;
+                place-items: center;
+            }
+            & > div {
+                order: -1;
+            }
+            figure {
+                width: 80%;
+                
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

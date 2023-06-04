@@ -14,6 +14,7 @@
         opacity: 1;
         color: $secondary-color;
         border-color: $secondary-color-variant;
+        background-color: $primary-color;
     } 
     &.active {
         background-color: $accent-color;

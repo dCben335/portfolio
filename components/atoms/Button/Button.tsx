@@ -1,17 +1,20 @@
 
-import { ButtonHTMLAttributes, CSSProperties, DetailedHTMLProps } from 'react'
+import { CSSProperties, ReactElement } from 'react'
 import styles from './Button.module.scss'
-import { types } from 'util'
+import Link from 'next/link'
+import { accentsTidy } from '@/utils/functions'
 
 export default function Button({
     children, 
+    path,
     clicked,
     active,
     activeColor,
     classes,
     type,
 } : {
-    children?: string, 
+    children?: string | ReactElement, 
+    path?: string,
     clicked?: Function,
     active?: boolean, 
     activeColor?: CSSProperties
@@ -20,12 +23,20 @@ export default function Button({
 }) {
 
     return (
-       <button 
-            style={active && activeColor ? activeColor : {}}
-            className={`${styles.btn} ${active ? styles.active : ''} ${classes ? classes : ""}`} 
-            onClick={() => clicked && clicked()}
-            type={type ? type : 'button'}
+        <>
+        {path ? 
+            <Link href={accentsTidy(path)} className={`${styles.btn} ${active ? styles.active : '' } ${classes ? classes : ""}`}>
+                {children}
+            </Link> :
+            <button 
+                style={active && activeColor ? activeColor : {}}
+                className={`${styles.btn} ${active ? styles.active : ''} ${classes ? classes : ""}`} 
+                onClick={() => clicked && clicked()}
+                type={type ? type : 'button'}>
+                { children }
+            </button>
+            }
+        </>
 
-        >{ children }</button>
     )
 }

@@ -1,4 +1,6 @@
 .main {
+  gap: 15vh;
+
     section {
         min-height: 80vh;
         display: grid;
@@ -19,45 +21,14 @@
         }
         
         &.about {    
-            
-            .grid {
-                display: grid;
-                gap: 5vh 3vw;
-
-                & > div {
-                    display: flex;
-                    flex-wrap: wrap;
-                    align-items: center;
-                    gap: 1.5rem 3rem;
-                    align-self: flex-end;
-                    justify-content: center; 
-
-                    article {
-                        width: 100%;
-                    }
-                }
-                @media screen and (min-width: 1000px) {
-                    & {
-                        grid-template-columns: 1fr 1fr;
-                    }
-                    & > div {
-                        flex-wrap: nowrap;
-                        justify-content: flex-start;
-                        order: -1;
-                    }
-                    
-                }
-            }
-        
+            @include about();
         }
         
-        &.contact {        
-            & > div {
-                display: grid;
-                place-items: center;
-                width: clamp(300px, 80vw, 700px);
-                margin: 0 auto;
-            }
+        &.contact > div {
+            display: grid;
+            place-items: center;
+            width: clamp(300px, 80vw, 700px);
+            margin: 0 auto;
         }
 
         .link {
