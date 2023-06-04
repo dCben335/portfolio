@@ -58,6 +58,9 @@ $basic-shadow: 0 0 2px $secondary-color-variant;
             margin: 0 auto;
             display: block;
             object-fit: cover;
+            margin-top: 5px;
+            border: 1px solid #ffffff;
+            padding: 5px;
         }
 
         & > div > p{
