@@ -20,10 +20,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${styles.layout} ${inter.className}`}>
-        <Header />
-        {children}
-        <Footer classes={[styles.footer]}/>
+      <body className={`${inter.className} ${styles.layout}`}>
+          <Header />
+          {children}
+          <Footer classes={[styles.footer]}/>
       </body>
     </html>
   )

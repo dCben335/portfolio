@@ -44,7 +44,6 @@ export default function ProjectCard({
             
             const adjustedScaling = maxScaling - ((distance / 1000) * scalingFactor)
             const scale = adjustedScaling >= baseScale ? adjustedScaling : baseScale
-  
 
             setCardMouseHoverStyle({transform: `
                 perspective(${transformPorperties.perspective}px) 

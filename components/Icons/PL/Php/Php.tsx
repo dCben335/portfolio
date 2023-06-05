@@ -3,10 +3,10 @@ export default function Php() {
         <svg viewBox="0 0 711.20123 383.5975" xmlns="http://www.w3.org/2000/svg">
             <defs>
                 <radialGradient cx="0" cy="0" fx="0" fy="0" gradientTransform="matrix(363.05789,0,0,-363.05789,177.52002,256.30713)" gradientUnits="userSpaceOnUse" id="radialGradient3452" r="1" spreadMethod="pad">
-                    <stop offset="0" stop-color="#aeb2d5"/>
-                    <stop offset="0.3" stop-color="#aeb2d5"/>
-                    <stop offset="0.75" stop-color="#484c89"/>
-                    <stop offset="1" stop-color="#484c89"/>
+                    <stop offset="0" stopColor="#aeb2d5"/>
+                    <stop offset="0.3" stopColor="#aeb2d5"/>
+                    <stop offset="0.75" stopColor="#484c89"/>
+                    <stop offset="1" stopColor="#484c89"/>
                 </radialGradient> 
             </defs>
             <g transform="matrix(1.25,0,0,-1.25,-4.4,394.29875)">

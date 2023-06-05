@@ -19,6 +19,18 @@ function accentsTidy(expression:string){
     return lower;
 };
 
+async function fetching(link: string) {
+    try {
+        const response:any = await fetch(link);
+        if (!response.ok) throw Error;
+        return response.json()     
+    } catch(err) {
+        console.log(err)
+    }
+ 
+}
+
 export {
     accentsTidy,
+    fetching,
 }

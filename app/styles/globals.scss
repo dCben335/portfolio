@@ -23,6 +23,7 @@ main {
   padding: 0 $website-padding 10vh $website-padding;
   overflow-x: hidden;
   display: grid;
+  min-height: 100vh;
 }
 
 h1 {

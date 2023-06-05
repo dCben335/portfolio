@@ -1,17 +1,57 @@
+"use client"
 import styles from './styles/modules/index.module.scss';
-import projects from '@/contents/project.json';
+
 import ProjectWrapper from '@/components/organisms/ProjectWrapper/ProjectWrapper';
+import ProgLanguages from '@/components/molecules/ProgLanguages/ProgLanguages';
 import ThreeDText from '@/components/atoms/3dText/ThreeDText';
 import Form from '@/components/molecules/Form/Form';
-import formDatas from "@/contents/formDatas.json";
-import { frameworks } from '@/components/Icons/PL/PL';
-
-import ProgLanguages from '@/components/molecules/ProgLanguages/ProgLanguages';
-import TypeScript from '@/components/Icons/PL/TypeScript/TypeScript';
 import Button from '@/components/atoms/Button/Button';
 
+import { frameworks } from '@/components/Icons/PL/PL';
+import TypeScript from '@/components/Icons/PL/TypeScript/TypeScript';
+
+import { useEffect, useState } from 'react';
+import { fetching } from '@/utils/functions';
+
+const formDatas = [
+  {
+    placeholder: "Jonah",
+    label: "first name",
+    type: "text",
+    name: "firstName"
+  },
+  {
+    placeholder: "Dupont",
+    label: "last name",
+    type: "text",
+    name: "lastName"
+  },
+  {
+    placeholder: "jonah.dupont@gmail.com",
+    label: "email",
+    type: "email",
+    name: "email"
+  },
+  {
+    placeholder: "Bonjour Monsieur",
+    label: "message",
+    type: "textarea",
+    name: "message"
+  }
+]
 
 export default function Home() {
+
+
+
+  const [projects, setProject] = useState()
+
+  useEffect(() => {
+    (async function getProjects() {
+     const datas = await fetching('/assets/contents/project.json')
+      setProject(datas)
+    })()
+  }, [])
 
   return (
     <main className={styles.main}>
@@ -40,30 +80,34 @@ export default function Home() {
           <Button path="/about">know more</Button>
         </div>
       </section>
-      <section>
-        <h2>My lastest Work</h2>
-        {projects &&
-          <ProjectWrapper 
-            projects={projects}
-            categorieFilters={false}
-            rowLimit={true}
-            nbOfRows={2}
-            pagination={false}
-          />
-        }
-        <div className={styles.link}>
-          <Button path="/my-work">see more</Button>
-        </div>
-      </section>
-      <section className={styles.contact}>
-        <h2>Contact me</h2>
-        <div>
-          <Form 
-            groupForms={formDatas}
-            submitLink="https://eo1za6eg6grst3h.m.pipedream.nett"
-          />
-        </div>
-      </section>
+
+      {projects &&
+        <section>
+          <h2>My lastest Work</h2>
+            <ProjectWrapper 
+              projects={projects}
+              categorieFilters={false}
+              rowLimit={true}
+              nbOfRows={2}
+              pagination={false}
+            />
+          <div className={styles.link}>
+            <Button path="/my-work">see more</Button>
+          </div>
+        </section>
+      }
+
+      {formDatas &&
+        <section className={styles.contact}>
+          <h2>Contact me</h2>
+          <div>
+            <Form 
+              groupForms={formDatas}
+              submitLink="https://eo1za6eg6grst3h.m.pipedream.net"
+            />
+          </div>
+        </section>  
+      }
     </main>
   )
 }
