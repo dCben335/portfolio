@@ -20,6 +20,9 @@
     "typescript": "5.0.4"
   },
   "devDependencies": {
-    "sass": "^1.62.1"
+    "@cloudflare/workers-types": "^4.20230518.0",
+    "sass": "^1.62.1",
+    "vitest": "^0.31.4",
+    "wrangler": "^2.13.0"
   }
 }

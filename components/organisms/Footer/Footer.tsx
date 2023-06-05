@@ -26,7 +26,7 @@ export default function Footer({
                         <li><Link href={"/"} className={styles.link}>home</Link></li>
                         <li><Link href={"/about"} className={styles.link}>about me</Link></li>
                         <li><Link href={"/my-work"} className={styles.link}>my work</Link></li>
-                        <li><Link href={"/conditions-generales-utilisation"} className={styles.link}>conditions générales d'utilisation</Link></li>
+                        <li><Link href={"/conditions-generales-utilisation"} className={styles.link}>conditions générales d&apos;utilisation</Link></li>
                         <li><Link href={"/politique-de-confidentialite"} className={styles.link}>politique de confidentialité</Link></li>
                     </ul>
                 </nav>
