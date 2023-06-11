@@ -19,13 +19,8 @@ export default function Home() {
 
   useEffect(() => {
     (async function getProjects() {
-      
-      const projectDatas = await fetching('/assets/contents/project.json')
-      setProject(projectDatas)
-
-      const forms = await fetching('/assets/contents/formDatas.json')
-      setFormDatas(forms)
-
+      setProject(await fetching('/assets/contents/project.json'))
+      setFormDatas(await fetching('/assets/contents/formDatas.json'))
     })()
   }, [])
 
@@ -36,17 +31,17 @@ export default function Home() {
           <span>Bonjour, je suis </span>
           <ThreeDText text='Benoît' smaller={false}/>
           <br />
-          <span className={styles.subtitle}><ThreeDText text='Full stack' smaller={true}/> developer Junior</span>
+          <span className={styles.subtitle}><ThreeDText text='Full stack' smaller={true} /> developer Junior</span>
         </h1>
       </section>
       <section className={styles.about}>
-        <h2>Learn About me</h2>
+        <h2>Qui je suis</h2>
         <div className={styles.grid}>
-            <figure>
-              <img src="/assets/images/me.png" alt="" />
-            </figure>
+          <figure>
+            <img src="/assets/images/me.png" alt="" />
+          </figure>
           <div>
-          <p>Bonjour, je m&apos;appelle Benoit et je suis un étudiant français passionné des métiers de l&apos;internet et du multimédia. Mon objectif est de devenir un développeur web fullstack polyvalent et créatif. Actuellement en formation en BUT Métiers de l&apos;internet et du Multimédia, je suis constamment à la recherche de nouvelles opportunités pour développer mes compétences et ma compréhension des technologies web modernes.</p>
+            <p>Bonjour, je m&apos;appelle Benoit et je suis un étudiant français passionné des métiers de l&apos;internet et du multimédia. Mon objectif est de devenir un développeur web fullstack polyvalent et créatif. Actuellement en formation en BUT Métiers de l&apos;internet et du Multimédia, je suis constamment à la recherche de nouvelles opportunités pour développer mes compétences et ma compréhension des technologies web modernes.</p>
             <ProgLanguages 
               languages={{...frameworks, "TypeScript": <TypeScript />}}
             />

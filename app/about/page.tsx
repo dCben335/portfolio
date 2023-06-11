@@ -36,9 +36,7 @@ export default function About() {
 
     useEffect(() => {
       (async function getProjects() {
-        
-        const skillDatas = await fetching('/assets/contents/skills.json')
-        setSkills(skillDatas)
+        setSkills(await fetching('/assets/contents/skills.json'))
       })()
     }, [])
 

@@ -13,8 +13,7 @@ export default function Page () {
 
     useEffect(() => {
       (async function getProjects() {
-       const datas = await fetching('/assets/contents/project.json')
-        setProject(datas)
+        setProject(await fetching('/assets/contents/project.json'))
       })()
     }, [])
 
