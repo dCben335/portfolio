@@ -14,11 +14,10 @@
                     display: grid;
                     place-items: center;
                     
-                    img {
+                    & > * {
                         min-height: 45vh;
-                        max-height: 65vh;
+                        max-height: 60vh;
                         object-fit: contain;
-                        
                     }
                 }
             }

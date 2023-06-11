@@ -50,6 +50,7 @@ $after-size: 500px;
         overflow: hidden;
         place-items: center;
         position: relative;
+        border-radius: inherit;
         margin: 1.5px;
         z-index: 2;
 
@@ -57,7 +58,7 @@ $after-size: 500px;
             width: 100%;
             aspect-ratio: 16/9;
             object-fit: cover;
-            border: inherit;
+            border-radius: inherit;
             pointer-events: none;
             transform-origin: center;
             transition: 

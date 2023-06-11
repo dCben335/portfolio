@@ -7,11 +7,11 @@ export default function About() {
 
     const programmingLanguages = [
         {
-            title:"basic languages",
+            title:"langages basiques",
             languages: nativeLanguages,
         },
         {
-            title:"additional languages",
+            title:"langages additionnels",
             languages: others,
         },
         {
@@ -28,13 +28,13 @@ export default function About() {
         <main className={styles.about}>
             <section>
                 <h1>
-                    <span>About </span>
-                    <ThreeDText text='me' smaller={true} />
+                    <span>A propos de </span>
+                    <ThreeDText text='moi' smaller={true} />
                 </h1>
 
                 <div className={styles.grid}>
                     <figure>
-                        <img src="/assets/images/me.png" alt="" />
+                        <img src="/assets/images/me.png" alt="me" />
                     </figure>
                     <div>
                         <p> Bonjour, je m&apos;appelle Benoit et je suis un étudiant français passionné des métiers de l&apos;internet et du multimédia. Mon objectif est de devenir un développeur web fullstack polyvalent et créatif. Actuellement en formation en BUT Métiers de l&apos;internet et du Multimédia, je suis constamment à la recherche de nouvelles opportunités pour développer mes compétences et ma compréhension des technologies web modernes.
@@ -50,7 +50,7 @@ export default function About() {
             </section>
         {programmingLanguages && 
             <section>
-                <h2>My progamming languages</h2>
+                <h2>Mes langages de programmation</h2>
                 <div className={styles["programming-languages"]}>
                     {programmingLanguages.map((programmingLanguage, idx) => 
                         <ProgLanguages 

@@ -61,7 +61,7 @@ export default function Slider({
             const test = setInterval(() => {
                 currentSlide < children.length - 1 ? nextSlide(): toSlide(0);
                 setAuto(auto + 1);
-            }, 3000);
+            }, 5000);
             return () => clearInterval(test);
         } 
     }, [auto])

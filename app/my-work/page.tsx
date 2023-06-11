@@ -24,8 +24,8 @@ export default function Page () {
                 {projects &&
                 <>
                     <h1>
-                        <span>My </span>
-                        <ThreeDText text='Work' smaller={false}/>
+                        <span>Mes </span>
+                        <ThreeDText text='Projets' smaller={false}/>
                     </h1>
                     <ProjectWrapper 
                         projects={projects}

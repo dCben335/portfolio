@@ -1,442 +1,434 @@
 [
     {
-        "name": "Iliyan Stoyanov porfolio",
-        "categories": ["front"],    
-        "desciption": "J'ai réalisé ce projet afin d'aider un de mes collaborateurs : Iliyan Stoyanov. Pour la création de ce site web, j'ai suivi les wireframes qu'il avait au préalable créé ainsi qu'écouté ses directives et effectué des ajustements afin de perfectionner le site web et finalement lui produire le site qu'il souhaitait réellement.",
-        
+        "name": "Iota-Solutions",
+        "categories": ["Développer", "Entreprendre"],    
+        "desciption": "Durant mon stage, j'ai réalisé ce projet en utilisant la technologie Nuxt3 combinée au Headless CMS Storyblok. L'objectif majeur était de concevoir un site web à la fois performant et facilement modifiable. Grâce à l'utilisation de Nuxt3, qui offre un rendu côté serveur et une gestion efficace des ressources, j'ai pu garantir une expérience utilisateur fluide et agréable. L'intégration du Headless CMS Storyblok a facilité la gestion du contenu en permettant à n'importe qui de mettre à jour et de modifier facilement le site via une interface visuelle intuitive. Cette approche a permis à l'équipe d'Iota Solutions de garder le contrôle sur le contenu tout en offrant une flexibilité maximale pour les futures modifications. En ce qui concerne le design, j'ai travaillé en étroite collaboration avec l'équipe d'Iota Solutions pour reprendre en grande partie l'esthétisme de leur site existant. J'ai respecté leur charte graphique tout en apportant des ajustements nécessaires pour répondre aux objectifs spécifiques du projet. Le résultat final est un site web grandement optimisé, réactif et facile à gérer, qui reflète fidèlement les exigences techniques et esthétiques d'Iota Solutions. Ce projet a été une occasion pour moi de mettre en pratique mes compétences en développement web tout en répondant aux besoins spécifiques de l'entreprise.",
         "images" : [
             {
-                "path": "/assets/images/projects/iliyan/accueil.png",
-                "alt": "Z"
+                "path": "/assets/images/projects/iota-solutions/1.JPG",
+                "alt": "Image du projet"
             },
             {
-                "path": "/assets/images/projects/iliyan/about.png",
-                "alt": "Z"
+                "path": "/assets/images/projects/iota-solutions/2.JPG",
+                "alt": "Image du projet"
             },
             {
-                "path": "/assets/images/projects/iliyan/projets.png",
-                "alt": "Z"
+                "path": "/assets/images/projects/iota-solutions/3.JPG",
+                "alt": "Image du projet"
             },
             {
-                "path": "/assets/images/projects/iliyan/comp.png",
-                "alt": "Z"
+                "path": "/assets/images/projects/iota-solutions/4.JPG",
+                "alt": "Image du projet"
             },
             {
-                "path": "/assets/images/projects/iliyan/contact.png",
-                "alt": "Z"
+                "path": "/assets/images/projects/iota-solutions/5.JPG",
+                "alt": "Image du projet"
             },
             {
-                "path": "/assets/images/projects/iliyan/modal.png",
-                "alt": "Z"
+                "path": "/assets/images/projects/iota-solutions/6.JPG",
+                "alt": "Image du projet"
+            },
+            {
+                "path": "/assets/images/projects/iota-solutions/7.JPG",
+                "alt": "Image du projet"
+            },
+            {
+                "path": "/assets/images/projects/iota-solutions/8.JPG",
+                "alt": "Image du projet"
+            }
+        ]
+    },
+    {
+        "name": "Andre-delorme",
+        "categories": ["Développer", "Entreprendre"],    
+        "desciption": "",
+        "images" : [
+            {
+                "path": "/assets/images/projects/andre-delorme/1.JPG",
+                "alt": "Image du projet"
+            },
+            {
+                "path": "/assets/images/projects/andre-delorme/2.JPG",
+                "alt": "Image du projet"
+            },
+            {
+                "path": "/assets/images/projects/andre-delorme/3.JPG",
+                "alt": "Image du projet"
+            },
+            {
+                "path": "/assets/images/projects/andre-delorme/4.JPG",
+                "alt": "Image du projet"
+            },
+            {
+                "path": "/assets/images/projects/andre-delorme/5.JPG",
+                "alt": "Image du projet"
+            },
+            {
+                "path": "/assets/images/projects/andre-delorme/6.JPG",
+                "alt": "Image du projet"
+            },
+            {
+                "path": "/assets/images/projects/andre-delorme/7.JPG",
+                "alt": "Image du projet"
+            },
+            {
+                "path": "/assets/images/projects/andre-delorme/8.JPG",
+                "alt": "Image du projet"
+            }
+        ]
+    },
+    {
+        "name": "Bacchus-dijon",
+        "categories": ["Développer", "Entreprendre"],    
+        "desciption": "",
+        "images" : [
+            {
+                "path": "/assets/images/projects/bacchus-dijon/1.JPG",
+                "alt": "Image du projet"
+            },
+            {
+                "path": "/assets/images/projects/bacchus-dijon/2.JPG",
+                "alt": "Image du projet"
+            },
+            {
+                "path": "/assets/images/projects/bacchus-dijon/3.JPG",
+                "alt": "Image du projet"
+            },
+            {
+                "path": "/assets/images/projects/bacchus-dijon/4.JPG",
+                "alt": "Image du projet"
+            },
+            {
+                "path": "/assets/images/projects/bacchus-dijon/5.JPG",
+                "alt": "Image du projet"
+            },
+            {
+                "path": "/assets/images/projects/bacchus-dijon/6.JPG",
+                "alt": "Image du projet"
+            },
+            {
+                "path": "/assets/images/projects/bacchus-dijon/7.JPG",
+                "alt": "Image du projet"
+            },
+            {
+                "path": "/assets/images/projects/bacchus-dijon/8.JPG",
+                "alt": "Image du projet"
+            }
+        ]
+    },
+    {
+        "name": "My Study Room",
+        "categories": ["Concevoir", "Comprendre"],    
+        "desciption": "https://www.figma.com/proto/LoSFGjy8ymMPzVuF1rckf1/My-Study-room?node-id=1-4&scaling=scale-down&page-id=0%3A1&starting-point-node-id=1%3A4&show-proto-sidebar=1",
+        "images" : [
+            {
+                "path": "/assets/images/projects/my-study-room/1.JPG",
+                "alt": "Image du projet"
+            },
+            {
+                "path": "/assets/images/projects/my-study-room/2.JPG",
+                "alt": "Image du projet"
+            },
+            {
+                "path": "/assets/images/projects/my-study-room/3.JPG",
+                "alt": "Image du projet"
+            },
+            {
+                "path": "/assets/images/projects/my-study-room/4.JPG",
+                "alt": "Image du projet"
+            },
+            {
+                "path": "/assets/images/projects/my-study-room/5.JPG",
+                "alt": "Image du projet"
+            },
+            {
+                "path": "/assets/images/projects/my-study-room/6.JPG",
+                "alt": "Image du projet"
+            },
+            {
+                "path": "/assets/images/projects/my-study-room/7.JPG",
+                "alt": "Image du projet"
+            },
+            {
+                "path": "/assets/images/projects/my-study-room/8.JPG",
+                "alt": "Image du projet"
+            },
+            {
+                "path": "/assets/images/projects/my-study-room/9.JPG",
+                "alt": "Image du projet"
+            },
+            {
+                "path": "/assets/images/projects/my-study-room/10.JPG",
+                "alt": "Image du projet"
+            },
+            {
+                "path": "/assets/images/projects/my-study-room/11.JPG",
+                "alt": "Image du projet"
+            },
+            {
+                "path": "/assets/images/projects/my-study-room/12.JPG",
+                "alt": "Image du projet"
+            },
+            {
+                "path": "/assets/images/projects/my-study-room/13.JPG",
+                "alt": "Image du projet"
+            },
+            {
+                "path": "/assets/images/projects/my-study-room/14.JPG",
+                "alt": "Image du projet"
+            },
+            {
+                "path": "/assets/images/projects/my-study-room/15.JPG",
+                "alt": "Image du projet"
+            },
+            {
+                "path": "/assets/images/projects/my-study-room/16.JPG",
+                "alt": "Image du projet"
+            }
+        ]
+    },
+    {
+        "name": "Sherlock Event",
+        "categories": ["Développer", "Exprimer", "Concevoir"],    
+        "desciption": "Le projet consiste en l'organisation et la communication d'un événement fictif sur le personnage de Sherlock Holmes prévu pour le 2 juin 2023 sur le campus de l'université de Dijon. Ce projet s'est déroulé en groupe, et nous avons été mené à concevoir des visuels attrayants et impactants pour promouvoir l'événement. On a créé des exemples de posts sur les réseaux sociaux, des lettres d'invitations pour les VIP et le public cible, des posters intrigants. Notre objectif était de capturer l'essence de Sherlock Holmes et de susciter l'enthousiasme chez les fans en utilisant des éléments visuels percutants. On a veillé à ce que tous les visuels créés soient en harmonie avec cette identité, en utilisant des couleurs, des typographies et des éléments graphiques spécifiques. Cela a permis de maintenir une cohérence visuelle tout au long de la communication et de renforcer la reconnaissance de l'événement. Nous avons également utilisé un diagramme de Gantt afin de détailler les étapes de notre plan de communication. Enfin, j'ai réaliser un site web dédié à l'événement, permettant aux participants d'acheter leurs tickets driectement en ligne. Ce site offre une interface conviviale et intuitive, fournissant toutes les informations essentielles sur l'événement, les horaires, les tarifs et les activités proposées. Ce projet m'a permis de mettre en pratique mes compétences en gestion de projet, en création visuelle et en développement web",
+        "images" : [
+            {
+                "path": "/assets/images/projects/sherlock/1.JPG",
+                "alt": "Image du projet"
+            },
+            {
+                "path": "/assets/images/projects/sherlock/2.JPG",
+                "alt": "Image du projet"
+            },
+            {
+                "path": "/assets/images/projects/sherlock/3.JPG",
+                "alt": "Image du projet"
+            },
+            {
+                "path": "/assets/images/projects/sherlock/4.JPG",
+                "alt": "Image du projet"
+            },
+            {
+                "path": "/assets/images/projects/sherlock/5.JPG",
+                "alt": "Image du projet"
+            },
+            {
+                "path": "/assets/images/projects/sherlock/6.JPG",
+                "alt": "Image du projet"
+            },
+            {
+                "path": "/assets/images/projects/sherlock/7.JPG",
+                "alt": "Image du projet"
+            },
+            {
+                "path": "/assets/images/projects/sherlock/8.JPG",
+                "alt": "Image du projet"
+            },
+            {
+                "path": "/assets/images/projects/sherlock/9.JPG",
+                "alt": "Image du projet"
+            },
+            {
+                "path": "/assets/images/projects/sherlock/10.JPG",
+                "alt": "Image du projet"
+            },
+            {
+                "path": "/assets/images/projects/sherlock/11.JPG",
+                "alt": "Image du projet"
+            },
+            {
+                "path": "/assets/images/projects/sherlock/12.JPG",
+                "alt": "Image du projet"
+            },
+            {
+                "path": "/assets/images/projects/sherlock/13.JPG",
+                "alt": "Image du projet"
+            },
+            {
+                "path": "/assets/images/projects/sherlock/14.JPG",
+                "alt": "Image du projet"
+            },
+            {
+                "path": "/assets/images/projects/sherlock/15.JPG",
+                "alt": "Image du projet"
+            },
+            {
+                "path": "/assets/images/projects/sherlock/16.JPG",
+                "alt": "Image du projet"
+            }
+        ]
+    },
+    {
+        "name": "Visualisation de données",
+        "categories": ["Développer", "Exprimer", "Comprendre"],    
+        "desciption": "Le projet consiste à analyser un jeu de données qui représente les réponses d'un sondage mené auprès de la promotion MMI1 de l'IUT de Dijon. Les étudiants de première année ont été interrogés sur différents aspects de leurs goûts et de leur personnalité, notamment leurs goûts musicaux, cinématographiques, vestimentaires, scolaires, leur utilisation du temps libre, ainsi que quelques questions personnelles générales. L'objectif de ce projet était de dresser le portrait de la promotion MMI1 en utilisant les données recueillies. J'ai alors dû choisir des questions spécifiques à partir du jeu de données. J'ai ensuite produit différentes visualisations de données telles que des graphiques des pour illustrer mes analyses. Le projet s'est déroulé en plusieurs phases. Dans un premier temps, j'ai travailler en groupe pour définir les questions auxquelles répondre avec le jeu de données. Ensuite, j'ai réaliser un site web en utilisant la librairie plotly.js avec pour objectif de communiquer des faits intéressants sur la promotion MMI1.", 
+        "images" : [
+            {
+                "path": "/assets/images/projects/visualisation-de-donnees/1.JPG",
+                "alt": "Image du projet"
+            },
+            {
+                "path": "/assets/images/projects/visualisation-de-donnees/2.JPG",
+                "alt": "Image du projet"
+            },
+            {
+                "path": "/assets/images/projects/visualisation-de-donnees/3.JPG",
+                "alt": "Image du projet"
+            },
+            {
+                "path": "/assets/images/projects/visualisation-de-donnees/4.JPG",
+                "alt": "Image du projet"
+            },
+            {
+                "path": "/assets/images/projects/visualisation-de-donnees/5.JPG",
+                "alt": "Image du projet"
+            },
+            {
+                "path": "/assets/images/projects/visualisation-de-donnees/6.JPG",
+                "alt": "Image du projet"
+            },
+            {
+                "path": "/assets/images/projects/visualisation-de-donnees/7.JPG",
+                "alt": "Image du projet"
             }
         ]
     },
     {
         "name": "Site Dune",
-        "categories": ["front"],    
-        "desciption": "Ce projet est la création d'un site vitrine sur l'univers de Dune. Le site web finalisé sera composé de 6 slides accessibles via le burger button ou simplement au scroll. Au scroll, on retrouvera un effet de parallax. Le but de celui-ci est de développer mes compétences front-end. Pour cela, dans ce projet, j'apprends les bases du JQuery afin d'être en capacité de l'utiliser si besoin. J'utilise également de nombreuses API telles que celle de Youtube pour pouvoir placer la bande-annonce du film Dune en haut à droite lors du scroll, ou encore Leaflet afin de placer une carte dans laquelle on peut retrouver les cinémas près de notre localisation. De plus afin de récupérer les cinémas, j'intéragis avec un geojson en javascript. Finalement la dernière slide va être créée en vue.js afin d'apprendre les bases de ce Framework pour être en mesure de par la suite, créer un site entier en utilisant Vue.",
-        
+        "categories": ["Développer"],    
+        "desciption": "Ce projet consiste en la création d'un site vitrine sur l'univers de Dune. Le site web finalisé est composé de 6 slides accessibles via le burger button ou simplement au scroll. Au scroll, on retrouve un effet de parallaxe. Le but de ce projet était de développer mes compétences front-end. Pour cela, dans ce projet, j'ai appris les bases du JQuery afin d'être en capacité de l'utiliser si besoin. J'ai également utilisé de nombreuses API telles que celle de Youtube pour pouvoir placer la bande-annonce du film Dune en haut à droite lors du scroll, ou encore Leaflet afin de placer une carte dans laquelle on pouvait retrouver les cinémas près de notre localisation. De plus, afin de récupérer les cinémas, j'ai interagi avec un geojson en javascript. Finalement, la dernière slide a été créée en vue.js afin d'apprendre les bases de ce Framework pour être en mesure de, par la suite, créer un site entier en utilisant Vue.js.", 
         "images" : [
             {
                 "path": "/assets/images/projects/dune/accueil.JPG",
-                "alt": "Z"
+                "alt": "Image du projet"
             },
             {
                 "path": "/assets/images/projects/dune/p_deux.JPG",
-                "alt": "Z"
+                "alt": "Image du projet"
             },
             {
                 "path": "/assets/images/projects/dune/p_trois.JPG",
-                "alt": "Z"
+                "alt": "Image du projet"
             },
             {
                 "path": "/assets/images/projects/dune/p_quatre.JPG",
-                "alt": "Z"
+                "alt": "Image du projet"
             },
             {
                 "path": "/assets/images/projects/dune/p_cinq.JPG",
-                "alt": "Z"
+                "alt": "Image du projet"
             }
         ]
     },
     {
-        "name": "Concours photos",
-        "categories": ["back", "front"],    
-        "desciption": "Le but de ce projet était de créer un site de création de concours. L'utilisateur ayant la possibilité de se connecter à son compte qu'il aurait enregistré précédemment. Avec ce compte, l'utilisateur pourrait organiser et participer à des concours ainsi que voter pour ceux-ci. Ce projet m'a permis d'apprendre les bases du back-end avec l'utilisation du php, de requêtes MySQL et d'une base de données. J'ai également porgressé en CSS et j'ai apris à mieux organiser l'arborescence de mes fichiers.",
-        
+        "name": "Iliyan Stoyanov porfolio",
+        "categories": ["Développer"],    
+        "desciption": "J'ai réalisé ce projet afin d'aider un de mes collaborateurs : Iliyan Stoyanov. Pour la création de ce site web, j'ai suivi les wireframes qu'il avait au préalable créé ainsi qu'écouté ses directives et effectué des ajustements afin de perfectionner le site web et finalement lui produire le site qu'il souhaitait réellement.",   
         "images" : [
             {
-                "path": "/assets/images/projects/sae203/accueil.JPG",
-                "alt": "Z"
+                "path": "/assets/images/projects/iliyan/accueil.png",
+                "alt": "Image du projet"
             },
             {
-                "path": "/assets/images/projects/sae203/connexion.JPG",
-                "alt": "Z"
+                "path": "/assets/images/projects/iliyan/about.png",
+                "alt": "Image du projet"
             },
             {
-                "path": "/assets/images/projects/sae203/inscription.JPG",
-                "alt": "Z"
+                "path": "/assets/images/projects/iliyan/projets.png",
+                "alt": "Image du projet"
             },
             {
-                "path": "/assets/images/projects/sae203/bdd.JPG",
-                "alt": "Z"
-            }
-        ]
-    },
-    {
-        "name": "My first Website",
-        "categories": ["front"],    
-        "desciption": "Ce projet est un site web réalisé pendant le     premier semestre de ma formation. L'objectif de celui-ci était l'apprentissage des bases de différents languages de programmation : HTML, CSS et JavaScript. Pour ce site web, j'avais des wireframes précis à respecter selon les différents appareils. J'ai donc réalisé ce site web en commençant par l'affichage sur smartphone portrait. Par la suite, j'ai réalisé l'affichage sur téléphone paysage, tablette portrait, tablette paysage et pc. Pour cela j'ai eu recours à des Media queries ( @media ) malgré l'utilisation d'unités responsives telles que le vh et vw. Ce projet a été pour moi, une bonne expérience. Il m'a permis d'apprendre non seulement les bases des languages précédemment cités mais aussi les normes dans ce domaine.",
-        
-        "images" : [
-            {
-                "path": "/assets/images/projects/first/tablette.png",
-                "alt": "Z"
+                "path": "/assets/images/projects/iliyan/comp.png",
+                "alt": "Image du projet"
             },
             {
-                "path": "/assets/images/projects/first/tablette_portrait.jpg",
-                "alt": "Z"
+                "path": "/assets/images/projects/iliyan/contact.png",
+                "alt": "Image du projet"
             },
             {
-                "path": "/assets/images/projects/first/phone.jpg",
-                "alt": "Z"
-            },
-            {
-                "path": "/assets/images/projects/first/burger.jpg",
-                "alt": "Z"
+                "path": "/assets/images/projects/iliyan/modal.png",
+                "alt": "Image du projet"
             }
         ]
     },
     {
         "name": "Septieme Dommage",
-        "categories": ["CMS"],    
+        "categories": ["Développer"],    
         "desciption": "Ce projet est un site web réalisé durant le second semestre de ma formation. Pour ce projet de groupe, nous avons pris relation avec un commanditaire et obtenu un cahier des charges. Ce commanditaire est une association du jeu de cartes Final Fantazy cherchant à développer leur portée sur Internet. Ce projet impliquait d'abord la création d'une identité visuelle bien distincte pour notre commanditaire. Pour cela, nous avons réalisé une veille ainsi qu'un benchmark. Cette association possédant déjà une version grande et une version petite sur fond blanc de leur logo; nous les avons adaptés en créant plusieurs autres versions notamment sur fond sombre; nous avons également réglé les différents problèmes de contraste présent dans leurs premières versions de leur logo. Par la suite, nous avons réalisé un diagramme de Gantt pour organiser le développement du site. Ensuite, nous avons préparé notre environnement de travail sur wordpress, réalisé des wireframes et suivi notre plan. Finalement nous avons créé un mode d'emploi du site web afin d'aider le commanditaire à reprendre le site. Ce projet m'a permis de m'intégrer aussein d'une équipe tout en ayant une approche professionnelle",
-        
         "images" : [
             {
                 "path": "/assets/images/projects/septieme-dommage/pc.jpeg",
-                "alt": "Z"
+                "alt": "Image du projet"
             },
             {
                 "path": "/assets/images/projects/septieme-dommage/accueil.jpg",
-                "alt": "Z"
+                "alt": "Image du projet"
             },
             {
                 "path": "/assets/images/projects/septieme-dommage/blog.jpg",
-                "alt": "Z"
+                "alt": "Image du projet"
             },
             {
                 "path": "/assets/images/projects/septieme-dommage/logo.jpg",
-                "alt": "Z"
+                "alt": "Image du projet"
             },
             {
                 "path": "/assets/images/projects/septieme-dommage/charte_graphique.png",
-                "alt": "Z"
+                "alt": "Image du projet"
             },
             {
                 "path": "/assets/images/projects/septieme-dommage/charte_web.png",
-                "alt": "Z"
+                "alt": "Image du projet"
             },
             {
                 "path": "/assets/images/projects/septieme-dommage/mode_emploi.jpg",
-                "alt": "Z"
+                "alt": "Image du projet"
             }
         ]
     },
     {
-        "name": "penguin",
-        "categories": ["front", "back"],
-        "desciption": "découvrez la famille du Grand Z",
+        "name": "Concours photos",
+        "categories": ["Développer"],    
+        "desciption": "Le but de ce projet était de créer un site de création de concours. L'utilisateur ayant la possibilité de se connecter à son compte qu'il aurait enregistré précédemment. Avec ce compte, l'utilisateur pourrait organiser et participer à des concours ainsi que voter pour ceux-ci. Ce projet m'a permis d'apprendre les bases du back-end avec l'utilisation du php, de requêtes MySQL et d'une base de données. J'ai également porgressé en CSS et j'ai apris à mieux organiser l'arborescence de mes fichiers.",
         "images" : [
             {
-                "path": "/assets/images/projects/penguin/penguin.jpg",
-                "alt": "Z"
+                "path": "/assets/images/projects/sae203/accueil.JPG",
+                "alt": "Image du projet"
             },
             {
-                "path": "/assets/images/projects/penguin/penguin.jpg",
-                "alt": "Z"
+                "path": "/assets/images/projects/sae203/connexion.JPG",
+                "alt": "Image du projet"
             },
             {
-                "path": "/assets/images/projects/penguin/penguin.jpg",
-                "alt": "Z"
+                "path": "/assets/images/projects/sae203/inscription.JPG",
+                "alt": "Image du projet"
             },
             {
-                "path": "/assets/images/projects/penguin/penguin.jpg",
-                "alt": "Z"
+                "path": "/assets/images/projects/sae203/bdd.JPG",
+                "alt": "Image du projet"
             }
         ]
     },
     {
-        "name": "portfolio",
-        "categories": ["dev"],
-        "desciption": "découvez mon porfolio",
+        "name": "Mon premier site Web",
+        "categories": ["Développer"],    
+        "desciption": "Ce projet est un site web réalisé pendant le     premier semestre de ma formation. L'objectif de celui-ci était l'apprentissage des bases de différents languages de programmation : HTML, CSS et JavaScript. Pour ce site web, j'avais des wireframes précis à respecter selon les différents appareils. J'ai donc réalisé ce site web en commençant par l'affichage sur smartphone portrait. Par la suite, j'ai réalisé l'affichage sur téléphone paysage, tablette portrait, tablette paysage et pc. Pour cela j'ai eu recours à des Media queries ( @media ) malgré l'utilisation d'unités responsives telles que le vh et vw. Ce projet a été pour moi, une bonne expérience. Il m'a permis d'apprendre non seulement les bases des languages précédemment cités mais aussi les normes dans ce domaine.",
         "images" : [
             {
-                "path": "https://picsum.photos/100/300?random=1",
-                "alt": "img 1"
+                "path": "/assets/images/projects/first/tablette.png",
+                "alt": "Image du projet"
             },
             {
-                "path": "https://picsum.photos/100/300?random=2",
-                "alt": "img 2"
+                "path": "/assets/images/projects/first/tablette_portrait.jpg",
+                "alt": "Image du projet"
             },
             {
-                "path": "https://picsum.photos/100/300?random=3",
-                "alt": "img 3"
+                "path": "/assets/images/projects/first/phone.jpg",
+                "alt": "Image du projet"
             },
             {
-                "path": "https://picsum.photos/100/300?random=4",
-                "alt": "img 4"
-            },
-            {
-                "path": "https://picsum.photos/100/300?random=5",
-                "alt": "img 5"
-            },
-            {
-                "path": "https://picsum.photos/100/300?random=6",
-                "alt": "img 6"
-            },
-            {
-                "path": "https://picsum.photos/100/300?random=7",
-                "alt": "img 7"
-            },
-            {
-                "path": "https://picsum.photos/100/300?random=8",
-                "alt": "img 8"
-            }
-        ]
-    },
-    {
-        "name": "react Test",
-        "categories": ["dev"],
-        "desciption": "découvez mes test React",
-        "images" : [
-            {
-                "path": "https://picsum.photos/100/300?random=1",
-                "alt": "img 1"
-            },
-            {
-                "path": "https://picsum.photos/100/300?random=2",
-                "alt": "img 2"
-            },
-            {
-                "path": "https://picsum.photos/100/300?random=3",
-                "alt": "img 3"
-            },
-            {
-                "path": "https://picsum.photos/100/300?random=4",
-                "alt": "img 4"
-            }
-        ]
-        
-
-    },
-    {
-        "name": "3",
-        "categories": ["dev"],
-        "desciption": "découvez le black_M officiel",
-        "images" : [
-            {
-                "path": "https://picsum.photos/100/300?random=1",
-                "alt": "img 1"
-            },
-            {
-                "path": "https://picsum.photos/100/300?random=2",
-                "alt": "img 2"
-            },
-            {
-                "path": "https://picsum.photos/100/300?random=3",
-                "alt": "img 3"
-            },
-            {
-                "path": "https://picsum.photos/100/300?random=4",
-                "alt": "img 4"
-            }
-        ]
-
-    },
-    {
-        "name": "4",
-        "categories": ["dev"],
-        "desciption": "découvez ce projet",
-        "images" : [
-            {
-                "path": "https://picsum.photos/100/300?random=1",
-                "alt": "img 1"
-            },
-            {
-                "path": "https://picsum.photos/100/300?random=2",
-                "alt": "img 2"
-            },
-            {
-                "path": "https://picsum.photos/100/300?random=3",
-                "alt": "img 3"
-            },
-            {
-                "path": "https://picsum.photos/100/300?random=4",
-                "alt": "img 4"
-            }
-        ]
-    },
-    {
-        "name": "5",
-        "categories": ["dev"],
-        "desciption": "découvez mon porfolio",
-        "images" : [
-            {
-                "path": "https://picsum.photos/100/300?random=1",
-                "alt": "img 1"
-            },
-            {
-                "path": "https://picsum.photos/100/300?random=2",
-                "alt": "img 2"
-            },
-            {
-                "path": "https://picsum.photos/100/300?random=3",
-                "alt": "img 3"
-            },
-            {
-                "path": "https://picsum.photos/100/300?random=4",
-                "alt": "img 4"
-            }
-        ]
-    },
-    {
-        "name": "6",
-        "categories": ["dev"],
-        "desciption": "découvez mes test React",
-        "images" : [
-            {
-                "path": "https://picsum.photos/100/300?random=1",
-                "alt": "img 1"
-            },
-            {
-                "path": "https://picsum.photos/100/300?random=2",
-                "alt": "img 2"
-            },
-            {
-                "path": "https://picsum.photos/100/300?random=3",
-                "alt": "img 3"
-            },
-            {
-                "path": "https://picsum.photos/100/300?random=4",
-                "alt": "img 4"
-            }
-        ]
-
-    },
-    {
-        "name": "7",
-        "categories": ["dev"],
-        "desciption": "découvez le black_M officiel",
-        "images" : [
-            {
-                "path": "https://picsum.photos/100/300?random=1",
-                "alt": "img 1"
-            },
-            {
-                "path": "https://picsum.photos/100/300?random=2",
-                "alt": "img 2"
-            },
-            {
-                "path": "https://picsum.photos/100/300?random=3",
-                "alt": "img 3"
-            },
-            {
-                "path": "https://picsum.photos/100/300?random=4",
-                "alt": "img 4"
-            }
-        ]
-
-    },
-    {
-        "name": "8",
-        "categories": ["dev"],
-        "desciption": "découvez ce projet",
-        "images" : [
-            {
-                "path": "https://picsum.photos/100/300?random=1",
-                "alt": "img 1"
-            },
-            {
-                "path": "https://picsum.photos/100/300?random=2",
-                "alt": "img 2"
-            },
-            {
-                "path": "https://picsum.photos/100/300?random=3",
-                "alt": "img 3"
-            },
-            {
-                "path": "https://picsum.photos/100/300?random=4",
-                "alt": "img 4"
-            }
-        ]
-    },
-    {
-        "name": "9",
-        "categories": ["dev"],
-        "desciption": "découvez ce projet",
-         "images" : [
-            {
-                "path": "https://picsum.photos/100/300?random=1",
-                "alt": "img 1"
-            },
-            {
-                "path": "https://picsum.photos/100/300?random=2",
-                "alt": "img 2"
-            },
-            {
-                "path": "https://picsum.photos/100/300?random=3",
-                "alt": "img 3"
-            },
-            {
-                "path": "https://picsum.photos/100/300?random=4",
-                "alt": "img 4"
-            }
-        ]
-    },
-    {
-        "name": "10",
-        "categories": ["dev"],
-        "desciption": "découvez ce projet",
-         "images" : [
-            {
-                "path": "https://picsum.photos/100/300?random=1",
-                "alt": "img 1"
-            },
-            {
-                "path": "https://picsum.photos/100/300?random=2",
-                "alt": "img 2"
-            },
-            {
-                "path": "https://picsum.photos/100/300?random=3",
-                "alt": "img 3"
-            },
-            {
-                "path": "https://picsum.photos/100/300?random=4",
-                "alt": "img 4"
-            }
-        ]
-    },
-    {
-        "name": "11",
-        "categories": ["dev"],
-        "desciption": "découvez ce projet",
-         "images" : [
-            {
-                "path": "https://picsum.photos/100/300?random=1",
-                "alt": "img 1"
-            },
-            {
-                "path": "https://picsum.photos/100/300?random=2",
-                "alt": "img 2"
-            },
-            {
-                "path": "https://picsum.photos/100/300?random=3",
-                "alt": "img 3"
-            },
-            {
-                "path": "https://picsum.photos/100/300?random=4",
-                "alt": "img 4"
+                "path": "/assets/images/projects/first/burger.jpg",
+                "alt": "Image du projet"
             }
         ]
     }

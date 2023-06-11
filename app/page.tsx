@@ -57,10 +57,10 @@ export default function Home() {
     <main className={styles.main}>
       <section className={styles.hero}>
         <h1>
-          <span>Hi, I&apos;m </span>
-          <ThreeDText text='Ben' smaller={false}/>
+          <span>Bonjour, je suis </span>
+          <ThreeDText text='Benoît' smaller={false}/>
           <br />
-          <span className={styles.subtitle}>A <ThreeDText text='Full stack' smaller={true}/> developer</span>
+          <span className={styles.subtitle}><ThreeDText text='Full stack' smaller={true}/> developer Junior</span>
         </h1>
       </section>
       <section className={styles.about}>
@@ -77,13 +77,13 @@ export default function Home() {
           </div>
         </div>
         <div className={styles.link}>
-          <Button path="/about">know more</Button>
+          <Button path="/about">voir plus</Button>
         </div>
       </section>
 
       {projects &&
         <section>
-          <h2>My lastest Work</h2>
+          <h2>Mes derniers Projets</h2>
             <ProjectWrapper 
               projects={projects}
               categorieFilters={false}
@@ -92,14 +92,14 @@ export default function Home() {
               pagination={false}
             />
           <div className={styles.link}>
-            <Button path="/my-work">see more</Button>
+            <Button path="/my-work">voir plus</Button>
           </div>
         </section>
       }
 
       {formDatas &&
         <section className={styles.contact}>
-          <h2>Contact me</h2>
+          <h2>Contactez moi</h2>
           <div>
             <Form 
               groupForms={formDatas}
