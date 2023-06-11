@@ -28,12 +28,13 @@ export default function ProjectCategories({
             >{"filters"}</Button>
             <ul className={opened ? styles.opened : ''}>
                 {categories.sort().map((category, idx) => 
+                <li key={idx}>
                     <Button 
-                        key={idx} 
                         clicked={() => clicked && clicked(idx)} 
                         active={activeCategory === idx}
                         activeColor={{backgroundColor : categoriesColors[idx]}} 
                     >{category}</Button>
+                </li>
                 )}                  
             </ul>
         </nav>  

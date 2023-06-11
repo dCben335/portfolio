@@ -1,28 +1,46 @@
+"use client"
+import styles from '../styles/modules/about.module.scss'
+import { useEffect, useState } from "react";
+
 import ThreeDText from "@/components/atoms/3dText/ThreeDText";
 import ProgLanguages from "@/components/molecules/ProgLanguages/ProgLanguages";
+import Skills from '@/components/molecules/Skills/Skills';
+
 import { frameworks, CMS, nativeLanguages, others } from "@/components/Icons/PL/PL";
-import styles from '../styles/modules/about.module.scss'
+import { fetching } from "@/utils/functions";
+
+
+const programmingLanguages = [
+    {
+        title:"langages basiques",
+        languages: nativeLanguages,
+    },
+    {
+        title:"langages additionnels",
+        languages: others,
+    },
+    {
+        title:"frameworks",
+        languages: frameworks
+    },
+    {
+        title: "CMS",
+        languages: CMS,
+    }
+]
 
 export default function About() {
 
-    const programmingLanguages = [
-        {
-            title:"langages basiques",
-            languages: nativeLanguages,
-        },
-        {
-            title:"langages additionnels",
-            languages: others,
-        },
-        {
-            title:"frameworks",
-            languages: frameworks
-        },
-        {
-            title: "CMS",
-            languages: CMS,
-        }
-    ]
+    const [skills, setSkills] = useState<{ [key: string]: Array<{[key: string] : string}>}>()
+
+
+    useEffect(() => {
+      (async function getProjects() {
+        
+        const skillDatas = await fetching('/assets/contents/skills.json')
+        setSkills(skillDatas)
+      })()
+    }, [])
 
     return (
         <main className={styles.about}>
@@ -60,6 +78,15 @@ export default function About() {
                     )}
                 </div>
             </section>
+        }
+        {skills && 
+            <section>
+                <h2>Mon portfolio de compétences</h2>
+                <div className={styles["programming-languages"]}>
+                    <Skills skills={skills}/>
+
+                </div>
+            </section> 
         }
         </main>
     )

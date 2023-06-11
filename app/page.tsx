@@ -13,43 +13,19 @@ import TypeScript from '@/components/Icons/PL/TypeScript/TypeScript';
 import { useEffect, useState } from 'react';
 import { fetching } from '@/utils/functions';
 
-const formDatas = [
-  {
-    placeholder: "Jonah",
-    label: "first name",
-    type: "text",
-    name: "firstName"
-  },
-  {
-    placeholder: "Dupont",
-    label: "last name",
-    type: "text",
-    name: "lastName"
-  },
-  {
-    placeholder: "jonah.dupont@gmail.com",
-    label: "email",
-    type: "email",
-    name: "email"
-  },
-  {
-    placeholder: "Bonjour Monsieur",
-    label: "message",
-    type: "textarea",
-    name: "message"
-  }
-]
-
 export default function Home() {
-
-
-
   const [projects, setProject] = useState()
+  const [formDatas, setFormDatas] = useState()
 
   useEffect(() => {
     (async function getProjects() {
-     const datas = await fetching('/assets/contents/project.json')
-      setProject(datas)
+      
+      const projectDatas = await fetching('/assets/contents/project.json')
+      setProject(projectDatas)
+
+      const forms = await fetching('/assets/contents/formDatas.json')
+      setFormDatas(forms)
+
     })()
   }, [])
 

@@ -13,4 +13,8 @@
             width: clamp(300px, 80vw , 800px);
         }
     }
+
+    section:last-child {
+        margin-top: 5vh;
+    }
 }

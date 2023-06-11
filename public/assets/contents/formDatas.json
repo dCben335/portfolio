@@ -1,13 +1,13 @@
 [
     {
       "placeholder": "Jonah",
-      "label": "first name",
+      "label": "prénom",
       "type": "text",
       "name": "firstName"
     },
     {
       "placeholder": "Dupont",
-      "label": "last name",
+      "label": "nom",
       "type": "text",
       "name": "lastName"
     },
