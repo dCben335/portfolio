@@ -8,6 +8,14 @@ import { fetching } from '@/utils/functions';
 import { accentsTidy } from '@/utils/functions';
 import { Project }  from '@/utils/types'
 
+export async function generateStaticParams() {
+    const posts = await fetch('/assets/contents/project.json').then((res) => res.json());
+   
+    return posts.map((post:Project) => ({
+        project_name : post.name,
+    }));
+  }
+
 export default function Page ({params} : { 
     params: {project_name : string}
 }) {

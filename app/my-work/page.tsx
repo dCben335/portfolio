@@ -6,6 +6,7 @@ import styles from '../styles/modules/my-work.module.scss'
 import { useEffect, useState } from 'react';
 import { fetching } from '@/utils/functions';
 
+
 export default function Page () {
     
     const [projects, setProject] = useState()

@@ -1,0 +1,26 @@
+[
+    {
+      "placeholder": "Jonah",
+      "label": "first name",
+      "type": "text",
+      "name": "firstName"
+    },
+    {
+      "placeholder": "Dupont",
+      "label": "last name",
+      "type": "text",
+      "name": "lastName"
+    },
+    {
+      "placeholder": "jonah.dupont@gmail.com",
+      "label": "email",
+      "type": "email",
+      "name": "email"
+    },
+    {
+      "placeholder": "Bonjour Monsieur",
+      "label": "message",
+      "type": "textarea",
+      "name": "message"
+    }
+]

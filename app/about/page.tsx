@@ -3,7 +3,6 @@ import ProgLanguages from "@/components/molecules/ProgLanguages/ProgLanguages";
 import { frameworks, CMS, nativeLanguages, others } from "@/components/Icons/PL/PL";
 import styles from '../styles/modules/about.module.scss'
 
-
 export default function About() {
 
     const programmingLanguages = [
