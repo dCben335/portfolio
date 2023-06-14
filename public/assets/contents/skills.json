@@ -10,9 +10,9 @@
         {
             "ac" : "AC21.02",
             "label": "Auditer un site web, une marque ou un service, en termes de trafic et de référencement",
-            "status": "",
-            "description" : "",
-            "link": "R306"
+            "status": "Acquis",
+            "description" : "Dans la ressource R306, j'ai ...",
+            "link": "/my-work/audit_rocketleague.com"
         },
         {
             "ac" : "AC21.03",
@@ -20,19 +20,20 @@
             "status": "Acquis",
             "description" : "",
             "link": "/my-work/visualisation_de_donnees"
+
         },
         {
             "ac" : "AC21.04",
             "label": "Identifier et décrire les parcours client à partir d’enquêtes de terrain",
-            "status": "",
-            "description" : "",
-            "link": "R403 Moreira"
+            "status": "Acquis",
+            "description" : "Dans le Projet MyStudyRoom supervisé par Monsieur Labille, j'ai réalisé, en collaboration avec mon groupe (Antoine Bonneau et Maxence Morot), un User Journey Map afin de déterminer les parcours d'un utilisateur cible sur un site de recherche de colocation.",
+            "link": "/my-work/my_study_room"
         },
         {
             "ac" : "AC21.05",
             "label": "Cartographier les expériences utilisateur : points de contact, points de friction et de satisfaction, carte d’empathie.",
             "status": "Acquis",
-            "description" : "",
+            "description" : "Dans la continuité du projet MyStudyRoom, mon groupe et moi avons réalisé une Empathy Map d'une personne recherchant une colocation. J'ai alors carthographier les différents phases de réflexion de la personne cible en repertoriant les différent points de frictions tout en les associants à la satisfaction de cette personne (User Journey Map).",
             "link": "/my-work/my_study_room"
         }
     ],
@@ -42,14 +43,14 @@
             "ac" : "AC22.01",
             "label": "Co-concevoir un produit ou un service (proposition de valeur, fonctionnalités...)",
             "status": "Acquis",
-            "description" : "",
+            "description" : "Dans le projet MyStudyRoom, suite aux études réalisées sur un utilisateur cible; j'ai déduit que l'application de recherche de colocation ne devrait pas seulement s'arrêter à cette option. C'est alors que, avec mon groupe, j'ai pu concevoir des services additionnels qui pourraient servir quotidiennement aux personnes étant en colocation comme l'utilisation comme la mise en place d'un calendrier afin de, par exemple, se répartir les taches ménajaires à effectuer pendant les jours, semaines à venir.",
             "link": "/my-work/my_study_room"
         },
         {
             "ac" : "AC22.02",
             "label": "Produire une recommandation ergonomique à partir des tests utilisateurs (sur système fonctionnel, prototype ou maquette interactive)",
             "status": "Acquis",
-            "description" : "",
+            "description" : "J'ai été mené à concevoir une maquette de l'application de colocation MyStudyRoom en groupe lors du projet de ce même nom. Le prototype interactif à été conçu sous un aspect d'atomic desing, en partant de la création des plus petits éléments (atomes) jusqu'à la création des plus gros (molécules, organismes). La conception de cette maquette interactive est tout d'abord basé sur les études préalablement réalisées dont notamment les benchmarks des sites concurents afin de produire une expérience optimal aux futures utilisateurs grâce à son ergonomie",
             "link": "/my-work/my_study_room"
         },
         {
@@ -72,31 +73,31 @@
         {
             "ac" : "AC23.01",
             "label": "Produire un écrit journalistique sourcé et documenté",
-            "status": "",
-            "description" : "",
-            "link": "R307 moissonier"
+            "status": "En cours d'acquisition",
+            "description" : "R307 moissonier",
+            "link": "my-work/communication_partenariat_militaire"
         },
         
         {
             "ac" : "AC23.02",
             "label": "Définir une iconographie (illustrations, photographies, vidéos)",
-            "status": "",
+            "status": "En cours d'acquisition",
             "description" : "",
-            "link": "R308 R304"
+            "link": "/my-work/court_metrage_viralite"
         },
         {
             "ac" : "AC23.03",
             "label": "Créer et décliner une identité visuelle (charte graphique)",
-            "status": "",
+            "status": "Acquis",
             "description" : "",
             "link": "SAE 208"
         },
         {
             "ac" : "AC23.04",
             "label": "Imaginer, écrire et scénariser en vue d’une communication multimédia ou transmédia",
-            "status": "",
+            "status": "En cours d'acquisition",
             "description" : "",
-            "link": "R308 R304"
+            "link": "/my-work/court_metrage_viralite"
         },
         {
             "ac" : "AC23.05",
@@ -132,7 +133,7 @@
         {
             "ac" : "AC24.03",
             "label": "Intégrer, produire ou développer des interactions riches ou des dispositifs interactifs",
-            "status": "",
+            "status": "Acquis",
             "description" : "",
             "link": "R312"
         },
@@ -157,36 +158,43 @@
             "ac" : "AC25.01",
             "label": "Gérer un projet avec une méthode d’amélioration continue par exemple une méthode agile",
             "status": "Acquis",
-            "description" : "",
+            "description" : "Lors de mon stage et plus précisemment le projet de refonte du site de l'entreprise, j'ai développer le site avec des technologie et méthodes permettant un amélioration continue du site. En effet, à l'aide de la technologie Nuxt, j'ai été capable de réaliser des composants comme des 'cards', des boutons, des carrousels qui sont réutilisable très facilement via l'interface du Headless CMS StoryBlook permettant à n'importe qui de créer des pages sur le sites. Le site est de ce fait très flexible et peut être modifier n'importe quand par un membre de la société Iota Solutions et ce, sans devoir retoucher au code du site.",
             "link": "/my-work/iota-solutions"
         },
         {
             "ac" : "AC25.02",
             "label": "Cartographier un écosystème (identification des acteurs, synthèse des propositions de valeur)",
-            "status": "",
+            "status": "En cours d'acquisition",
             "description" : "",
-            "link": ""
+            "link": "/my-work/iota-solutions"
         },
         {
             "ac" : "AC25.03",
             "label": "Initier la constitution d’un réseau professionnel",
             "status": "Acquis",
-            "description" : "",
+            "description" : "Pendant le quatrième semestre de ma formation, j'ai effectué un stage de 3 mois dans l'entreprise Iota-Solutions située à Couternon, proche de Dijon. J'ai alors pu commencer à constituer un réseau professionnel en faisant la rencontre de M.Ollivier Romain et M.Imbeaux Alix en travaillant quotidiennement avec eux pendant mon stage.",
             "link": "/my-work/iota-solutions"
         },
         {
             "ac" : "AC25.04",
             "label": "Collaborer au sein des organisations",
             "status": "Acquis",
-            "description" : "",
-            "link": "/my-work/iota-solutions"
+            "description" : "Lors des différents de mon stage, j'ai été amené à collaborer avec les autres membres de la société Iota-Solutions dont notemenent mon maitre de stage et responsable technique, Monsieur Ollivier Romain. Nous nous sommes réparties les tâches et avons régulièrement rendu compte de nos avancées, de notre travail effectué afin d'éviter des imcopréhensions et problèmes. J'ai également été conduis à collaborer avec les clients en leurs expliquant les avancées des différents projets durant les réunions et en m'adptant par la suite à leurs demandes.",
+            "link": "/my-work/andre-delorme"
+        },
+        {
+            "ac" : "AC25.05",
+            "label": "Maitriser les codes des productions écrites et orales professionnelles",
+            "status": "En cours d'acquisition",
+            "description" : "Pendant mon stage, j'ai eu l'opportunité de participer à des réunions clients, j'ai alors communiqué oralement des avancés des projets à nos clients et ce, avec du vocabulaire et tenue professionnelles. J'ai également pu leurs proposer quelques changements/améliorations possibles sur le site en cours de production.",
+            "link": "/my-work/andre-delorme"
         },
         {
             "ac" : "AC25.06",
             "label": "Prendre en compte les contraintes juridiques",
-            "status": "Acquis",
-            "description" : "",
-            "link": "/my-work/iota-solutions"
+            "status": "En cours d'acquisition",
+            "description" : "Lors du développemet du E-commerce de l'entreprise Andre-delorme pendant mon stage, j'ai dû prendre en compte des différentes contraintres juridiques. En effet, j'ai par exemple été ammené à utiliser des images de bouteils de vins qui sont libres de droit dans la perspectives que l'entreprise client puissent les utiliser si besoin (ce qui a été le cas). J'ai également été conduis à créer un bandeau relatif à la livraison dans la page produit.",
+            "link": "/my-work/andre-delorme"
         }
     ]
 }

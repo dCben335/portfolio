@@ -1,0 +1,47 @@
+.square {
+    border-radius: $basic-radius;
+    padding: .7rem;
+    border: 1px solid $secondary-color-variant;
+    box-shadow: $basic-shadow;
+    opacity: .3;
+    transform: skewX(5deg);
+    aspect-ratio: 1;
+    display: block;
+    transition: all .2s ease-in-out;
+    position: relative;
+
+    &::after {
+        content: attr(data-text);
+        position: absolute;
+        bottom: 100%;
+        left: 0;
+        opacity: 0;
+        white-space: nowrap;
+        padding: .5rem .2rem ;
+    }
+
+    &.active {
+        opacity: 0.75;
+        color: $secondary-color;
+        border-color: $secondary-color;
+
+        &:is(:hover, :focus)  {
+            opacity: 1;
+
+            &::after {
+                transform: scale(1.2);
+            }
+        }
+    }
+    
+    &:is(:hover, :focus) {
+        opacity: 1;
+        color: $secondary-color;
+        border-color: $secondary-color;
+
+        &::after {
+            opacity: 1;
+        }
+    } 
+}
+

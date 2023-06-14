@@ -12,6 +12,7 @@ export default function Button({
     activeColor,
     classes,
     type,
+    blank
 } : {
     children?: string | ReactElement, 
     path?: string,
@@ -20,20 +21,25 @@ export default function Button({
     activeColor?: CSSProperties
     classes?: string
     type?: "button" | "reset" | "submit" | undefined
+    blank?: boolean
 }) {
 
     return (
         <>
         {path ? 
-            <Link href={accentsTidy(path)} className={`${styles.btn} ${active ? styles.active : '' } ${classes ? classes : ""}`}>
+            <Link 
+                href={accentsTidy(path)}
+                className={`${styles.btn} ${active ? styles.active : '' } ${classes ? classes : ""}`}
+                target={blank ? '_blank' : ''}>
                 {children}
-            </Link> :
+            </Link>
+            :
             <button 
                 style={active && activeColor ? activeColor : {}}
                 className={`${styles.btn} ${active ? styles.active : ''} ${classes ? classes : ""}`} 
                 onClick={() => clicked && clicked()}
                 type={type ? type : 'button'}>
-                { children }
+                {children}
             </button>
             }
         </>
