@@ -7,8 +7,6 @@ module.exports = {
     prependData: `@import "/app/styles/utils.scss";`
   },
 
-  output: "export",
-
   images: {
     remotePatterns: [
       {
