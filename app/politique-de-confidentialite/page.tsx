@@ -7,7 +7,7 @@ export default function PolitiqueDeConfidentialite() {
             <section>
                 <h1>Politique de Confidentialité</h1>
                 <div>
-                    <p><em>En vigueur au 04/06/20203</em></p>
+                    <p><em>En vigueur depuis 2023</em></p>
                 </div>
                 <div className={styles.grid}>
                     <article>
