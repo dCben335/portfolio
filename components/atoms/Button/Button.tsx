@@ -12,7 +12,8 @@ export default function Button({
     activeColor,
     classes,
     type,
-    blank
+    blank,
+    ariaLabel,
 } : {
     children?: string | ReactElement, 
     path?: string,
@@ -22,6 +23,7 @@ export default function Button({
     classes?: string
     type?: "button" | "reset" | "submit" | undefined
     blank?: boolean
+    ariaLabel?: string
 }) {
 
     return (
@@ -30,7 +32,8 @@ export default function Button({
             <Link 
                 href={accentsTidy(path)}
                 className={`${styles.btn} ${active ? styles.active : '' } ${classes ? classes : ""}`}
-                target={blank ? '_blank' : ''}>
+                target={blank ? '_blank' : ''}
+                aria-label={ariaLabel}>
                 {children}
             </Link>
             :
@@ -38,7 +41,8 @@ export default function Button({
                 style={active && activeColor ? activeColor : {}}
                 className={`${styles.btn} ${active ? styles.active : ''} ${classes ? classes : ""}`} 
                 onClick={() => clicked && clicked()}
-                type={type ? type : 'button'}>
+                type={type ? type : 'button'}
+                aria-label={ariaLabel}>
                 {children}
             </button>
             }

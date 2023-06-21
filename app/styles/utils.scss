@@ -54,7 +54,7 @@ $basic-shadow: 0 0 2px $secondary-color-variant;
         figure img {
             border-radius: 50%;
             aspect-ratio: 1;
-            width: clamp(250px, 80%, 310px) ;
+            width: clamp(min(250px, 100%), 80%, 310px) ;
             margin: 0 auto;
             display: block;
             object-fit: cover;

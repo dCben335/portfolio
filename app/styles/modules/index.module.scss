@@ -27,7 +27,7 @@
         &.contact > div {
             display: grid;
             place-items: center;
-            width: clamp(300px, 80vw, 700px);
+            width: clamp(min(300px, 100%), 80%, 700px);
             margin: 5vh auto;
         }
 

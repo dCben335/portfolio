@@ -1,4 +1,5 @@
 .slider {    
+    padding: 3vh 0;
     & > div {
         position: relative;
         
@@ -15,7 +16,6 @@
                     place-items: center;
                     
                     & > * {
-                        min-height: 45vh;
                         max-height: 60vh;
                         object-fit: contain;
                     }

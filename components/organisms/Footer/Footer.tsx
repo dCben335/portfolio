@@ -34,8 +34,8 @@ export default function Footer({
                 <nav>
                     <strong>Retrouvez-moi</strong>
                     <ul className={styles.socials}>
-                        <li><Link href={"https://github.com/dCben335"} className={styles.link} target='_blank'><GitHub /></Link></li>
-                        <li><Link href={"https://www.linkedin.com/in/benoit-cabocel-748aaa22b/"} className={styles.link} target='_blank'><LinkedIn /></Link></li>
+                        <li><Link href={"https://github.com/dCben335"} className={styles.link} target='_blank' aria-label={"mon Github"}><GitHub /></Link></li>
+                        <li><Link href={"https://www.linkedin.com/in/benoit-cabocel-748aaa22b/"} className={styles.link} target='_blank' aria-label={"mon LinkedIn"}><LinkedIn /></Link></li>
                     </ul>                    
                 </nav>
             </div>

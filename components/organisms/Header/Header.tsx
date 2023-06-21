@@ -36,7 +36,8 @@ export default function Header () {
                     <li key={index}>
                         <Button
                             path={link.path === null ? '/' : `/${link.path}`}
-                            active={activeSegment === link.path} 
+                            active={activeSegment === link.path}
+                            ariaLabel={`retourner à la page ${link.path}`} 
                         >{link.children}</Button>
                     </li>
                 )}
