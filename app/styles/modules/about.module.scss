@@ -11,6 +11,7 @@
 
         article {
             width: clamp(min(300px, 100%), 80vw , 800px);
+            margin: 0 auto;
         }
     }
 
