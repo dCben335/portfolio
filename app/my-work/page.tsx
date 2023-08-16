@@ -5,16 +5,17 @@ import ThreeDText from '@/components/atoms/3dText/ThreeDText';
 import styles from '../styles/modules/my-work.module.scss'
 import { useEffect, useState } from 'react';
 import { fetching } from '@/utils/functions';
+import { Project } from '@/utils/types';
 
 
 export default function Page () {
     
-    const [projects, setProject] = useState()
+    const [projects, setProject] = useState<Project[]>()
 
     useEffect(() => {
-      (async function getProjects() {
-        setProject(await fetching('/assets/contents/project.json'))
-      })()
+        (async function getProjects() {
+            setProject(await fetching('/assets/contents/project.json'))
+        })()
     }, [])
 
     return (         

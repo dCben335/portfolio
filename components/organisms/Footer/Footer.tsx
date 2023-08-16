@@ -7,7 +7,7 @@ import LinkedIn from '@/components/Icons/Socials/LinkedIn/LinkedIn'
 export default function Footer({
     classes
 } : {
-    classes: Array<any>
+    classes: string[]
 }) {
     return (
         <footer className={`${styles.footer} ${classes ? [...classes] : ''}`}>

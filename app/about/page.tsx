@@ -31,13 +31,13 @@ const programmingLanguages = [
 
 export default function About() {
 
-    const [skills, setSkills] = useState<{ [key: string]: Array<{[key: string] : string}>}>()
+    const [skills, setSkills] = useState<{ [key: string]: {[key: string] : string}[]}>()
 
 
     useEffect(() => {
-      (async function getProjects() {
-        setSkills(await fetching('/assets/contents/skills.json'))
-      })()
+        (async function getProjects() {
+            setSkills(await fetching('/assets/contents/skills.json'))
+        })()
     }, [])
 
     return (
@@ -64,27 +64,26 @@ export default function About() {
                     </div>
                 </div>
             </section>
-        {programmingLanguages && 
-            <section>
-                <h2>Mes langages de programmation</h2>
-                <div className={styles["programming-languages"]}>
-                    {programmingLanguages.map((programmingLanguage, idx) => 
-                        <ProgLanguages 
-                            key={idx}
-                            {...programmingLanguage}
-                        />
-                    )}
-                </div>
-            </section>
-        }
-        {skills && 
-            <section>
-                <h2>Mon portfolio de compétences</h2>
-                <div className={styles["programming-languages"]}>
-                    <Skills skills={skills}/>
-
-                </div>
-            </section> 
+            {programmingLanguages && 
+                <section>
+                    <h2>Mes langages de programmation</h2>
+                    <div className={styles["programming-languages"]}>
+                        {programmingLanguages.map((programmingLanguage, idx) => 
+                            <ProgLanguages 
+                                key={idx}
+                                {...programmingLanguage}
+                            />
+                        )}
+                    </div>
+                </section>
+            }
+            {skills && 
+                <section>
+                    <h2>Mon portfolio de compétences</h2>
+                    <div className={styles["programming-languages"]}>
+                        <Skills skills={skills}/>
+                    </div>
+                </section> 
         }
         </main>
     )

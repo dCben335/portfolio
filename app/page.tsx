@@ -13,9 +13,13 @@ import TypeScript from '@/components/Icons/PL/TypeScript/TypeScript';
 import { useEffect, useState } from 'react';
 import { fetching } from '@/utils/functions';
 
+import { Project } from '@/utils/types';
+import { GroupForm } from "@/utils/types";
+
+
 export default function Home() {
-  const [projects, setProject] = useState()
-  const [formDatas, setFormDatas] = useState()
+  const [projects, setProject] = useState<Project[]>()
+  const [formDatas, setFormDatas] = useState<GroupForm[]>()
 
   useEffect(() => {
     (async function getProjects() {

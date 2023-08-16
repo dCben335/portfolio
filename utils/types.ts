@@ -1,8 +1,8 @@
 interface Project {
     name: string,
-    categories: Array<string>,
+    categories: string[],
     desciption: string,
-    images: Array<Img>
+    images: Img[]
 }
 interface Img {
     path: string,

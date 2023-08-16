@@ -15,7 +15,7 @@ export default function ProjectWrapper({
     pagination,
     nbOfRows = 1
 } : {
-    projects: Array<Project>,
+    projects: Project[],
     categorieFilters: boolean,
     rowLimit: boolean,
     pagination: boolean,
@@ -24,14 +24,13 @@ export default function ProjectWrapper({
     
     const projectWrapper = useRef<any>()
 
-    const [projectList, setProjectList] = useState<Array<Project>>([...projects])
-    const [currentProjects, setCurrentProjects] = useState<Array<Project>>();
+    const [projectList, setProjectList] = useState<Project[]>([...projects])
+    const [currentProjects, setCurrentProjects] = useState<Project[]>();
     const [activeCategory, setActiveCategory]:any = useState<number>();
     const [currentPage, setCurrentPage] = useState<number>(1);
     const [nbOfProjectPerPages, setNbOfProjectPerPages] = useState<number>()
-
-
-    const categories:Array<string>|undefined = categorieFilters 
+    
+    const categories:string[]|undefined = categorieFilters 
         ? projects.flatMap((project) => project.categories).filter((item, idx, arr) => arr.indexOf(item) == idx)
         : undefined
 
@@ -68,7 +67,7 @@ export default function ProjectWrapper({
         setCurrentPage(pageNumber);
     }
 
-    const handlePagination = () => {
+    const handlePagination:Function = () => {
         if (nbOfProjectPerPages) {
             const indexOfLastPost = currentPage * nbOfProjectPerPages;
             const indexOfFirstPost = indexOfLastPost - nbOfProjectPerPages;
@@ -105,7 +104,7 @@ export default function ProjectWrapper({
 
     return (
         <>
-            { categories && 
+            { categories && handleClick &&
                 <ProjectCategories 
                     categories={categories}
                     activeCategory={activeCategory}

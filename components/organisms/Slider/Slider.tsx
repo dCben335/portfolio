@@ -8,16 +8,14 @@ export default function Slider({
     children
 }: {
     sliderWidth: string
-    children: Array<ReactElement>
+    children: ReactElement[]
 }) {
 
-    const slidesContainer = useRef<HTMLDivElement | null>(null)
+    const slidesContainer = useRef<HTMLDivElement>(null)
     const [currentSlide, setCurrentSlide] = useState<number>(0);
     const [sliderWrapperWidth, setSliderWrapperWidth] = useState<number>(0);
     const [slideWidth, setSlideWidth] = useState<number>(0);
     const [auto, setAuto] = useState<number>(0)
-
-
 
     const setSlider = () => {
         if (slidesContainer.current) {

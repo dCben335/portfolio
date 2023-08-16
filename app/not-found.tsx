@@ -20,7 +20,6 @@ export default function Custom404() {
                         <Button clicked={() => router.back()}> go back </Button>  
                     </div>
                 </div>
-
             </section>
         </main>
     )

@@ -29,6 +29,7 @@ $after-size: 500px;
         position: absolute;
         inset: 0;
         pointer-events: none;
+        -webkit-user-select: none;
         user-select: none;
         border-radius: inherit;
         opacity: 0;

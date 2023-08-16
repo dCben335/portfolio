@@ -1,5 +1,5 @@
 "use client"
-import { ChangeEvent, Fragment, useState } from "react";
+import { ChangeEvent, useState } from "react";
 import { GroupForm } from "@/utils/types";
 import FormGroup from "@/components/atoms/FormGroup/FormGroup";
 import Button from "@/components/atoms/Button/Button";
@@ -12,11 +12,11 @@ export default function Form({
     submitLink,
 } : {
     title?: string,
-    groupForms: Array<GroupForm>,
+    groupForms: GroupForm[],
     submitLink: string
 }) {
-    const [formDatas, setFormDatas] = useState<{[key: string] :Object}>({})
-    const [submited, setSubmited] = useState<Number>(-1)
+    const [formDatas, setFormDatas] = useState<{[key: string] : string | Date}>({})
+    const [submited, setSubmited] = useState<number>(-1)
 
     const handleChange = (event: ChangeEvent<HTMLTextAreaElement | HTMLInputElement>) => {
         if (event.target.value === '') return 

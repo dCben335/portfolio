@@ -14,7 +14,7 @@ export default function Pagination({
     paginate: Function
 }) {
     
-  const [pageNumbers, setPageNumber] = useState<Array<number>>([])
+  const [pageNumbers, setPageNumber] = useState<number[]>([])
   
     useEffect(() => {
         setPageNumber([])
@@ -26,7 +26,7 @@ export default function Pagination({
     return (
       <nav className={styles.pagination}>
         <ul>
-          {pageNumbers[0] && pageNumbers.map((number) => (
+          {(pageNumbers ?? []).map((number) => (
             <li key={number}>
                 <Button 
                   clicked={() => paginate(number)} 

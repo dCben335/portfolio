@@ -9,7 +9,7 @@ import EvaluationSquare from '../../atoms/EvaluationSquare/EvaluationSquare'
 export default function Skills({
     skills
 } : {
-    skills: { [key: string]: Array<{[key: string] : string}>}
+    skills: { [key: string]: {[key: string] : string}[]}
 }) {
 
     const evaluations = [

@@ -7,8 +7,8 @@ export default function ProjectCategories({
     clicked,
     activeCategory
 } : {
-    categories: Array<string>,
-    clicked: Function| undefined,
+    categories: string[],
+    clicked: Function,
     activeCategory: number
 }) {
 
@@ -18,7 +18,7 @@ export default function ProjectCategories({
         setOpened(!opened)
     }
 
-    const categoriesColors:Array<string> = categories.map((el, idx) => `#${Math.floor(((idx + 1) * 0.85/categories.length) * 16777215).toString(16)}`)
+    const categoriesColors:string[] = categories.map((el, idx) => `#${Math.floor(((idx + 1) * 0.85/categories.length) * 16777215).toString(16)}`)
 
     return (
         <nav className={styles.categories}>
@@ -28,13 +28,13 @@ export default function ProjectCategories({
             >{"filters"}</Button>
             <ul className={opened ? styles.opened : ''}>
                 {categories.sort().map((category, idx) => 
-                <li key={idx}>
-                    <Button 
-                        clicked={() => clicked && clicked(idx)} 
-                        active={activeCategory === idx}
-                        activeColor={{backgroundColor : categoriesColors[idx]}} 
-                    >{category}</Button>
-                </li>
+                    <li key={idx}>
+                        <Button 
+                            clicked={() => clicked && clicked(idx)} 
+                            active={activeCategory === idx}
+                            activeColor={{backgroundColor : categoriesColors[idx]}} 
+                        >{category}</Button>
+                    </li>
                 )}                  
             </ul>
         </nav>  
