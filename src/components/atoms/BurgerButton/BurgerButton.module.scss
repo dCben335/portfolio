@@ -1,0 +1,40 @@
+.burger-btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    aspect-ratio: 1/1;
+    position: relative;
+    border-radius: 50%;
+    
+    span {
+        position: absolute;
+        width: 75%;
+        height: 7.5%;
+        display: block;
+        border-radius: 100vmax;
+        transform: translateY(calc(300% * var(--i)));
+        transition: transform .3s ease-in-out, opacity .2s ease-in-out ;
+        background-color: $secondary-color;
+
+        &:first-child {
+            --i: 1
+        }
+        &:last-child {
+            --i: -1
+        }
+    }
+
+    &.cross {
+        span:nth-child(2) {
+            opacity: 0;
+            transform: translateX(25%);
+        }
+
+        span {
+            transform: rotate(calc(135deg * var(--i)));
+        }
+    }
+    
+}

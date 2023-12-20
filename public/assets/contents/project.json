@@ -1,0 +1,567 @@
+[
+    {
+        "name": "Campagne de pub baby food",
+        "categories": ["Comprendre"],    
+        "desciption": "Ce projet était axé sur l'organisation d'une campagne publicitaire en anglais pour promouvoir de la nourriture pour bébé. Dans le cadre de cette initiative de groupe, nous avons consacré du temps à définir l'histoire de la marque, ses produits, ses objectifs, son public cible ainsi que ses concurrents directs. Notre objectif était de créer une campagne de publicité percutante qui attirerait l'attention des parents et leur donnerait envie d'opter pour nos produits. Nous avons consacré une attention particulière à l'élaboration d'une histoire de marque convaincante qui mettait en avant les valeurs de qualité, de sécurité et de nutrition pour les bébés. Cette histoire nous a servi de base pour présenter nos produits de manière attractive, en mettant en évidence les avantages uniques qu'ils offrent. En ce qui concerne la campagne publicitaire, nous avons décidé d'utiliser les Google Ads et les réseaux sociaux comme principaux canaux de diffusion. Les Google Ads nous ont permis de cibler efficacement les parents en affichant nos annonces lorsqu'ils effectuaient des recherches pertinentes liées à la nourriture pour bébé.  Pour se démarquer de la concurrence, nous avons proposé un produit unique sur le marché. Nous avons développé un produit innovant ce qui nous a permis de nous positionner comme une option attrayante et différenciée parmi les autres marques concurrentes.",
+        "images" : [
+            {
+                "path": "/assets/images/projects/baby-food-campaign/1.JPG",
+                "alt": "Image du projet"
+            },
+            {
+                "path": "/assets/images/projects/baby-food-campaign/2.JPG",
+                "alt": "Image du projet"
+            },
+            {
+                "path": "/assets/images/projects/baby-food-campaign/3.JPG",
+                "alt": "Image du projet"
+            }
+        ]
+    },
+    {
+        "name": "Iota-Solutions",
+        "categories": ["Développer", "Entreprendre"],    
+        "desciption": "Durant mon stage, j'ai réalisé ce projet en utilisant la technologie Nuxt3 combinée au Headless CMS Storyblok. L'objectif majeur était de concevoir un site web à la fois performant et facilement modifiable. Grâce à l'utilisation de Nuxt3, qui offre un rendu côté serveur et une gestion efficace des ressources, j'ai pu garantir une expérience utilisateur fluide et agréable. L'intégration du Headless CMS Storyblok a facilité la gestion du contenu en permettant à n'importe qui de mettre à jour et de modifier facilement le site via une interface visuelle intuitive. Cette approche a permis à l'équipe d'Iota Solutions de garder le contrôle sur le contenu tout en offrant une flexibilité maximale pour les futures modifications. En ce qui concerne le design, j'ai travaillé en étroite collaboration avec l'équipe d'Iota Solutions pour reprendre en grande partie l'esthétisme de leur site existant. J'ai respecté leur charte graphique tout en apportant des ajustements nécessaires pour répondre aux objectifs spécifiques du projet. Le résultat final est un site web grandement optimisé, réactif et facile à gérer, qui reflète fidèlement les exigences techniques et esthétiques d'Iota Solutions. Ce projet a été une occasion pour moi de mettre en pratique mes compétences en développement web tout en répondant aux besoins spécifiques de l'entreprise.",
+        "images" : [
+            {
+                "path": "/assets/images/projects/iota-solutions/1.JPG",
+                "alt": "Image du projet"
+            },
+            {
+                "path": "/assets/images/projects/iota-solutions/2.JPG",
+                "alt": "Image du projet"
+            },
+            {
+                "path": "/assets/images/projects/iota-solutions/3.JPG",
+                "alt": "Image du projet"
+            },
+            {
+                "path": "/assets/images/projects/iota-solutions/4.JPG",
+                "alt": "Image du projet"
+            },
+            {
+                "path": "/assets/images/projects/iota-solutions/5.JPG",
+                "alt": "Image du projet"
+            },
+            {
+                "path": "/assets/images/projects/iota-solutions/6.JPG",
+                "alt": "Image du projet"
+            },
+            {
+                "path": "/assets/images/projects/iota-solutions/7.JPG",
+                "alt": "Image du projet"
+            },
+            {
+                "path": "/assets/images/projects/iota-solutions/8.JPG",
+                "alt": "Image du projet"
+            }
+        ]
+    },
+    {
+        "name": "Andre-delorme",
+        "categories": ["Développer", "Entreprendre"],    
+        "desciption": "Durant mon stage en tant que développeur Junior, j'ai eu l'opportunité de contribuer à la création d'un site e-commerce pour l'entreprise André-Delorme, spécialisée dans les vins. Mon objectif principal était de concevoir une plateforme en ligne conviviale permettant aux utilisateurs de découvrir et d'acheter facilement les vins proposés par l'entreprise. J'ai utilisé WordPress comme base pour construire le site e-commerce, en choisissant un thème très flexible permettant de m'adapté à l'identité visuelle d'André-Delorme. J'ai personnalisé l'apparence du site pour créer une expérience visuelle cohérente et attrayante pour les visiteurs.  Pour répondre aux besoins spécifiques d'André-Delorme, j'ai utilisé le plugin ACF (Advanced Custom Fields) afin d'ajouter des champs personnalisés aux différentes sections du site. Ces champs personnalisés permettaient au client de gérer facilement les informations relatives aux produits, telles que les caractéristiques des vins, les notes de dégustation et les informations de livraison. Ce projet m'a permis d'acquérir une expérience précieuse dans la création d'un site e-commerce fonctionnel et adapté aux besoins d'une entreprise spécifique. J'ai également appris à travailler de manière proffessionel en équipe tout en m'adpatant aux demandes et retours du client",
+        "images" : [
+            {
+                "path": "/assets/images/projects/andre-delorme/1.JPG",
+                "alt": "Image du projet"
+            },
+            {
+                "path": "/assets/images/projects/andre-delorme/2.JPG",
+                "alt": "Image du projet"
+            },
+            {
+                "path": "/assets/images/projects/andre-delorme/3.JPG",
+                "alt": "Image du projet"
+            },
+            {
+                "path": "/assets/images/projects/andre-delorme/4.JPG",
+                "alt": "Image du projet"
+            },
+            {
+                "path": "/assets/images/projects/andre-delorme/5.JPG",
+                "alt": "Image du projet"
+            },
+            {
+                "path": "/assets/images/projects/andre-delorme/6.JPG",
+                "alt": "Image du projet"
+            },
+            {
+                "path": "/assets/images/projects/andre-delorme/7.JPG",
+                "alt": "Image du projet"
+            },
+            {
+                "path": "/assets/images/projects/andre-delorme/8.JPG",
+                "alt": "Image du projet"
+            }
+        ]
+    },
+    {
+        "name": "Bacchus-dijon",
+        "categories": ["Développer", "Entreprendre"],    
+        "desciption": "",
+        "images" : [
+            {
+                "path": "/assets/images/projects/bacchus-dijon/1.JPG",
+                "alt": "Image du projet"
+            },
+            {
+                "path": "/assets/images/projects/bacchus-dijon/2.JPG",
+                "alt": "Image du projet"
+            },
+            {
+                "path": "/assets/images/projects/bacchus-dijon/3.JPG",
+                "alt": "Image du projet"
+            },
+            {
+                "path": "/assets/images/projects/bacchus-dijon/4.JPG",
+                "alt": "Image du projet"
+            },
+            {
+                "path": "/assets/images/projects/bacchus-dijon/5.JPG",
+                "alt": "Image du projet"
+            },
+            {
+                "path": "/assets/images/projects/bacchus-dijon/6.JPG",
+                "alt": "Image du projet"
+            },
+            {
+                "path": "/assets/images/projects/bacchus-dijon/7.JPG",
+                "alt": "Image du projet"
+            },
+            {
+                "path": "/assets/images/projects/bacchus-dijon/8.JPG",
+                "alt": "Image du projet"
+            }
+        ]
+    },
+    {
+        "name": "My Study Room",
+        "categories": ["Concevoir", "Comprendre"],    
+        "desciption": "Le projet MyStudyRoom avait pouR but la conception d'une application innovante conçue pour simplifier la recherche de colocations. Notre objectif principal était de créer une plateforme conviviale et efficace, permettant aux utilisateurs de trouver facilement des colocations correspondant à leurs besoins spécifiques. Pour garantir la pertinence et l'efficacité de notre application, nous avons réalisé une étude préalable approfondie. Dans cette étude, nous avons débuté en identifiant notre public cibles et en comprenant leurs attentes en matière de recherche de colocation. Nous avons analysé la concurrence existante sur le marché, en étudiant les forces et les faiblesses des applications similaires. Cette analyse comparative nous a permis de positionner MyStudyRoom de manière stratégique en proposant des fonctionnalités uniques et attrayantes.Pour mieux comprendre les besoins des utilisateurs, nous avons également effectué des tests utilisateurs. Ces tests ont été essentiels pour évaluer l'expérience utilisateur de notre application et recueillir des retours précieux. Ils nous ont permis d'identifier les points d'amélioration et de nous assurer que MyStudyRoom répondra aux besoins réels de nos utilisateurs. Dans le cadre de notre étude préalable, nous avons également créé des cartes de parcours utilisateur et des cartes d'empathie. Les cartes de parcours utilisateur nous ont aidés à visualiser et analyser les différentes étapes que les utilisateurs traversent lors de leur recherche de colocation, nous permettant ainsi de concevoir une expérience fluide et sans friction. Les cartes d'empathie nous ont permis de mieux comprendre les besoins, les motivations et les frustrations de nos utilisateurs cible, afin de développer une application personnalisée et engageante. Lien de la maquette : https://www.figma.com/proto/LoSFGjy8ymMPzVuF1rckf1/My-Study-room?node-id=1-4&scaling=scale-down&page-id=0%3A1&starting-point-node-id=1%3A4&show-proto-sidebar=1",
+        "images" : [
+            {
+                "path": "/assets/images/projects/my-study-room/1.JPG",
+                "alt": "Image du projet"
+            },
+            {
+                "path": "/assets/images/projects/my-study-room/2.JPG",
+                "alt": "Image du projet"
+            },
+            {
+                "path": "/assets/images/projects/my-study-room/3.JPG",
+                "alt": "Image du projet"
+            },
+            {
+                "path": "/assets/images/projects/my-study-room/4.JPG",
+                "alt": "Image du projet"
+            },
+            {
+                "path": "/assets/images/projects/my-study-room/5.JPG",
+                "alt": "Image du projet"
+            },
+            {
+                "path": "/assets/images/projects/my-study-room/6.JPG",
+                "alt": "Image du projet"
+            },
+            {
+                "path": "/assets/images/projects/my-study-room/7.JPG",
+                "alt": "Image du projet"
+            },
+            {
+                "path": "/assets/images/projects/my-study-room/8.JPG",
+                "alt": "Image du projet"
+            },
+            {
+                "path": "/assets/images/projects/my-study-room/9.JPG",
+                "alt": "Image du projet"
+            },
+            {
+                "path": "/assets/images/projects/my-study-room/10.JPG",
+                "alt": "Image du projet"
+            },
+            {
+                "path": "/assets/images/projects/my-study-room/11.JPG",
+                "alt": "Image du projet"
+            },
+            {
+                "path": "/assets/images/projects/my-study-room/12.JPG",
+                "alt": "Image du projet"
+            },
+            {
+                "path": "/assets/images/projects/my-study-room/13.JPG",
+                "alt": "Image du projet"
+            },
+            {
+                "path": "/assets/images/projects/my-study-room/14.JPG",
+                "alt": "Image du projet"
+            },
+            {
+                "path": "/assets/images/projects/my-study-room/15.JPG",
+                "alt": "Image du projet"
+            },
+            {
+                "path": "/assets/images/projects/my-study-room/16.JPG",
+                "alt": "Image du projet"
+            }
+        ]
+    },
+    {
+        "name": "Sherlock Event",
+        "categories": ["Développer", "Exprimer", "Concevoir"],    
+        "desciption": "Le projet consiste en l'organisation et la communication d'un événement fictif sur le personnage de Sherlock Holmes prévu pour le 2 juin 2023 sur le campus de l'université de Dijon. Ce projet s'est déroulé en groupe, et nous avons été mené à concevoir des visuels attrayants et impactants pour promouvoir l'événement. On a créé des exemples de posts sur les réseaux sociaux, des lettres d'invitations pour les VIP et le public cible, des posters intrigants. Notre objectif était de capturer l'essence de Sherlock Holmes et de susciter l'enthousiasme chez les fans en utilisant des éléments visuels percutants. On a veillé à ce que tous les visuels créés soient en harmonie avec cette identité, en utilisant des couleurs, des typographies et des éléments graphiques spécifiques. Cela a permis de maintenir une cohérence visuelle tout au long de la communication et de renforcer la reconnaissance de l'événement. Nous avons également utilisé un diagramme de Gantt afin de détailler les étapes de notre plan de communication. Enfin, j'ai réalisé un site web dédié à l'événement, permettant aux participants d'acheter leurs tickets directement en ligne. Ce site offre une interface conviviale et intuitive, fournissant toutes les informations essentielles sur l'événement, les horaires, les tarifs et les activités proposées. Ce projet m'a permis de mettre en pratique mes compétences en gestion de projet, en création visuelle et en développement web",
+        "images" : [
+            {
+                "path": "/assets/images/projects/sherlock/1.JPG",
+                "alt": "Image du projet"
+            },
+            {
+                "path": "/assets/images/projects/sherlock/2.JPG",
+                "alt": "Image du projet"
+            },
+            {
+                "path": "/assets/images/projects/sherlock/3.JPG",
+                "alt": "Image du projet"
+            },
+            {
+                "path": "/assets/images/projects/sherlock/4.JPG",
+                "alt": "Image du projet"
+            },
+            {
+                "path": "/assets/images/projects/sherlock/5.JPG",
+                "alt": "Image du projet"
+            },
+            {
+                "path": "/assets/images/projects/sherlock/6.JPG",
+                "alt": "Image du projet"
+            },
+            {
+                "path": "/assets/images/projects/sherlock/7.JPG",
+                "alt": "Image du projet"
+            },
+            {
+                "path": "/assets/images/projects/sherlock/8.JPG",
+                "alt": "Image du projet"
+            },
+            {
+                "path": "/assets/images/projects/sherlock/9.JPG",
+                "alt": "Image du projet"
+            },
+            {
+                "path": "/assets/images/projects/sherlock/10.JPG",
+                "alt": "Image du projet"
+            },
+            {
+                "path": "/assets/images/projects/sherlock/11.JPG",
+                "alt": "Image du projet"
+            },
+            {
+                "path": "/assets/images/projects/sherlock/12.JPG",
+                "alt": "Image du projet"
+            },
+            {
+                "path": "/assets/images/projects/sherlock/13.JPG",
+                "alt": "Image du projet"
+            },
+            {
+                "path": "/assets/images/projects/sherlock/14.JPG",
+                "alt": "Image du projet"
+            },
+            {
+                "path": "/assets/images/projects/sherlock/15.JPG",
+                "alt": "Image du projet"
+            },
+            {
+                "path": "/assets/images/projects/sherlock/16.JPG",
+                "alt": "Image du projet"
+            }
+        ]
+    },
+    {
+        "name": "Visualisation de données",
+        "categories": ["Développer", "Exprimer", "Comprendre"],    
+        "desciption": "Le projet consiste à analyser un jeu de données qui représente les réponses d'un sondage mené auprès de la promotion MMI1 de l'IUT de Dijon. Les étudiants de première année ont été interrogés sur différents aspects de leurs goûts et de leur personnalité, notamment leurs goûts musicaux, cinématographiques, vestimentaires, scolaires, leur utilisation du temps libre, ainsi que quelques questions personnelles générales. L'objectif de ce projet était de dresser le portrait de la promotion MMI1 en utilisant les données recueillies. J'ai alors dû choisir des questions spécifiques à partir du jeu de données. J'ai ensuite produit différentes visualisations de données telles que des graphiques des pour illustrer mes analyses. Le projet s'est déroulé en plusieurs phases. Dans un premier temps, j'ai travaillé en groupe pour définir les questions auxquelles répondre avec le jeu de données. Ensuite, j'ai réalisé un site web en utilisant la librairie Plotly.js avec pour objectif de communiquer des faits intéressants sur la promotion MMI1.", 
+        "images" : [
+            {
+                "path": "/assets/images/projects/visualisation-de-donnees/1.JPG",
+                "alt": "Image du projet"
+            },
+            {
+                "path": "/assets/images/projects/visualisation-de-donnees/2.JPG",
+                "alt": "Image du projet"
+            },
+            {
+                "path": "/assets/images/projects/visualisation-de-donnees/3.JPG",
+                "alt": "Image du projet"
+            },
+            {
+                "path": "/assets/images/projects/visualisation-de-donnees/4.JPG",
+                "alt": "Image du projet"
+            },
+            {
+                "path": "/assets/images/projects/visualisation-de-donnees/5.JPG",
+                "alt": "Image du projet"
+            },
+            {
+                "path": "/assets/images/projects/visualisation-de-donnees/6.JPG",
+                "alt": "Image du projet"
+            },
+            {
+                "path": "/assets/images/projects/visualisation-de-donnees/7.JPG",
+                "alt": "Image du projet"
+            }
+        ]
+    },
+    {
+        "name": "Court métrage viralité",
+        "categories": ["Exprimer"],    
+        "desciption": "Dans ce court métrage à la manière de Kombini, nous avons délibérément choisi de présenter non seulement les préoccupations liées à la viralité, mais aussi les avantages qu'elle peut apporter. Nous souhaitons offrir une vision équilibrée et complète de ce phénomène. En explorant les conséquences néfastes de la viralité, nous mettrons en évidence les problèmes tels que la propagation rapide de fausses informations, les atteintes à la vie privée, la cyberintimidation et les conséquences psychologiques négatives qui peuvent en découler. Cela permettra de sensibiliser le public aux dangers inhérents à la viralité des informations. Cependant, nous ne nous arrêterons pas là. Nous souhaitons également illustrer les aspects positifs de la viralité. Nous présenterons des histoires inspirantes où une information virale a été utilisée pour sensibiliser à une cause importante, mobiliser des communautés autour d'une action collective ou même changer la vie d'une personne en difficulté. Notre objectif était de montrer que la viralité n'est pas uniquement négative, mais qu'elle peut également servir de catalyseur pour le changement social et la diffusion d'idées positives. En explorant ces différents aspects, nous espérons ouvrir une réflexion nuancée sur la viralité dans les médias et les réseaux sociaux. Lien du court métrage : https://drive.google.com/file/d/1glQ1mo5atjmreiqKltr9_YoETAQ7jjFJ/view?usp=sharing", 
+        "images" : [
+            {
+                "path": "/assets/images/projects/viralite/1.JPG",
+                "alt": "Image du projet"
+            },
+            {
+                "path": "/assets/images/projects/viralite/2.JPG",
+                "alt": "Image du projet"
+            },
+            {
+                "path": "/assets/images/projects/viralite/3.JPG",
+                "alt": "Image du projet"
+            },
+            {
+                "path": "/assets/images/projects/viralite/4.JPG",
+                "alt": "Image du projet"
+            }
+        ]
+    },   
+    {
+        "name": "Site Dune",
+        "categories": ["Développer"],    
+        "desciption": "Ce projet consiste en la création d'un site vitrine sur l'univers de Dune. Le site web finalisé est composé de 6 slides accessibles via le burger button ou simplement au scroll. Au scroll, on retrouve un effet de parallaxe. Le but de ce projet était de développer mes compétences front-end. Pour cela, dans ce projet, j'ai appris les bases du JQuery afin d'être en capacité de l'utiliser si besoin. J'ai également utilisé de nombreuses API telles que celle de Youtube pour pouvoir placer la bande-annonce du film Dune en haut à droite lors du scroll, ou encore Leaflet afin de placer une carte dans laquelle on pouvait retrouver les cinémas près de notre localisation. De plus, afin de récupérer les cinémas, j'ai interagi avec un geojson en javascript. Finalement, la dernière slide a été créée en vue.js afin d'apprendre les bases de ce Framework pour être en mesure de, par la suite, créer un site entier en utilisant Vue.js.", 
+        "images" : [
+            {
+                "path": "/assets/images/projects/dune/accueil.JPG",
+                "alt": "Image du projet"
+            },
+            {
+                "path": "/assets/images/projects/dune/p_deux.JPG",
+                "alt": "Image du projet"
+            },
+            {
+                "path": "/assets/images/projects/dune/p_trois.JPG",
+                "alt": "Image du projet"
+            },
+            {
+                "path": "/assets/images/projects/dune/p_quatre.JPG",
+                "alt": "Image du projet"
+            },
+            {
+                "path": "/assets/images/projects/dune/p_cinq.JPG",
+                "alt": "Image du projet"
+            },
+            {
+                "path": "/assets/images/projects/dune/p_six.JPG",
+                "alt": "Image du projet"
+            }
+        ]
+    },
+    {
+        "name": "Audit rocketleague.com",
+        "categories": ["Comprendre"],    
+        "desciption": "Ce projet consistait à réaliser l'audit approfondi d'un site internet en analysant son référencement. L'objectif principal était d'évaluer la visibilité en ligne de ce site et d'identifier les opportunités d'amélioration pour augmenter sa visibilité dans les résultats des moteurs de recherche. Pour mener à bien cette tâche, j'ai suivi une méthodologie rigoureuse. Tout d'abord, j'ai effectué une analyse détaillée des mots-clés pertinents pour le secteur d'activité du site. Cela m'a permis de comprendre les tendances de recherche et les termes les plus utilisés par les internautes intéressés par les produits ou services proposés par le site. Ensuite, j'ai procédé à une évaluation approfondie de la structure du site et de son contenu. J'ai également vérifié la qualité des balises HTML, telles que les balises de titre et de description, ainsi que l'utilisation des mots-clés dans le contenu. J'ai aussi analysé les liens internes et externes, en évaluant leur pertinence et leur qualité. Parallèlement, j'ai examiné les facteurs techniques qui peuvent influencer le référencement, tels que la vitesse de chargement du site, sa compatibilité. J'ai identifié les opportunités d'optimisation, suggéré des recommandations spécifiques pour améliorer le positionnement dans les moteurs de recherche et augmenter la visibilité organique. Ce projet d'audit de référencement a été une expérience enrichissante qui m'a permis d'apprendre les bases du référencement de sites internet.",
+        "images" : [
+            {
+                "path": "/assets/images/projects/referencement/1.JPG",
+                "alt": "Image du projet"
+            },
+            {
+                "path": "/assets/images/projects/referencement/2.JPG",
+                "alt": "Image du projet"
+            },
+            {
+                "path": "/assets/images/projects/referencement/3.JPG",
+                "alt": "Image du projet"
+            },
+            {
+                "path": "/assets/images/projects/referencement/4.JPG",
+                "alt": "Image du projet"
+            }
+        ]
+    },
+    {
+        "name": "Communication partenariat militaire",
+        "categories": ["Exprimer"],    
+        "desciption": "Ce projet de groupe consistait en la création d'un plan de communication et d'un communiqué de presse pour annoncer le partenariat militaire entre l'armée française et la Colombie. Il est axé sur la définition d'une stratégie de communication précise, la détermination d'objectifs spécifiques et la mise en œuvre d'une approche multi-canaux pour atteindre et informer efficacement la population. Notre travail visait à susciter l'engagement et le soutien de la population envers cette initiative importante pour les relations entre les deux pays.",
+        "images" : [
+            {
+                "path": "/assets/images/projects/communication-militaire/1.JPG",
+                "alt": "Image du projet"
+            },
+            {
+                "path": "/assets/images/projects/communication-militaire/2.JPG",
+                "alt": "Image du projet"
+            },
+            {
+                "path": "/assets/images/projects/communication-militaire/3.JPG",
+                "alt": "Image du projet"
+            }
+        ]
+    },
+    {
+        "name": "Iliyan Stoyanov porfolio",
+        "categories": ["Développer"],    
+        "desciption": "J'ai réalisé ce projet afin d'aider un de mes collaborateurs : Iliyan Stoyanov. Pour la création de ce site web, j'ai suivi les wireframes qu'il avait au préalable créé ainsi qu'écouté ses directives et effectué des ajustements afin de perfectionner le site web et finalement lui produire le site qu'il souhaitait réellement.",   
+        "images" : [
+            {
+                "path": "/assets/images/projects/iliyan/accueil.png",
+                "alt": "Image du projet"
+            },
+            {
+                "path": "/assets/images/projects/iliyan/about.png",
+                "alt": "Image du projet"
+            },
+            {
+                "path": "/assets/images/projects/iliyan/projets.png",
+                "alt": "Image du projet"
+            },
+            {
+                "path": "/assets/images/projects/iliyan/comp.png",
+                "alt": "Image du projet"
+            },
+            {
+                "path": "/assets/images/projects/iliyan/contact.png",
+                "alt": "Image du projet"
+            },
+            {
+                "path": "/assets/images/projects/iliyan/modal.png",
+                "alt": "Image du projet"
+            }
+        ]
+    },
+    {
+        "name": "Septieme Dommage",
+        "categories": ["Développer"],    
+        "desciption": "Ce projet est un site web réalisé durant le second semestre de ma formation. Pour ce projet de groupe, nous avons pris relation avec un commanditaire et obtenu un cahier des charges. Ce commanditaire est une association du jeu de cartes Final Fantazy cherchant à développer leur portée sur Internet. Ce projet impliquait d'abord la création d'une identité visuelle bien distincte pour notre commanditaire. Pour cela, nous avons réalisé une veille ainsi qu'un benchmark. Cette association possédant déjà une version grande et une version petite sur fond blanc de leur logo; nous les avons adaptés en créant plusieurs autres versions notamment sur fond sombre; nous avons également réglé les différents problèmes de contraste présents dans leurs premières versions de leur logo. Par la suite, nous avons réalisé un diagramme de Gantt pour organiser le développement du site. Ensuite, nous avons préparé notre environnement de travail sur wordpress, réalisé des wireframes et suivi notre plan. Finalement nous avons créé un mode d'emploi du site web afin d'aider le commanditaire à reprendre le site. Ce projet m'a permis de m'intégrer au sein d'une équipe tout en ayant une approche professionnelle",
+        "images" : [
+            {
+                "path": "/assets/images/projects/septieme-dommage/pc.jpeg",
+                "alt": "Image du projet"
+            },
+            {
+                "path": "/assets/images/projects/septieme-dommage/accueil.jpg",
+                "alt": "Image du projet"
+            },
+            {
+                "path": "/assets/images/projects/septieme-dommage/blog.jpg",
+                "alt": "Image du projet"
+            },
+            {
+                "path": "/assets/images/projects/septieme-dommage/logo.jpg",
+                "alt": "Image du projet"
+            },
+            {
+                "path": "/assets/images/projects/septieme-dommage/charte_graphique.png",
+                "alt": "Image du projet"
+            },
+            {
+                "path": "/assets/images/projects/septieme-dommage/charte_web.png",
+                "alt": "Image du projet"
+            },
+            {
+                "path": "/assets/images/projects/septieme-dommage/mode_emploi.jpg",
+                "alt": "Image du projet"
+            }
+        ]
+    },
+    {
+        "name": "Concours photos",
+        "categories": ["Développer"],    
+        "desciption": "Le but de ce projet était de créer un site de création de concours. L'utilisateur ayant la possibilité de se connecter à son compte qu'il aurait enregistré précédemment. Avec ce compte, l'utilisateur pourrait organiser et participer à des concours ainsi que voter pour ceux-ci. Ce projet m'a permis d'apprendre les bases du back-end avec l'utilisation du php, de requêtes MySQL et d'une base de données. J'ai également progressé en CSS et j'ai appris à mieux organiser l'arborescence de mes fichiers.",
+        "images" : [
+            {
+                "path": "/assets/images/projects/sae203/accueil.JPG",
+                "alt": "Image du projet"
+            },
+            {
+                "path": "/assets/images/projects/sae203/connexion.JPG",
+                "alt": "Image du projet"
+            },
+            {
+                "path": "/assets/images/projects/sae203/inscription.JPG",
+                "alt": "Image du projet"
+            },
+            {
+                "path": "/assets/images/projects/sae203/bdd.JPG",
+                "alt": "Image du projet"
+            }
+        ]
+    },
+    {
+        "name": "Capsul'Hotel",
+        "categories": ["Exprimer"],    
+        "desciption": "Le but de ce projet était de créer une entreprise fictive avec une identité visuelle distincte. Pour y parvenir, j'ai commencé par réaliser une étude préliminaire en définissant mes cibles et en effectuant une veille concurrentielle pour analyser ce qui existe déjà sur le marché (benchmark). Cette étape m'a permis d'obtenir une meilleure compréhension de mon public cible et de m'inspirer des bonnes pratiques du secteur. Ensuite, j'ai conçu le logo de mon entreprise en utilisant des feuilles A4. J'ai exploré différentes idées, croquis et variations pour trouver le design qui représenterait le mieux l'image de ma marque. Une fois satisfait du concept, je l'ai reproduit le logo sur propre Illustrator. J'ai retravaillé les formes, les couleurs et les détails pour créer une version numérique professionnelle du logo. Cette étape m'a permis de bénéficier d'une précision et d'une qualité supérieure par rapport au dessin initial sur papier. Finalement, j'ai développé une charte graphique complète autour de mon entreprise fictive, Capsul'Hotel. J'ai défini les couleurs principales, les typographies, les styles d'illustrations et les éléments visuels qui représenteraient l'identité de l'entreprise de manière cohérente.",
+        "images" : [
+            {
+                "path": "/assets/images/projects/capsul-hotel/1.JPG",
+                "alt": "Image du projet"
+            },
+            {
+                "path": "/assets/images/projects/capsul-hotel/2.JPG",
+                "alt": "Image du projet"
+            },
+            {
+                "path": "/assets/images/projects/capsul-hotel/3.JPG",
+                "alt": "Image du projet"
+            },
+            {
+                "path": "/assets/images/projects/capsul-hotel/4.JPG",
+                "alt": "Image du projet"
+            },
+            {
+                "path": "/assets/images/projects/capsul-hotel/5.JPG",
+                "alt": "Image du projet"
+            },
+            {
+                "path": "/assets/images/projects/capsul-hotel/6.JPG",
+                "alt": "Image du projet"
+            },
+            {
+                "path": "/assets/images/projects/capsul-hotel/7.JPG",
+                "alt": "Image du projet"
+            },
+            {
+                "path": "/assets/images/projects/capsul-hotel/8.JPG",
+                "alt": "Image du projet"
+            },
+            {
+                "path": "/assets/images/projects/capsul-hotel/9.JPG",
+                "alt": "Image du projet"
+            }
+        
+        ]
+    },
+    {
+        "name": "Mon premier site Web",
+        "categories": ["Développer"],    
+        "desciption": "Ce projet est un site web réalisé pendant le premier semestre de ma formation. L'objectif de celui-ci était l'apprentissage des bases de différents langages de programmation : HTML, CSS et JavaScript. Pour ce site web, j'avais des wireframes précis à respecter selon les différents appareils. J'ai donc réalisé ce site web en commençant par l'affichage sur smartphone portrait. Par la suite, j'ai réalisé l'affichage sur téléphone paysage, tablette portrait, tablette paysage et pc. Pour cela j'ai eu recours à des Media queries ( @media ) malgré l'utilisation d'unités responsives telles que le vh et vw. Ce projet a été pour moi, une bonne expérience. Il m'a permis d'apprendre non seulement les bases des languages précédemment cités mais aussi les normes dans ce domaine.",
+        "images" : [
+            {
+                "path": "/assets/images/projects/first/tablette.png",
+                "alt": "Image du projet"
+            },
+            {
+                "path": "/assets/images/projects/first/tablette_portrait.jpg",
+                "alt": "Image du projet"
+            },
+            {
+                "path": "/assets/images/projects/first/phone.jpg",
+                "alt": "Image du projet"
+            },
+            {
+                "path": "/assets/images/projects/first/burger.jpg",
+                "alt": "Image du projet"
+            }
+        ]
+    }
+]

@@ -1,0 +1,76 @@
+.form {
+    display: grid;
+    place-items: center;
+    gap: 2rem;
+    width: 100%;
+    position: relative;
+
+    h3 {
+        text-align: center;
+    }
+    
+    .succeeded, .failed {
+        position: relative;
+        width: 65%;
+        height: 6px;
+        background-color: $secondary-color;
+        border-radius: 100vmax;
+        display: grid;
+        place-items: center;
+        animation: scaleX 0.7s -0.25s ease-in-out forwards;
+        
+        &::after, &::before {
+            position: absolute;
+            margin: auto;
+            width: 2.5rem;
+            background-color: $accent-color;
+        }
+        &::before {
+            content: '';
+            width: 100%;
+            height: 100%;
+            padding: 1px;
+            border-radius: inherit;
+            animation: scaleX 0.7s .2s ease-in-out forwards;
+            z-index: 1;
+        }
+        
+        &::after {
+            content: '\2713';
+            border-radius: 50%;
+            aspect-ratio: 1;
+            display: grid;
+            place-items: center;
+            font-size: 1.5rem;
+            transform: scale(0%);
+            animation: pop 0.35s .8s ease-out forwards;
+            z-index: 2;
+        }
+
+        &.failed::after, &.failed::before {
+            background-color: red;
+        }
+        &.failed::after {
+            content: '\2717';
+        }
+
+        & + small {
+            text-align: center;
+        }
+    }
+}
+
+@keyframes pop {
+    to {
+        transform:  scale(1);
+    }
+}
+
+@keyframes scaleX {
+    from {
+        transform: scaleX(0%) ;
+    }
+    to {
+        transform: scaleX(100%) ;
+    }
+}

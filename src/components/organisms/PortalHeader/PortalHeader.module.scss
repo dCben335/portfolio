@@ -1,0 +1,104 @@
+@mixin smaller() {
+    padding: 0;
+
+        .burger {
+            transform: translateX(50%);
+        }
+        nav {
+            gap: 27.5vh;
+            
+            ul {
+                gap: 0;
+            }
+            
+            a {
+                padding: 0rem;
+                svg {
+                    padding: .5rem;
+                    width: 45px;
+                }
+                span {
+                    width: 0;
+                    margin-left: 0;
+                }    
+            }
+        }
+}
+
+.header {
+    $side-padding: 1rem;
+    background: linear-gradient(to top, $gradiant-color);
+    position: relative;  
+    border-right: 1px solid $secondary-color-variant;
+    padding: $side-padding 1.5rem;
+    width: -moz-fit-content;
+    width: fit-content;
+    transition: all .5s ease-in-out;
+
+    .burger {
+        transform: translateX(calc(1rem + 75%));
+        position: sticky;
+        top: 10%;
+        left: 100%;
+        width: 2rem;
+        background: radial-gradient($gradiant-color);
+        border: 1px solid $secondary-color-variant;
+        z-index: 1000
+    }
+
+    nav {
+        position: sticky;
+        top: $side-padding; 
+        display: grid;
+        gap: 0;
+        transition: gap .75s ease-out;
+        padding-bottom: 5rem;
+        
+        ul {
+            gap: 1rem;
+            display: grid;
+            margin-top: 3.5rem;
+            width: 100%;
+            transition: gap .75s ease-out;
+    
+            li {
+                width: 100%;
+            }
+        }
+        a {
+            transform: skewX(0);
+            width: 100%;
+            display: flex;
+            align-items: center;
+            padding: .5rem max(.5rem, 5.5vw) .5rem .5rem ;
+            border-radius: 0;
+            overflow: hidden;
+            transition: all .3s ease-in-out;
+
+            span {
+                width: 12ch;
+                margin-left: 1.25rem;
+                transition: all .5s ease;
+            }
+            
+            svg {
+                width: 35px;
+                fill: $secondary-color;
+                stroke-width: .5;
+                transition: all .5s ease-in-out;
+            }       
+        }
+    }
+
+    &.smaller {
+        @include smaller();
+    }
+
+    @media screen and (max-width: 750px) {
+        @include smaller();
+
+        .burger {
+            display: none;
+        }
+    }
+}

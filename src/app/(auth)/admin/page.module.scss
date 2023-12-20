@@ -1,0 +1,9 @@
+.main {
+    display: grid;
+    place-items: center;
+
+    & > :first-child {
+        width: clamp(min(300px, 100%), 45vw, 450px );
+    }
+    
+}

@@ -1,0 +1,51 @@
+.slider {    
+    padding: 3vh 0;
+    & > div {
+        position: relative;
+        
+        .slidesContainer {
+            overflow: hidden;
+            
+            .sliderWrapper {
+                display: flex;
+                transition: transform .4s cubic-bezier(0.455, 0.03, 0.715, 0.95);
+                
+                figure {
+                    width: 100%;
+                    display: grid;
+                    place-items: center;
+                    
+                    & > * {
+                        max-height: 60vh;
+                        object-fit: contain;
+                    }
+                }
+            }
+        }
+
+        .controls {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 95%;
+            display: flex;
+
+            & > .left {
+                margin-right: auto;
+            }
+            & > .right {
+                margin-left: auto;
+            }
+        }
+    }
+
+    
+    ul {
+        padding: 1rem;
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}

@@ -1,0 +1,33 @@
+.skills {
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: flex-end;
+        gap: 1rem;
+        width: fit-content;
+        margin-left: auto;
+    }
+
+}
+.ac article {
+    padding: 1rem;
+    display: grid;
+    gap: 1rem;
+
+    & > div:first-child {
+        display: flex;
+        gap: 3rem;
+
+        .eval {
+            display: flex;
+            gap: 1rem;
+        }
+    }
+    
+    & > div:last-child {
+        margin-left: auto;
+        font-size: .8rem;
+    }
+    
+}

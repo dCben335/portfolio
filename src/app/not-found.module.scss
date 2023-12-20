@@ -1,0 +1,34 @@
+.notFound {
+    display: grid;
+    place-items: center;
+    width: 100vw;
+
+    section {
+        display: grid;
+        place-items: center;
+        gap: 5rem;
+
+        h1 {
+            text-align: center;
+            font-size: clamp(3.5rem, 3.5rem + 5vw, 8rem);
+        }
+
+        p {
+            font-size: .85rem;
+            letter-spacing: 1px;
+            text-align: center;
+            padding: 2rem 1rem;
+        }
+
+        div {
+            display: grid;
+            place-items: center;
+            gap: 1rem; 
+        }
+
+        .flex {
+            display: flex;
+            gap: 2rem
+        }
+    }
+}

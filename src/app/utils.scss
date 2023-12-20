@@ -1,0 +1,91 @@
+$primary-color: #050505;
+$primary-color-variant: #151515;;
+$secondary-color: #ffffff;
+$secondary-color-variant: #ffffff26;
+$accent-color: rgb(123 45 195);
+$accent-color-variant: rgb(123, 45,195, .3);
+
+$gradiant-color: #131019 10%, $primary-color;
+
+$website-padding: 5vw;
+$basic-radius: 5px;
+$basic-shadow: 0 0 2px $secondary-color-variant;
+
+
+
+.section {
+    min-height: 45rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding-top: 5vh;
+}
+
+.underlineAnim {
+    position: relative;
+    display: inline-block;
+
+    &::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background-color: $secondary-color;
+        left: 0;
+        bottom: 0;
+        transform: scaleX(0);
+        transform-origin: right;
+        transition: transform .3s ease-in-out;
+    }
+
+    &:is(:hover, :focus-within)::after {
+        transform-origin: left;
+        transform: scaleX(1);
+    }
+}
+
+
+@mixin about() {
+    .grid {
+        display: grid;
+        gap: 5rem 3vw;
+        padding: 3rem 0;
+
+        figure img {
+            border-radius: 50%;
+            aspect-ratio: 1;
+            width: clamp(min(250px, 100%), 80%, 310px) ;
+            margin: 0 auto;
+            display: block;
+            object-fit: cover;
+            margin-top: 5px;
+            border: 1px solid #ffffff;
+            padding: 5px;
+        }
+
+        & > div > p{
+            margin-bottom: 3vh;
+        }
+
+        article {
+            width: 100%;
+        }
+        
+        @media screen and (min-width: 1000px) {
+            & {
+                grid-template-columns: 1.75fr 1fr;
+                place-items: center;
+            }
+            & > div {
+                order: -1;
+            }
+            figure {
+                width: 80%;
+                
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

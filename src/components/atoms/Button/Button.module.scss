@@ -1,0 +1,25 @@
+.btn {
+    padding: 0.4rem 1rem;  
+    background-color: $primary-color-variant;
+    letter-spacing: 2px;
+    border-radius: $basic-radius;
+    box-shadow: $basic-shadow;
+    width: -moz-fit-content;
+    width: fit-content;
+    border: 1px solid transparent;   
+    text-shadow: 0 1.5px #101015;
+    opacity: .5;
+    transform: skewX(5deg);
+    transition: all .3s ease-in-out;
+
+    &:is(.active, :hover, :focus) {
+        opacity: 1;
+        color: $secondary-color;
+        border-color: $secondary-color-variant;
+        background-color: $primary-color;
+    } 
+    &.active {
+        background-color: $accent-color;
+    }
+}
+

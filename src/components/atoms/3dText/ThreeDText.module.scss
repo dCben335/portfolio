@@ -1,0 +1,11 @@
+.threeDText {
+    font-family: verdana;
+    font-weight: 700;
+    color: $accent-color;
+    position: relative;
+    text-shadow: -3px 2px $secondary-color;
+
+    &.smaller {
+        text-shadow: -1px 2px $secondary-color;
+    }
+}

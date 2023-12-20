@@ -1,0 +1,22 @@
+$slider-width: clamp(min(280px, 100vw - (2 * $website-padding) - 50px), 100vw - (2 * $website-padding) - 50px, 700px);
+
+.project section{
+    @extend .section;
+
+    .grid {
+        display: grid;
+        min-height: 70vh;
+        place-items: center;
+    
+        @media screen and (min-width: 1400px) {
+            & {
+                grid-template-columns: $slider-width 1fr;
+                gap: 2rem;
+            }
+        }
+    }
+}
+
+:export {
+    sliderWidth: $slider-width;
+}

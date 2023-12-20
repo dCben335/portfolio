@@ -1,0 +1,39 @@
+.nav {    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+
+    h3 {
+        letter-spacing: 1.2px;
+    }
+
+    div {
+        display: flex;
+        gap: 0.5rem;
+    }
+    
+    & + ul {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 1.5rem 3rem;
+        justify-content: center;
+        font-size:  clamp(1.5rem, 2.5vw, 3.5rem); 
+
+        svg{
+            height: clamp(1.65rem, 2.5vw, 3.5rem); 
+            fill: currentColor
+        }
+        
+    }
+
+    @media screen and (min-width: 1000px) {
+        & + ul {
+            flex-wrap: nowrap;
+            justify-content: flex-start;
+            order: -1;
+        }
+        
+    }
+}

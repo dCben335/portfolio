@@ -1,0 +1,49 @@
+.main {
+    gap: 7.5rem;
+
+    section {
+        min-height: 45rem;
+        display: grid;
+        align-items: center;
+        align-content: center;
+
+        &.hero {
+            min-height: 100vh;
+        
+            h1 {
+                strong:nth-child(2){
+                    font-size: clamp(2.35rem , 2.35rem + 3.55vw, 5.5rem);
+                }
+            
+                .subtitle {
+                    font-size: clamp(1.5rem, 1.5rem + 2.5vw, 2.75rem);
+                }
+            }
+        }
+        
+        &.about {    
+            @include about();
+        }
+
+        &.work {
+            min-height: initial;
+
+        }
+        
+        &.contact > div {
+            display: grid;
+            place-items: center;
+            width: clamp(min(300px, 100%), 80%, 700px);
+            margin: 5vh auto;
+        }
+        
+
+        .link {
+            margin-left: auto;
+            width: -moz-fit-content;
+            width: fit-content;
+        }
+    }
+
+}
+
