@@ -5,7 +5,7 @@ import Link from 'next/link'
 import { accentsTidy } from '@/libs/functions'
 
 type ButtonProps = { 
-    children?: ReactElement | string,
+    children?: any,
     path?: string,
     clicked?: Function,
     active?: boolean, 
