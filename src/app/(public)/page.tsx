@@ -1,11 +1,11 @@
 "use client"
 import styles from './page.module.scss';
 
-import ProjectWrapper from '@/components/organisms/ProjectWrapper/ProjectWrapper';
+import ProjectWrapper from '@/app/features/Projects/Wrapper/Wrapper';
 import ProgLanguages from '@/components/molecules/ProgLanguages/ProgLanguages';
-import ThreeDText from '@/components/atoms/3dText/ThreeDText';
-import Form from '@/components/molecules/Form/Form';
-import Button from '@/components/atoms/Button/Button';
+import ThreeDText from '@/components/ui/3dText/ThreeDText';
+import Form from '@/app/features/Form/Form';
+import Button from '@/components/ui/Button/Button';
 
 import { frameworks } from '@/components/Icons/PL/PL';
 import TypeScript from '@/components/Icons/PL/TypeScript/TypeScript';

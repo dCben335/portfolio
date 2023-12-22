@@ -2,7 +2,7 @@
 import styles from './page.module.scss'
 import { useEffect, useState } from "react";
 
-import ThreeDText from "@/components/atoms/3dText/ThreeDText";
+import ThreeDText from "@/components/ui/3dText/ThreeDText";
 import ProgLanguages from "@/components/molecules/ProgLanguages/ProgLanguages";
 import Skills from '@/components/molecules/Skills/Skills';
 

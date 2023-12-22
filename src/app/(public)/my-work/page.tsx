@@ -1,7 +1,7 @@
 "use client"
 
-import ProjectWrapper from '@/components/organisms/ProjectWrapper/ProjectWrapper';
-import ThreeDText from '@/components/atoms/3dText/ThreeDText';
+import ProjectWrapper from '@/app/features/Projects/Wrapper/Wrapper';
+import ThreeDText from '@/components/ui/3dText/ThreeDText';
 import styles from './page.module.scss'
 import { useEffect, useState } from 'react';
 import { fetching } from '@/libs/functions';

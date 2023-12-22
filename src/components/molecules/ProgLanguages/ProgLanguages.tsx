@@ -2,7 +2,7 @@
 
 import { Fragment, useState } from "react"
 import styles from "./ProgLanguages.module.scss"
-import Button from "@/components/atoms/Button/Button"
+import Button from "@/components/ui/Button/Button"
 import { ProgrammingLanguagesProps } from "@/libs/types"
 
 export default function ProgLanguages({ languages, title } : ProgrammingLanguagesProps) {

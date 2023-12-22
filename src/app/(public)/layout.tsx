@@ -1,5 +1,5 @@
-import Header from '@/components/organisms/PublicHeader/PublicHeader'
-import Footer from '@/components/organisms/Footer/Footer'
+import Header from '@/app/features/Header/Header'
+import Footer from '@/components/Footer/Footer'
 import routes from './routes'
 import { ReactNode } from 'react'
 
@@ -12,7 +12,7 @@ export default function PublicLayout({
   return (
     <>
       <div className={`layout`}>
-          <Header routes={routes} />
+          <Header routes={routes} admin={false}/>
           {children}
       </div>
       <Footer />

@@ -1,8 +1,8 @@
 import { useState } from "react";
 
 import styles from './Skills.module.scss'
-import Button from "@/components/atoms/Button/Button";
-import EvaluationSquare from '../../atoms/EvaluationSquare/EvaluationSquare'
+import Button from "@/components/ui/Button/Button";
+import EvaluationSquare from '../EvaluationSquare/EvaluationSquare'
 
 
 

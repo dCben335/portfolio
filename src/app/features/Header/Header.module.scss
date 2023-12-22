@@ -1,0 +1,57 @@
+@mixin smaller() {
+    nav {
+        ul {
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+}
+
+.header {
+    background: linear-gradient(to top, $gradiant-color);
+    position: relative;
+    border-right: 1px solid $secondary-color-variant;
+
+    .burger {
+        transform: translateX(50%);
+        position: sticky;
+        top: 10%;
+        left: 100%;
+        width: 2rem;
+        background: radial-gradient($gradiant-color);
+        border: 1px solid $secondary-color-variant;
+        z-index: 1000
+    }
+
+    nav {
+        position: sticky;
+        height: 100vh;
+        top: 0;
+        padding-bottom: 20%;
+        margin-top: -2rem;
+        
+        & > ul {
+            position: relative;
+            top: 15%;
+            transform: translateY(0%);
+            transition: all .3s ease-in-out;
+        }
+        
+        & > a {
+            position: relative;
+            top: 2.5rem;
+        }
+    }
+
+    &.smaller {
+        @include smaller();
+    }
+
+    @media screen and (max-width: 750px) {
+        @include smaller();
+
+        .burger {
+            display: none;
+        }
+    }
+}
