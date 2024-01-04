@@ -1,7 +1,7 @@
 import Home from "@/components/Icons/pages/Home/Home";
 import About from "@/components/Icons/pages/About/About";
 import Work from "@/components/Icons/pages/Work/Work";
-import { routeLink } from "@/libs/types";
+import { routeLink } from "@/types/types";
 
 const routes: routeLink[] = [
     {

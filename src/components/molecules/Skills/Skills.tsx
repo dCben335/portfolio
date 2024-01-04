@@ -4,35 +4,32 @@ import styles from './Skills.module.scss'
 import Button from "@/components/ui/Button/Button";
 import EvaluationSquare from '../EvaluationSquare/EvaluationSquare'
 
-
-
-export default function Skills({
-    skills
-} : {
+interface SkillsProps {
     skills: { [key: string]: {[key: string] : string}[]}
-}) {
+}
 
-    const evaluations = [
-        {
-            color: {
-                background: 'red'
-            },
-            text: "Non acquis"
+const evaluations = [
+    {
+        color: {
+            background: 'red'
         },
-        {
-            color: {
-                background: 'orange'
-            },
-            text: "En cours d'acquisition"
+        text: "Non acquis"
+    },
+    {
+        color: {
+            background: 'orange'
         },
-        {
-            color: {
-                background: 'green'
-            },
-            text: "Acquis"
-        }
-    ]
+        text: "En cours d'acquisition"
+    },
+    {
+        color: {
+            background: 'green'
+        },
+        text: "Acquis"
+    }
+]
 
+export default function Skills({ skills }: SkillsProps) {
     const [currentSkill, setCurrentSkill] = useState<string>(Object.keys(skills)[0])
 
     const handleClick = (skill : string) => {
@@ -45,10 +42,7 @@ export default function Skills({
                 <ul>
                     {Object.keys(skills).map((skill, idx) => 
                         <li key={idx}>
-                            <Button
-                                active={skill === currentSkill}
-                                clicked={() => handleClick(skill)}
-                            >{skill}</Button>
+                            <Button active={skill === currentSkill} onClick={() => handleClick(skill)}>{skill}</Button>
                         </li>
                     )}
                 </ul>
@@ -59,20 +53,20 @@ export default function Skills({
                         <div>
                             <h3>{skill.ac}</h3>
                             <div className={styles.eval}>
-                                {evaluations && evaluations.map((evaluation, idx) => 
+                                {(evaluations ?? []).map((evaluation, idx) => 
                                     <EvaluationSquare
                                         key={idx}
                                         color={evaluation.color} 
                                         text={evaluation.text} 
-                                        active={skill.status === evaluation.text} />
-
+                                        active={skill.status === evaluation.text} 
+                                    />
                                 )}
                             </div>
                         </div>
                         <strong>{skill.label}</strong>
                         <p>{skill.description}</p>
                         <div>
-                            <Button path={skill.link} blank={true}>voir le projet</Button>
+                            <Button href={skill.link} blank={true}>voir le projet</Button>
                         </div>
                     </article>
                 )}

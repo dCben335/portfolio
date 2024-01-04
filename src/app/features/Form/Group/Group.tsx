@@ -1,4 +1,4 @@
-import { GroupForm } from "@/libs/types"
+import { GroupForm } from "@/types/types"
 import styles from "./Group.module.scss"
 
 type FormGroupProps = {

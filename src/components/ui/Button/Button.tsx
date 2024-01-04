@@ -2,55 +2,39 @@
 import { CSSProperties, ReactElement } from 'react'
 import styles from './Button.module.scss'
 import Link from 'next/link'
-import { accentsTidy } from '@/libs/functions'
+import { accentsTidy } from '@/libs/utils'
 
-type ButtonProps = { 
-    children?: any,
-    path?: string,
-    clicked?: () => any
+
+interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+    href?: string,
+    blank?: boolean,
     active?: boolean, 
     activeColor?: CSSProperties
-    classes?: string
-    type?: "button" | "reset" | "submit" | undefined
-    blank?: boolean
-    ariaLabel?: string
+
 }
-
-export default function Button({
-    children, 
-    path,
-    clicked,
-    active,
-    activeColor,
-    classes,
-    type,
-    blank,
-    ariaLabel,
-} : ButtonProps) {
-
-    return (
-        <>
-        {path ? 
+export default function Button({ children, className, href, blank, active, activeColor, ...props} : ButtonProps & (React.ButtonHTMLAttributes<HTMLButtonElement> | React.AnchorHTMLAttributes<HTMLAnchorElement>) ) {
+    if (href) {
+        return (
             <Link 
-                href={accentsTidy(path)}
-                className={`${styles.btn} ${active ? styles.active : '' } ${classes ? classes : ""}`}
-                target={blank ? '_blank' : ''}
-                aria-label={ariaLabel}
+                href={accentsTidy(href)}
+                style={active && activeColor ? activeColor : {}}
+                className={`${styles.btn} ${active ? styles.active : '' } ${className}`}
+                target={blank ? '_blank' : '_self'}
             >
                 {children}
             </Link>
-            :
-            <button 
-                style={active && activeColor ? activeColor : {}}
-                className={`${styles.btn} ${active ? styles.active : ''} ${classes ? classes : ""}`} 
-                onClick={() => clicked && clicked()}
-                type={type ? type : 'button'}
-                aria-label={ariaLabel}
-            >
-                {children}
-            </button>
-            }
-        </>
-
+        )
+    }
+    return (   
+        <button 
+            style={active && activeColor ? activeColor : {}}
+            className={`${styles.btn} ${active ? styles.active : ''} ${className}`} 
+            {...props}
+        >
+            {children}
+        </button>
     )
 }
+
+
+

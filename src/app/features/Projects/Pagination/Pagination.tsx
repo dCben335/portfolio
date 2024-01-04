@@ -5,7 +5,7 @@ type PaginationProps = {
   postsPerPage: number,
   totalPosts: number,
   activePage: number,
-  paginate: (number: number) => void
+  paginate: any
 }
 
 export default function Pagination({ postsPerPage, totalPosts, activePage, paginate } : PaginationProps) {
@@ -16,14 +16,15 @@ export default function Pagination({ postsPerPage, totalPosts, activePage, pagin
     <>
       {pageNumbers.at(1) && (
         <nav className={styles.pagination}>
-          <ul>
-            
+          <ul>       
             {(pageNumbers ?? []).map((number) => (
               <li key={number}>
                   <Button 
-                    clicked={() => paginate(number)} 
+                    onClick={() => paginate(number)} 
                     active={number === activePage}
-                  >{`${number}`}</Button>
+                  >
+                    {`${number}`}
+                  </Button>
               </li>
             ))}
           </ul>

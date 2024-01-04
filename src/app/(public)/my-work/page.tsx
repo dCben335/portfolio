@@ -4,8 +4,8 @@ import ProjectWrapper from '@/app/features/Projects/Wrapper/Wrapper';
 import ThreeDText from '@/components/ui/3dText/ThreeDText';
 import styles from './page.module.scss'
 import { useEffect, useState } from 'react';
-import { fetching } from '@/libs/functions';
-import { Project } from '@/libs/types';
+import { fetching } from '@/libs/utils';
+import { Project } from '@/types/types';
 
 
 export default function Page () {

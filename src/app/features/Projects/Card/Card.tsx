@@ -1,5 +1,7 @@
-import { Img, ProjectCardTransformPorperties } from "@/libs/types";
-import { accentsTidy } from "@/libs/functions";
+"use client"
+
+import { Img, ProjectCardTransformPorperties } from "@/types/types";
+import { accentsTidy } from "@/libs/utils";
 import Link from "next/link";
 import styles from './Card.module.scss'
 import { CSSProperties, useRef, useState, MouseEvent } from "react";
@@ -67,18 +69,21 @@ export default function Card({ image, title, path, transformPorperties = {
     }
 
     return (
-        <article className={styles.card} ref={projectCard}
+        <article 
+            ref={projectCard}
+            className={styles.card} 
             onMouseMove={(e) =>  mouseOnProject(e)}
             onMouseLeave={() => mouseLeaveProject()} 
-            style={{...cardMouseHoverStyle}}
-            
+            style={{...cardMouseHoverStyle}} 
             >
+
             <Link href={accentsTidy(path)} className={styles.link}>
                 <img src={image.path} alt={image.alt} />
                 <h3 >
                     <span style={{...cardMouseHoverTitleStyle}}>{title}</span>
                 </h3>
             </Link> 
+            
         </article>
     )
 }

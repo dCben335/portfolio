@@ -1,20 +1,16 @@
-"use client"
-
 import styles from "./BurgerButton.module.scss"
 
-type BurgerButtonProps = {
-    clicked?: Function,
+interface BurgerButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
     cross: boolean,
-    classes?: string[]
 }
 
-
-export default function BurgerButton({ clicked, cross, classes }:  BurgerButtonProps) { 
+export default function BurgerButton({ cross, className, ...props }:  BurgerButtonProps) { 
 
     return (
-        <button className={`${styles["burger-btn"]} ${cross ? styles.cross : ""}  ${classes ? [...classes] : ''}`}
+        <button 
+            className={`${styles["burger-btn"]} ${cross ? styles.cross : ""} ${className}`}
             title="burger-button" 
-            onClick={() => clicked && clicked()}
+            {...props}
             >
             <span title="burger-menu-bar"></span>
             <span title="burger-menu-bar"></span>

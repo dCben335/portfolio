@@ -2,7 +2,7 @@
 
 import styles from './Header.module.scss'
 import BurgerButton from '@/components/ui/BurgerButton/BurgerButton'
-import { routeLink } from '@/libs/types'
+import { routeLink } from '@/types/types'
 import Link from './Link/Link'
 
 import ArrowLeft from '@/components/Icons/ArrowLeft/ArrowLeft'
@@ -26,20 +26,20 @@ export default function Header({ routes, admin } :  HeaderProps) {
         <header className={`${styles.header} ${smallMenu ? styles.smaller : ""}`}>
             {admin && (
                     <BurgerButton 
-                        classes={[styles.burger]}
-                        clicked={handleClick}
+                        className={styles.burger}
+                        onClick={handleClick}
                         cross={!smallMenu}
                     />
                 )
             }
             <nav>
                 {admin && (
-                    <Link 
-                        path={null}
-                        svg={<ArrowLeft />}
-                        title={"get back to client side"}
-                        smaller={smallMenu}
-                    />  
+                        <Link 
+                            path={null}
+                            svg={<ArrowLeft />}
+                            title={"get back to client side"}
+                            smaller={smallMenu}
+                        />  
                     )
                 }
                 <ul>

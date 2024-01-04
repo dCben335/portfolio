@@ -1,7 +1,7 @@
 "use client"
 
-import { useEffect, useState, useRef, ChangeEvent } from "react";
-import { Project } from "@/libs/types"
+import { useEffect, useState, useRef, ChangeEvent, useMemo, useCallback } from "react";
+import { Project } from "@/types/types"
 import styles from "./Wrapper.module.scss"
 import ProjectCard from "@/app/features/Projects/Card/Card";
 import ProjectCategories from "@/app/features/Projects/Categories/Categories";
@@ -25,41 +25,47 @@ export default function ProjectWrapper({ projects, categorieFilters, rowLimit, p
     const [activeCategory, setActiveCategory]:any = useState<number>();
     const [currentPage, setCurrentPage] = useState<number>(1);
     const [nbOfProjectPerPages, setNbOfProjectPerPages] = useState<number>()
-    
-    const categories:string[]|undefined = categorieFilters 
-        ? projects.flatMap((project) => project.categories).filter((item, idx, arr) => arr.indexOf(item) == idx)
-        : undefined
 
+    const categories:string[]|null = useMemo(() => {
+        if (!categorieFilters) return null;
+        return projects
+            .flatMap((project) => project.categories)
+            .filter((item, idx, arr) => arr.indexOf(item) == idx);
+    }, [projects, categorieFilters]);
 
-    const handleClick = categories ? (index: number) => {    
-        if ( activeCategory !== index ) {
-            setProjectList(projects.filter((project) => project.categories.includes(categories[index])))
-            setActiveCategory(index)
-            pagination && setCurrentPage(1)
-        }  else {
-            setProjectList(projects)
-            setActiveCategory(undefined)
+    const handleClick: ((index: number) => void) | undefined = useCallback((index: number) => {
+        if (categories && activeCategory !== index) {
+            setProjectList(projects.filter((project) => project.categories.includes(categories[index])));
+            setActiveCategory(index);
+            pagination && setCurrentPage(1);
+
+        } else {
+            setProjectList(projects);
+            setActiveCategory(undefined);
+
             if (pagination) {
-                setCurrentPage(1)
-                handlePagination()
+                setCurrentPage(1);
+                handlePagination();
             }
-        } 
-    } : undefined
-
-    const handleRows = () => {
-        if(projectWrapper.current && projectWrapper.current.children[0]) {
-            const nbOfProjectPerRow = 
-                Math.min(Math.floor(
-                    projectWrapper.current.clientWidth
-                    / Number(projectWrapper.current.children[0].offsetWidth)
-                ), 4);            
-            nbOfProjectPerRow !== 0 
-                ? setNbOfProjectPerPages(nbOfProjectPerRow * nbOfRows)
-                : setNbOfProjectPerPages(1 * nbOfRows)
         }
-    }
+        },[activeCategory, projects, categories, pagination]
+      );
+      
 
-    const handleResearch:Function = (e: ChangeEvent<HTMLTextAreaElement | HTMLInputElement>) => {
+
+    const handleRows = useCallback(() => {
+        if (projectWrapper.current && projectWrapper.current.children[0]) {
+          const nbOfProjectPerRow = Math.min(
+            Math.floor(projectWrapper.current.clientWidth / Number(projectWrapper.current.children[0].offsetWidth)),
+            4
+          );
+          nbOfProjectPerRow !== 0
+            ? setNbOfProjectPerPages(nbOfProjectPerRow * nbOfRows)
+            : setNbOfProjectPerPages(1 * nbOfRows);
+        }
+      }, [projectWrapper, nbOfRows]);
+
+    const handleResearch = (e: ChangeEvent<HTMLTextAreaElement | HTMLInputElement>) => {
         setCurrentProjects(projects.filter((project) => project.name.toLowerCase().includes(e.target.value.toLowerCase())))
     } 
 
@@ -67,40 +73,46 @@ export default function ProjectWrapper({ projects, categorieFilters, rowLimit, p
         setCurrentPage(pageNumber);
     }
 
-    const handlePagination:Function = () => {
+ 
+    const handlePagination = useCallback(() => {
         if (nbOfProjectPerPages) {
-            const indexOfLastPost = currentPage * nbOfProjectPerPages;
-            const indexOfFirstPost = indexOfLastPost - nbOfProjectPerPages;
-            setCurrentProjects(projectList.slice(indexOfFirstPost, indexOfLastPost))
+          const indexOfLastPost = currentPage * nbOfProjectPerPages;
+          const indexOfFirstPost = indexOfLastPost - nbOfProjectPerPages;
+          setCurrentProjects(projectList.slice(indexOfFirstPost, indexOfLastPost));
         }
-    }
+      }, [nbOfProjectPerPages, currentPage, projectList]);
 
     useEffect(() => {
         if (nbOfProjectPerPages && currentPage) {
             if(pagination) {
                 handlePagination() 
-            } else if(rowLimit) setCurrentProjects(projects.filter((project, idx) => idx < nbOfProjectPerPages ));
+            } else if(rowLimit) setCurrentProjects(projects.filter((_project, idx) => idx < nbOfProjectPerPages ));
         }
-    }, [nbOfProjectPerPages, currentPage])
+    }, [nbOfProjectPerPages, currentPage, pagination, rowLimit, projects, handlePagination]);
+
 
     useEffect(() => {
         setCurrentProjects(projects)
         if (rowLimit || pagination) {
             handleRows()
-            window.addEventListener('resize', () =>  {
-                handleRows()
-                setCurrentPage(1)
-            })
-            return () => window.removeEventListener('resize', () => {
-                handleRows()
-                setCurrentPage(1)
-            });
+
+            const handleResize = () => {
+                handleRows();
+                setCurrentPage(1);
+            };
+        
+            window.addEventListener('resize', handleResize);
+            return () => {
+                window.removeEventListener('resize', handleResize);
+            };
         }
-    }, [projectWrapper.current, nbOfRows])
+    }, [projectWrapper, nbOfRows, rowLimit, pagination, handleRows, projects]);
+
 
     useEffect(() => {
-        pagination || rowLimit && nbOfProjectPerPages ? handlePagination() : setCurrentProjects(projectList)
-    }, [projectList])
+        pagination || rowLimit && nbOfProjectPerPages ? handlePagination() : setCurrentProjects(projectList);
+    }, [projectList, pagination, rowLimit, nbOfProjectPerPages, handlePagination]);
+    
 
     return (
         <div>
@@ -117,7 +129,7 @@ export default function ProjectWrapper({ projects, categorieFilters, rowLimit, p
                             changed={(e : ChangeEvent<HTMLTextAreaElement | HTMLInputElement>) => handleResearch(e)}
                         />
                     )}
-                    {categories && handleClick && (
+                    {categories && (
                         <ProjectCategories 
                             categories={categories}
                             activeCategory={activeCategory}
@@ -126,6 +138,8 @@ export default function ProjectWrapper({ projects, categorieFilters, rowLimit, p
                     )}
                 </nav>
             )}
+
+
             <div className={pagination ? styles.projectWrapperContainer : ''}>
                 <div className={styles.projectWrapper} ref={projectWrapper}>
                     {(currentProjects ?? []).map((project, idx) => 
@@ -141,6 +155,8 @@ export default function ProjectWrapper({ projects, categorieFilters, rowLimit, p
                     )}  
                 </div>
             </div>
+
+
             {pagination && nbOfProjectPerPages && projectList &&
                 <Pagination 
                     postsPerPage={nbOfProjectPerPages}

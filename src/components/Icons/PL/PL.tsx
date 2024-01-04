@@ -12,7 +12,7 @@ import SQL from "./SQL/SQL"
 import StoryBlok from "./StoryBlok/StoryBlok"
 import TailWind from "./Tailwind/Tailwind"
 import JavaScript from "./JavaScript/JavaScript"
-import { ProgrammingLanguages } from "@/libs/types"
+import { ProgrammingLanguages } from "@/types/types"
 
 const frameworks: ProgrammingLanguages  = {
     "React" : <React />,

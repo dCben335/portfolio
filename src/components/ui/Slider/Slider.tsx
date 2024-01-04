@@ -3,13 +3,12 @@ import { ReactElement,  useRef, useEffect, useState } from "react";
 import Button from "@/components/ui/Button/Button";
 import styles from './Slider.module.scss'
 
-export default function Slider({
-    sliderWidth,
-    children
-}: {
-    sliderWidth: string
+interface SliderProps {
+    sliderWidth: string,
     children: ReactElement[]
-}) {
+}
+
+export default function Slider({ sliderWidth, children }: SliderProps) {
 
     const slidesContainer = useRef<HTMLDivElement>(null)
     const [currentSlide, setCurrentSlide] = useState<number>(0);
@@ -51,7 +50,7 @@ export default function Slider({
     
     useEffect(() => {
         setSliderWrapperWidth(slideWidth * children.length)
-    }, [slideWidth])
+    }, [slideWidth, children.length])
 
 
     useEffect(() => {
@@ -81,15 +80,10 @@ export default function Slider({
                 </div>
                 <nav className={styles.controls}>
                     {currentSlide !== 0 && 
-                        <Button 
-                            clicked={() => prevSlide()} 
-                            classes={styles.left}
-                        >{`<`}</Button> }
+                        <Button onClick={() => prevSlide()} className={styles.left}>{`<`}</Button> 
+                    }
                     {currentSlide < children.length - 1 && 
-                        <Button 
-                            clicked={() => nextSlide()} 
-                            classes={styles.right}
-                        >{`>`}</Button> 
+                        <Button onClick={() => nextSlide()} className={styles.right}>{`>`}</Button> 
                     }
                 </nav>
             </div>
@@ -98,8 +92,9 @@ export default function Slider({
                 {children && children[0] && children.map((child, number) => (
                     <li key={number} className='page-item'>
                         <Button 
-                            clicked={() => toSlide(number)} 
+                            onClick={() => toSlide(number)} 
                             active={number === currentSlide}
+                            title={`go to slide ${number}`}
                         ></Button>
                     </li>
                 ))}

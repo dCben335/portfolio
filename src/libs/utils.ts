@@ -11,23 +11,27 @@ const non_asciis:any = {
     'y': '[ýÿ]'
 };
 
-function accentsTidy(expression:string){
-    var lower = expression.toLowerCase();
+const accentsTidy = (expression: string) => {
+    let lower = expression.toLowerCase();
     for (let i in non_asciis) {
         lower = lower.replace(new RegExp(non_asciis[i], 'g'), i)
     }
     return lower;
 };
 
-async function fetching(link: string) {
+const fetching = async (link: string) => {
     try {
         const response:any = await fetch(link);
         if (!response.ok) throw Error;
-        return response.json()     
+
+        return response.json() 
+
     } catch(err) {
         console.log(err)
+        return undefined;
     }
 }
+
 
 export {
     accentsTidy,

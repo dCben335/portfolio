@@ -17,10 +17,9 @@ export default function HeaderLink({ svg, path, title, smaller }: HeaderLinkProp
 
     return (
         <Button
-            classes={`${styles.headerLink} ${smaller ? styles.smaller : ''}`}
-            path={path === null ? '/' : `/${path}`}
+            className={`${styles.headerLink} ${smaller ? styles.smaller : ''}`}
+            href={path === null ? '/' : `/${path}`}
             active={activeSegment === path}
-            ariaLabel={`retourner à la page ${path}`} 
         >
             {svg}
             {title && <span>{title}</span>}

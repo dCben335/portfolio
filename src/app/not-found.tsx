@@ -14,7 +14,7 @@ export default function Custom404() {
                 <div>
                     <p>La page que vous recherchez n&apos;existe pas</p>
                     <div className={styles.flex}>
-                        <Button clicked={() => redirect('/')}>go home</Button>  
+                        <Button onClick={() => redirect('/')}>go home</Button>  
                     </div>
                 </div>
             </section>

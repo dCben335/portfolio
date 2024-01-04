@@ -11,10 +11,10 @@ import { frameworks } from '@/components/Icons/PL/PL';
 import TypeScript from '@/components/Icons/PL/TypeScript/TypeScript';
 
 import { useEffect, useState } from 'react';
-import { fetching } from '@/libs/functions';
+import { fetching } from '@/libs/utils';
 
-import { Project } from '@/libs/types';
-import { GroupForm } from "@/libs/types";
+import { Project } from '@/types/types';
+import { GroupForm } from "@/types/types";
 
 const formDatas: GroupForm[] = [
   {
@@ -52,6 +52,7 @@ export default function Home() {
     })()
   }, [])
 
+
   return (
     <main className={styles.main}>
       <section className={styles.hero}>
@@ -76,7 +77,7 @@ export default function Home() {
           </div>
         </div>
         <div className={styles.link}>
-          <Button path="/about">voir plus</Button>
+          <Button href="/about">voir plus</Button>
         </div>
       </section>
 
@@ -92,7 +93,7 @@ export default function Home() {
               searchfield={false}
             />
           <div className={styles.link}>
-            <Button path="/my-work">voir plus</Button>
+            <Button href="/my-work">voir plus</Button>
           </div>
         </section>
       }

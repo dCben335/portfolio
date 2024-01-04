@@ -7,8 +7,8 @@ import ProgLanguages from "@/components/molecules/ProgLanguages/ProgLanguages";
 import Skills from '@/components/molecules/Skills/Skills';
 
 import { frameworks, CMS, nativeLanguages, others } from "@/components/Icons/PL/PL";
-import { fetching } from "@/libs/functions";
-import { ProgrammingLanguagesProps } from '@/libs/types';
+import { fetching } from "@/libs/utils";
+import { ProgrammingLanguagesProps } from '@/types/types';
 
 
 const programmingLanguages: ProgrammingLanguagesProps[] = [

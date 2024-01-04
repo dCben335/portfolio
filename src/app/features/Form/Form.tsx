@@ -1,6 +1,6 @@
 "use client"
 import { ChangeEvent, useState } from "react";
-import { GroupForm } from "@/libs/types";
+import { GroupForm } from "@/types/types";
 import FormGroup from "@/app/features/Form/Group/Group";
 import Button from "@/components/ui/Button/Button";
 import styles from "./Form.module.scss"
@@ -26,7 +26,7 @@ export default function Form({ title, groupForms, submitLink, successMessage, fa
         })
     }
 
-    const handleSubmit = async (event : SubmitEvent) => {
+    const handleSubmit = async (event: SubmitEvent) => {
         event.preventDefault()
         if (submited === 1) return
         if (formDatas && Object.keys(formDatas).length === groupForms.length) {

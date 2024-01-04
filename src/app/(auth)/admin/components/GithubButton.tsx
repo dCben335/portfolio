@@ -4,6 +4,7 @@ import Button from "@/components/ui/Button/Button";
 import { signIn } from "next-auth/react";
 
 export default function GithubButton() {
+    
     const handleClick = () => { 
         signIn("github", { 
             callbackUrl: "/dashboard" 
@@ -12,7 +13,7 @@ export default function GithubButton() {
 
 
     return (
-        <Button clicked={() => handleClick()}>
+        <Button onClick={() => handleClick()}>
             Connexion avec Github
         </Button>
     )
