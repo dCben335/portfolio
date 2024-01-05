@@ -49,7 +49,7 @@ export default function Form({ title, groupForms, submitLink, successMessage, fa
     return (
         <form onSubmit={(e: any) => handleSubmit(e)} className={styles.form}>
             {title && <h3>{title}</h3>}
-            {groupForms && groupForms.map((groupForm, idx) => 
+            {(groupForms ?? []).map((groupForm, idx) => 
                 <FormGroup 
                     key={idx}
                     groupForm={groupForm}

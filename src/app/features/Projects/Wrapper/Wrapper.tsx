@@ -33,7 +33,8 @@ export default function ProjectWrapper({ projects, categorieFilters, rowLimit, p
             .filter((item, idx, arr) => arr.indexOf(item) == idx);
     }, [projects, categorieFilters]);
 
-    const handleClick: ((index: number) => void) | undefined = useCallback((index: number) => {
+
+    const handleClick: ((index: number) => void) = useCallback((index: number) => {
         if (categories && activeCategory !== index) {
             setProjectList(projects.filter((project) => project.categories.includes(categories[index])));
             setActiveCategory(index);
@@ -49,21 +50,21 @@ export default function ProjectWrapper({ projects, categorieFilters, rowLimit, p
             }
         }
         },[activeCategory, projects, categories, pagination]
-      );
-      
-
+    );
 
     const handleRows = useCallback(() => {
         if (projectWrapper.current && projectWrapper.current.children[0]) {
-          const nbOfProjectPerRow = Math.min(
-            Math.floor(projectWrapper.current.clientWidth / Number(projectWrapper.current.children[0].offsetWidth)),
+            const nbOfProjectPerRow = Math.min(
+            Math.floor(
+                projectWrapper.current.clientWidth 
+                / Number(projectWrapper.current.children[0].offsetWidth)),
             4
-          );
-          nbOfProjectPerRow !== 0
-            ? setNbOfProjectPerPages(nbOfProjectPerRow * nbOfRows)
-            : setNbOfProjectPerPages(1 * nbOfRows);
+            );
+            nbOfProjectPerRow !== 0
+                ? setNbOfProjectPerPages(nbOfProjectPerRow * nbOfRows)
+                : setNbOfProjectPerPages(1 * nbOfRows);
         }
-      }, [projectWrapper, nbOfRows]);
+    }, [projectWrapper.current?.children, nbOfRows]);
 
     const handleResearch = (e: ChangeEvent<HTMLTextAreaElement | HTMLInputElement>) => {
         setCurrentProjects(projects.filter((project) => project.name.toLowerCase().includes(e.target.value.toLowerCase())))
@@ -73,14 +74,13 @@ export default function ProjectWrapper({ projects, categorieFilters, rowLimit, p
         setCurrentPage(pageNumber);
     }
 
- 
     const handlePagination = useCallback(() => {
         if (nbOfProjectPerPages) {
-          const indexOfLastPost = currentPage * nbOfProjectPerPages;
-          const indexOfFirstPost = indexOfLastPost - nbOfProjectPerPages;
-          setCurrentProjects(projectList.slice(indexOfFirstPost, indexOfLastPost));
+            const indexOfLastPost = currentPage * nbOfProjectPerPages;
+            const indexOfFirstPost = indexOfLastPost - nbOfProjectPerPages;
+            setCurrentProjects(projectList.slice(indexOfFirstPost, indexOfLastPost));
         }
-      }, [nbOfProjectPerPages, currentPage, projectList]);
+    }, [nbOfProjectPerPages, currentPage, projectList]);
 
     useEffect(() => {
         if (nbOfProjectPerPages && currentPage) {
