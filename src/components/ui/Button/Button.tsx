@@ -2,7 +2,6 @@
 import { CSSProperties, ReactElement } from 'react'
 import styles from './Button.module.scss'
 import Link from 'next/link'
-import { accentsTidy } from '@/libs/utils'
 
 interface LinkProps extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
     renderAs: "link"
@@ -23,7 +22,7 @@ export default function Button({ children, className, active, activeColor, ...pr
         const { renderAs, ...newProps } = props
 
         return (
-            <Link {...newProps} href={accentsTidy(props.href)}
+            <Link {...newProps}
                 style={active && activeColor ? activeColor : {}}
                 className={`${styles.btn} ${active ? styles.active : '' } ${className}`}     
             >
