@@ -13,29 +13,23 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 
 type Props = (LinkProps | ButtonProps) & {
     active?: boolean
-    activeColor?: CSSProperties
 }
 
-export default function Button({ children, className, active, activeColor, ...props} : Props ) {    
+export default function Button({ children, className, active, ...props} : Props ) {  
+    const classes = `${styles.btn} ${active ? styles.active : ''} ${className}`
     
     if (props.renderAs === 'link') {
         const { renderAs, ...newProps } = props
 
         return (
-            <Link {...newProps}
-                style={active && activeColor ? activeColor : {}}
-                className={`${styles.btn} ${active ? styles.active : '' } ${className}`}     
-            >
+            <Link {...newProps} className={classes}>
                 {children}
             </Link>
         )
     }
 
-    return (   
-        <button {...props}
-            style={active && activeColor ? activeColor : {}}
-            className={`${styles.btn} ${active ? styles.active : ''} ${className}`} 
-        >
+    return (    
+        <button {...props} className={classes}>
             {children}
         </button>
     )

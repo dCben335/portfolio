@@ -29,7 +29,7 @@ export default function ProjectCategories({ categories, clicked, activeCategory 
                         <Button 
                             onClick={() => clicked && clicked(idx)} 
                             active={activeCategory === idx}
-                            activeColor={{backgroundColor : categoriesColors[idx]}}
+                            style={activeCategory === idx ? {backgroundColor : categoriesColors[idx]} : {}}
                         >
                             {category}
                         </Button>
