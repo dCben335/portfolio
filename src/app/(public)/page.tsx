@@ -77,7 +77,7 @@ export default function Home() {
           </div>
         </div>
         <div className={styles.link}>
-          <Button href="/about">voir plus</Button>
+          <Button renderAs='link' href="/about">voir plus</Button>
         </div>
       </section>
 
@@ -93,7 +93,7 @@ export default function Home() {
               searchfield={false}
             />
           <div className={styles.link}>
-            <Button href="/my-work">voir plus</Button>
+            <Button renderAs="link" href="/my-work">voir plus</Button>
           </div>
         </section>
       }

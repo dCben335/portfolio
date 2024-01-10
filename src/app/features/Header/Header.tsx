@@ -25,23 +25,21 @@ export default function Header({ routes, admin } :  HeaderProps) {
     return (
         <header className={`${styles.header} ${smallMenu ? styles.smaller : ""}`}>
             {admin && (
-                    <BurgerButton 
-                        className={styles.burger}
-                        onClick={handleClick}
-                        cross={!smallMenu}
-                    />
-                )
-            }
+                <BurgerButton 
+                    className={styles.burger}
+                    onClick={handleClick}
+                    cross={!smallMenu}
+                />
+            )}
             <nav>
                 {admin && (
-                        <Link 
-                            path={null}
-                            svg={<ArrowLeft />}
-                            title={"get back to client side"}
-                            smaller={smallMenu}
-                        />  
-                    )
-                }
+                    <Link 
+                        path={null}
+                        svg={<ArrowLeft />}
+                        title={"get back to client side"}
+                        isSmaller={smallMenu}
+                    />  
+                )}
                 <ul>
                     {routes.map((route, index) => 
                         <li key={index}>
@@ -49,7 +47,7 @@ export default function Header({ routes, admin } :  HeaderProps) {
                                 path={route.path}
                                 svg={route.children}
                                 title={route.name}
-                                smaller={smallMenu}
+                                isSmaller={smallMenu}
                             />
                         </li>
                     )}

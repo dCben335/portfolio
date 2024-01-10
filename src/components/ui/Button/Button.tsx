@@ -18,9 +18,12 @@ type Props = (LinkProps | ButtonProps) & {
 }
 
 export default function Button({ children, className, active, activeColor, ...props} : Props ) {    
+    
     if (props.renderAs === 'link') {
+        const { renderAs, ...newProps } = props
+
         return (
-            <Link {...props} href={accentsTidy(props.href)}
+            <Link {...newProps} href={accentsTidy(props.href)}
                 style={active && activeColor ? activeColor : {}}
                 className={`${styles.btn} ${active ? styles.active : '' } ${className}`}     
             >
@@ -28,7 +31,6 @@ export default function Button({ children, className, active, activeColor, ...pr
             </Link>
         )
     }
-
 
     return (   
         <button {...props}

@@ -9,15 +9,16 @@ type HeaderLinkProps = {
     svg: React.ReactNode,
     path: string | null,
     title?: string
-    smaller: boolean
+    isSmaller: boolean
 }
 
-export default function HeaderLink({ svg, path, title, smaller }: HeaderLinkProps) {
+export default function HeaderLink({ svg, path, title, isSmaller }: HeaderLinkProps) {
     const activeSegment = useSelectedLayoutSegment();
 
     return (
         <Button
-            className={`${styles.headerLink} ${smaller ? styles.smaller : ''}`}
+            renderAs="link"
+            className={`${styles.headerLink} ${isSmaller ? styles.smaller : ''}`}
             href={path === null ? '/' : `/${path}`}
             active={activeSegment === path}
         >

@@ -1,3 +1,5 @@
+"use client"
+
 import { useState } from "react";
 
 import styles from './Skills.module.scss'
@@ -66,7 +68,7 @@ export default function Skills({ skills }: SkillsProps) {
                         <strong>{skill.label}</strong>
                         <p>{skill.description}</p>
                         <div>
-                            <Button href={skill.link} blank={true}>voir le projet</Button>
+                            <Button renderAs="link" href={skill.link} target="_blank">voir le projet</Button>
                         </div>
                     </article>
                 )}
