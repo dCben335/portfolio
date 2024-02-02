@@ -34,7 +34,7 @@ export default  function Page() {
                 {projects &&
                     <ProjectWrapper 
                         projects={projects}
-                        filters={true}      
+                        categorieFilters={true}      
                         rowLimit={false}
                         searchfield={true}
                         pagination={true}

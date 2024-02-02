@@ -86,7 +86,7 @@ export default function Home() {
           <h2>Mes derniers Projets</h2>
             <ProjectWrapper 
               projects={projects}
-              filters={false}
+              categorieFilters={false}
               rowLimit={true}
               nbOfRows={2}
               pagination={false}

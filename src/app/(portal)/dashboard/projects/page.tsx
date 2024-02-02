@@ -30,7 +30,7 @@ export default function Page() {
                     </h1>
                     <ProjectWrapper 
                         projects={projects}
-                        filters={true}      
+                        categorieFilters={true}      
                         rowLimit={false}
                         pagination={true}
                         nbOfRows={2}
