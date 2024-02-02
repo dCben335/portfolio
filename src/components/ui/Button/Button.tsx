@@ -15,7 +15,7 @@ type Props = (LinkProps | ButtonProps) & {
     active?: boolean
 }
 
-export default function Button({ children, className, active, ...props} : Props ) {  
+const Button = ({ children, className, active, ...props} : Props ) => {  
     const classes = `${styles.btn} ${active ? styles.active : ''} ${className}`
     
     if (props.renderAs === 'link') {
@@ -34,6 +34,10 @@ export default function Button({ children, className, active, ...props} : Props 
         </button>
     )
 }
+
+Button.displayName = 'Button';
+
+export default Button;
 
 
 

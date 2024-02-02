@@ -16,7 +16,6 @@ export default function Page({params} : {
 
     if (isLoading || !project) return <div>Loading...</div>
     if (error || (!project)) return notFound();
-
     
     return (
         <main className={styles.project}>

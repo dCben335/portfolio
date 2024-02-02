@@ -4,7 +4,7 @@ interface BurgerButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement
     cross: boolean,
 }
 
-export default function BurgerButton({ cross, className, ...props }:  BurgerButtonProps) { 
+const BurgerButton = ({ cross, className, ...props }:  BurgerButtonProps) => { 
 
     return (
         <button 
@@ -18,3 +18,7 @@ export default function BurgerButton({ cross, className, ...props }:  BurgerButt
         </button>
     )
 }
+
+BurgerButton.displayName = 'BurgerButton';
+
+export default BurgerButton;
