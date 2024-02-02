@@ -1,6 +1,6 @@
 "use client"
 import { notFound } from 'next/navigation';
-import Slider from '@/components/ui/Slider/Slider'
+import Slider from '@/components/customs/Slider/Slider'
 import styles from './page.module.scss'
 
 import { useEffect, useState } from 'react';

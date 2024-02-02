@@ -4,6 +4,9 @@
 
     & > :first-child {
         width: clamp(min(300px, 100%), 45vw, 450px );
+        & > * {
+            fill: $primary-color;
+        }
     }
     
 }

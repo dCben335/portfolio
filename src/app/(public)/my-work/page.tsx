@@ -1,6 +1,6 @@
 "use client"
 
-import ProjectWrapper from '@/app/features/Projects/Wrapper/Wrapper';
+import ProjectWrapper from '@/components/customs/Projects/Projects';
 import ThreeDText from '@/components/ui/3dText/ThreeDText';
 import styles from './page.module.scss'
 import { useEffect, useState } from 'react';
@@ -29,7 +29,7 @@ export default function Page () {
                     </h1>
                     <ProjectWrapper 
                         projects={projects}
-                        categorieFilters={true}      
+                        filters={true}      
                         rowLimit={false}
                         pagination={true}
                         nbOfRows={2}

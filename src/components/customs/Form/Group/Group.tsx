@@ -6,7 +6,7 @@ type FormGroupProps = {
     groupForm: GroupForm
 }
 
-export default function FormGroup({ groupForm, changed } : FormGroupProps) {
+const Group = ({ groupForm, changed } : FormGroupProps) => {
     return (
         <label className={styles.label}>
             <span>{groupForm.label}</span>
@@ -30,3 +30,7 @@ export default function FormGroup({ groupForm, changed } : FormGroupProps) {
         </label>
     )
 }
+
+Group.displayName = 'Form_Group';
+
+export default Group;

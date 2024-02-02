@@ -16,7 +16,3 @@ $slider-width: clamp(min(280px, 100vw - (2 * $website-padding) - 50px), 100vw - 
         }
     }
 }
-
-:export {
-    sliderWidth: $slider-width;
-}

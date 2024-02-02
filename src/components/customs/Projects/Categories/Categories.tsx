@@ -10,7 +10,7 @@ type ProjectCategoriesProps = {
     activeCategory: number
 }
 
-export default function ProjectCategories({ categories, clicked, activeCategory } : ProjectCategoriesProps) {
+const ProjectCategories = ({ categories, clicked, activeCategory } : ProjectCategoriesProps) => {
     const [opened, setOpened] = useState(false)
 
     const handleClick = () => {
@@ -38,5 +38,8 @@ export default function ProjectCategories({ categories, clicked, activeCategory 
             </ul>
         </div>  
     )
-
 }
+
+ProjectCategories.displayName = 'Project_Categories';
+
+export default ProjectCategories;

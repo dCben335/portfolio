@@ -2,36 +2,43 @@
 
 import { useEffect, useState, useRef, ChangeEvent, useMemo, useCallback } from "react";
 import { Project } from "@/types/types"
-import styles from "./Wrapper.module.scss"
-import ProjectCard from "@/app/features/Projects/Card/Card";
-import ProjectCategories from "@/app/features/Projects/Categories/Categories";
-import Pagination from "@/app/features/Projects/Pagination/Pagination";
-import FormGroup from "@/app/features/Form/Group/Group";
+import styles from "./Projects.module.scss"
+import ProjectCategories from "@/components/customs/Projects/Categories/Categories";
+import Pagination from "@/components/customs/Projects/Pagination/Pagination";
+import Group from "@/components/customs/Form/Group/Group";
+import Wrapper from "./Wrapper/Wrapper";
 
 type ProjectWrapperProps = {
     projects: Project[],
-    categorieFilters?: boolean,
+    filters?: boolean,
     rowLimit?: boolean,
     pagination?: boolean,
     nbOfRows?: number,
     searchfield?: boolean
 }
 
-export default function ProjectWrapper({ projects, categorieFilters, rowLimit, pagination, nbOfRows = 1, searchfield } : ProjectWrapperProps) {
+const searchfieldProps = {
+    label: "",
+    placeholder: "project_name",
+    type: "text",
+    name: "project_name"
+}
+
+export default function Projects({ projects, filters, rowLimit, pagination, nbOfRows = 1, searchfield } : ProjectWrapperProps) {
     const projectWrapper = useRef<any>()
 
     const [projectList, setProjectList] = useState<Project[]>([...projects])
     const [currentProjects, setCurrentProjects] = useState<Project[]>();
-    const [activeCategory, setActiveCategory]:any = useState<number>();
+    const [activeCategory, setActiveCategory] = useState<number>();
     const [currentPage, setCurrentPage] = useState<number>(1);
     const [nbOfProjectPerPages, setNbOfProjectPerPages] = useState<number>()
 
     const categories:string[]|null = useMemo(() => {
-        if (!categorieFilters) return null;
+        if (!filters) return null;
         return projects
             .flatMap((project) => project.categories)
             .filter((item, idx, arr) => arr.indexOf(item) == idx);
-    }, [projects, categorieFilters]);
+    }, [projects, filters]);
 
 
     const handleClick: ((index: number) => void) = useCallback((index: number) => {
@@ -115,21 +122,16 @@ export default function ProjectWrapper({ projects, categorieFilters, rowLimit, p
     
 
     return (
-        <div>
+        <div className={styles.projects}>
             {(categories || searchfield) && (      
                 <nav className={styles.navigation}>
                     {searchfield && (
-                        <FormGroup 
-                            groupForm={{
-                                label: "",
-                                placeholder: "project_name",
-                                type: "text",
-                                name: "project_name"
-                            }}
-                            changed={(e : ChangeEvent<HTMLTextAreaElement | HTMLInputElement>) => handleResearch(e)}
+                        <Group 
+                            groupForm={searchfieldProps}
+                            changed={(e : ChangeEvent<HTMLInputElement>) => handleResearch(e)}
                         />
                     )}
-                    {categories && (
+                    {categories && activeCategory && (
                         <ProjectCategories 
                             categories={categories}
                             activeCategory={activeCategory}
@@ -139,23 +141,12 @@ export default function ProjectWrapper({ projects, categorieFilters, rowLimit, p
                 </nav>
             )}
 
-
-            <div className={pagination ? styles.projectWrapperContainer : ''}>
-                <div className={styles.projectWrapper} ref={projectWrapper}>
-                    {(currentProjects ?? []).map((project, idx) => 
-                        <ProjectCard      
-                            key={project.name.split(' ').join('_')}
-                            path={`my-work/${project.name.split(' ').join('_')}`}
-                            image={{
-                                path: project.images[0].path,
-                                alt: project.images[0].alt,
-                            }}
-                            title={project.name}
-                        />
-                    )}  
-                </div>
-            </div>
-
+            {currentProjects && ( 
+                <Wrapper 
+                    currentProjects={currentProjects} 
+                    ref={projectWrapper}
+                />
+            )}
 
             {pagination && nbOfProjectPerPages && projectList &&
                 <Pagination 

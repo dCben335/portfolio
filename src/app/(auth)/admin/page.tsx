@@ -1,5 +1,5 @@
 import styles from './page.module.scss'
-import GithubButton from "./components/GithubButton"
+import GithubButton from "./_components/GithubButton"
 
 export default function Page() {
     return (

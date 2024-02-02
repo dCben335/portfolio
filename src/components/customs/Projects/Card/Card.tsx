@@ -14,11 +14,11 @@ type ProjectCardProps = {
     transformPorperties?: ProjectCardTransformPorperties
 }
 
-export default function Card({ image, title, path, transformPorperties = {
+const Card = ({ image, title, path, transformPorperties = {
     perspective: 1000,
     maxAngle: 3.5,
     scale: 1.01,
-}}: ProjectCardProps) {
+}}: ProjectCardProps) => {
 
     const projectCard = useRef<HTMLElement | null>(null)
     const [cardMouseHoverStyle, setCardMouseHoverStyle] = useState<CSSProperties>({}) 
@@ -87,3 +87,7 @@ export default function Card({ image, title, path, transformPorperties = {
         </article>
     )
 }
+
+Card.displayName = 'Project_Card';
+
+export default Card;

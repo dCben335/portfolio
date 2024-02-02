@@ -1,18 +1,4 @@
-.navigation {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-
-    & > :first-child {
-        width: 100%;
-    }
-
-    & > :last-child {
-        margin-left: auto;
-    }
-}
-
-.projectWrapper {
+.wrapper {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(min(280px, 100%), 1fr));
     padding: 1rem 0;
@@ -24,4 +10,3 @@
         }
     }
 }
-

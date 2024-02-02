@@ -1,0 +1,15 @@
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    & > :first-child {
+        width: 100%;
+    }
+
+    & > :last-child {
+        margin-left: auto;
+        width: -moz-fit-content;
+        width: fit-content;
+    }
+}

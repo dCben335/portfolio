@@ -1,6 +1,6 @@
 "use client"
 
-import ProjectWrapper from '@/app/features/Projects/Wrapper/Wrapper';
+import ProjectWrapper from '@/components/customs/Projects/Projects';
 import styles from './page.module.scss'
 import { fetching } from '@/libs/utils';
 import { Project } from '@/types/types';
@@ -34,7 +34,7 @@ export default  function Page() {
                 {projects &&
                     <ProjectWrapper 
                         projects={projects}
-                        categorieFilters={true}      
+                        filters={true}      
                         rowLimit={false}
                         searchfield={true}
                         pagination={true}

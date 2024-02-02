@@ -3,8 +3,8 @@ import styles from './page.module.scss'
 import { useEffect, useState } from "react";
 
 import ThreeDText from "@/components/ui/3dText/ThreeDText";
-import ProgLanguages from "@/components/molecules/ProgLanguages/ProgLanguages";
-import Skills from '@/components/molecules/Skills/Skills';
+import ProgLanguages from "@/app/(public)/_components/ProgLanguages/ProgLanguages";
+import Skills from '@/app/(public)/_components/Skills/Skills';
 
 import { frameworks, CMS, nativeLanguages, others } from "@/components/Icons/PL/PL";
 import { fetching } from "@/libs/utils";

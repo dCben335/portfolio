@@ -12,7 +12,7 @@ type HeaderLinkProps = {
     isSmaller: boolean
 }
 
-export default function HeaderLink({ svg, path, title, isSmaller }: HeaderLinkProps) {
+const HeaderLink = ({ svg, path, title, isSmaller }: HeaderLinkProps) => {
     const activeSegment = useSelectedLayoutSegment();
 
     return (
@@ -27,3 +27,7 @@ export default function HeaderLink({ svg, path, title, isSmaller }: HeaderLinkPr
         </Button>
     )
 }
+
+HeaderLink.displayName = 'Header_Link';
+
+export default HeaderLink;

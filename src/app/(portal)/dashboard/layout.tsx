@@ -1,5 +1,5 @@
-import Header from '@/app/features/Header/Header'
-import Footer from '@/components/Footer/Footer'
+import Header from '@/components/customs/Header/Header'
+import Footer from '@/components/customs/Footer/Footer'
 import routes from './routes'
 
 

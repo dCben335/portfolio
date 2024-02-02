@@ -1,62 +1,40 @@
 "use client"
 import { notFound } from 'next/navigation';
-import Slider from '@/components/ui/Slider/Slider'
+import Slider from '@/components/customs/Slider/Slider'
 import styles from './page.module.scss'
-
-import { useEffect, useState } from 'react';
-import { fetching } from '@/libs/utils';
-import { accentsTidy } from '@/libs/utils';
 import { Project }  from '@/types/types'
+import useProjects from '@/hooks/useProjects';
+import { accentsTidy } from '@/libs/utils';
 
 
 export default function Page({params} : { 
     params: {project_name : string}
 }) {
-    const [projectDatas, setProjectDatas] = useState<Project | false>()
-    const [loading, setLoading] = useState<boolean>(true)
+    const { data, error, isLoading } = useProjects();
 
-    useEffect(() => {
-        projectDatas === undefined &&
-            (async function getProjects() {
-                const projects = await fetching('/assets/contents/project.json')
+    const project = data?.find((el : Project) =>  accentsTidy(el.name.split(' ').join('_')) == params.project_name) as Project;
 
-                const thisProject = projects.filter((el:Project) => 
-                    accentsTidy(el.name.split(' ').join('_')) == params.project_name
-                )[0] 
-                
-                setProjectDatas(thisProject ? thisProject : false) 
-            })()
-    }, [])
+    if (isLoading || !project) return <div>Loading...</div>
+    if (error || (!project)) return notFound();
 
-    useEffect(() => {
-        projectDatas !== undefined && setLoading(false)
-    }, [projectDatas])
-
+    
     return (
-        <>
-            { !loading && !projectDatas ? notFound() :
-                <main className={styles.project}>
-                    {!projectDatas ? <></> :
-                    <section>
-                        <h1>{projectDatas.name}</h1>
-                        <div className={styles.grid}>          
-                            {projectDatas.images &&
-                                <div>
-                                    <Slider sliderWidth={styles.sliderWidth}>
-                                        {projectDatas.images.map((image, idx) => 
-                                            <img src={image.path} alt={image.alt} key={idx}/>
-                                        )}
-                                    </Slider>
-                                </div>
-                            }
-                            <div>
-                                <p>{projectDatas.desciption}</p>
-                            </div>
-                        </div>
-                    </section>
+        <main className={styles.project}>
+            <section>
+                <h1>{project.name}</h1>
+                <div className={styles.grid}>          
+                    {project.images &&
+                        <Slider>
+                            {project.images.map((image, idx) => 
+                                <img src={image.path} alt={image.alt} key={idx}/>
+                            )}
+                        </Slider>
                     }
-                </main>
-            }
-        </>
+                    <div>
+                        <p>{project.desciption}</p>
+                    </div>
+                </div>
+            </section>
+        </main>
     )
 }

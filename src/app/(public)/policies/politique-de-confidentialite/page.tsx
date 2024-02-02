@@ -12,17 +12,19 @@ export default function PolitiqueDeConfidentialite() {
                 <div className={styles.grid}>
                     <article>
                         <h2>Introduction</h2>
-                        <p>Dans le cadre de son activité, Benoît CABOCEL est amenée à collecter et à traiter des informations dont certaines sont qualifiées de «&nbsp;données personnelles&nbsp;». IOTA Solutions attache une grande importance au respect de la vie privée, et n’utilise que des donnes de manière responsable et confidentielle et dans une finalité précise.</p>
+                        <p>Dans le cadre de son activité, Benoît CABOCEL est amenée à collecter et à traiter des informations dont certaines sont qualifiées de «&nbsp;données personnelles&nbsp;». Il attache une grande importance au respect de la vie privée, et n’utilise que des donnes de manière responsable et confidentielle et dans une finalité précise.</p>
                     </article>
                     <article>
                         <h2>Données personnelles</h2>
-                        <p>Sur le site web iota-solutions.fr, il y a 2 types de données susceptibles d’être recueillies :</p>
+                        <p>Sur le site web, il y a 2 types de données susceptibles d’être recueillies :</p>
                         <ul>
-                            <li><b>Les données transmises directement: </b>
-                            Ces données sont celles que vous nous transmettez directement, via un formulaire de contact ou bien par contact direct par email. Sont obligatoires dans le formulaire de contact le champs «&nbsp;prénom et nom&nbsp;», «&nbsp;entreprise ou organisation&nbsp;» et «&nbsp;email&nbsp;».
+                            <li>
+                                <b>Les données transmises directement: </b>
+                                Ces données sont celles que vous nous transmettez directement, via un formulaire de contact ou bien par contact direct par email. Sont obligatoires dans le formulaire de contact le champs «&nbsp;prénom et nom&nbsp;», «&nbsp;entreprise ou organisation&nbsp;» et «&nbsp;email&nbsp;».
                             </li>
-                            <li><b>&nbsp;Les données collectées automatiquement: </b>
-                            Lors de vos visites, une fois votre consentement donné, nous pouvons recueillir des informations anonymes de type &nbsp;» web analytics &nbsp;» relatives à votre navigation, la durée de votre consultation, votre type et version de navigateur. La technologie utilisée est le cookie.
+                            <li>
+                                <b>&nbsp;Les données collectées automatiquement: </b>
+                                Lors de vos visites, une fois votre consentement donné, nous pouvons recueillir des informations anonymes de type &nbsp;» web analytics &nbsp;» relatives à votre navigation, la durée de votre consultation, votre type et version de navigateur. La technologie utilisée est le cookie.
                             </li>
                         </ul>
                     </article>

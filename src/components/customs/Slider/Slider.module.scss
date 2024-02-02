@@ -1,27 +1,33 @@
 .slider {    
     padding: 3vh 0;
+    max-width: 100%;
+    min-width: 100%;
+
+
     & > div {
         position: relative;
-        
-        .slidesContainer {
-            overflow: hidden;
+        width: 100%;
+        overflow: hidden;
+        width: 100%;
             
-            .sliderWrapper {
-                display: flex;
-                transition: transform .4s cubic-bezier(0.455, 0.03, 0.715, 0.95);
+        .sliderWrapper {
+            display: flex;
+            width: 100%;
+            transform: translateX(var(--translateX));
+            transition: transform .4s cubic-bezier(0.455, 0.03, 0.715, 0.95);
+            
+            figure {
+                display: grid;
+                place-items: center;
+                min-width: 100%;
                 
-                figure {
-                    width: 100%;
-                    display: grid;
-                    place-items: center;
-                    
-                    & > * {
-                        max-height: 60vh;
-                        object-fit: contain;
-                    }
+                & > * {
+                    max-height: 60vh;
+                    object-fit: contain;
                 }
             }
         }
+        
 
         .controls {
             position: absolute;
@@ -34,6 +40,7 @@
             & > .left {
                 margin-right: auto;
             }
+            
             & > .right {
                 margin-left: auto;
             }

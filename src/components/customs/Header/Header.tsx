@@ -13,7 +13,7 @@ type HeaderProps = {
     admin: boolean
 }
 
-export default function Header({ routes, admin } :  HeaderProps) {
+const Header = ({ routes, admin } :  HeaderProps) => {
 
     const [smallMenu, setSmallMenu] = useState<boolean>(!admin)    
 
@@ -56,3 +56,7 @@ export default function Header({ routes, admin } :  HeaderProps) {
         </header>
     )
 }
+
+Header.displayName = 'Header';
+
+export default Header;

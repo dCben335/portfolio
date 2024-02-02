@@ -2,6 +2,7 @@
 
 import Button from "@/components/ui/Button/Button";
 import { signIn } from "next-auth/react";
+import GitHub from "@/components/Icons/Socials/GitHub/GitHub";
 
 export default function GithubButton() {
     
@@ -14,7 +15,7 @@ export default function GithubButton() {
 
     return (
         <Button onClick={() => handleClick()}>
-            Connexion avec Github
+            <GitHub />
         </Button>
     )
 }

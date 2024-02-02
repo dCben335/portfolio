@@ -4,7 +4,7 @@ import GitHub from '@/components/Icons/Socials/GitHub/GitHub'
 import LinkedIn from '@/components/Icons/Socials/LinkedIn/LinkedIn'
 
 
-export default function Footer({}) {
+const Footer = ({}) => {
     return (
         <footer className={`${styles.footer}`}>
             <div className={styles.wrapper}>
@@ -43,3 +43,7 @@ export default function Footer({}) {
         </footer>
     )
 }
+
+Footer.displayName = 'Footer';
+
+export default Footer;

@@ -1,7 +1,7 @@
 "use client"
 import { ChangeEvent, useState } from "react";
 import { GroupForm } from "@/types/types";
-import FormGroup from "@/app/features/Form/Group/Group";
+import Group from "@/components/customs/Form/Group/Group";
 import Button from "@/components/ui/Button/Button";
 import styles from "./Form.module.scss"
 
@@ -19,6 +19,7 @@ export default function Form({ title, groupForms, submitLink, successMessage, fa
 
     const handleChange = (event: ChangeEvent<HTMLTextAreaElement | HTMLInputElement>) => {
         if (event.target.value === '') return 
+        
         setFormDatas((prev) => {
             const newDatas = {...prev}
             newDatas[event.target.name] = event.target.value
@@ -50,7 +51,7 @@ export default function Form({ title, groupForms, submitLink, successMessage, fa
         <form onSubmit={(e: any) => handleSubmit(e)} className={styles.form}>
             {title && <h3>{title}</h3>}
             {(groupForms ?? []).map((groupForm, idx) => 
-                <FormGroup 
+                <Group 
                     key={idx}
                     groupForm={groupForm}
                     changed={(e : ChangeEvent<HTMLTextAreaElement | HTMLInputElement>) => handleChange(e)}
