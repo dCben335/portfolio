@@ -1,5 +1,7 @@
 .about{
-    @extend .section;
+    section {
+        @extend .section;
+    }
     
     @include about();
 
@@ -13,9 +15,5 @@
             width: clamp(min(300px, 100%), 80vw , 800px);
             margin: 0 auto;
         }
-    }
-
-    section:last-child {
-        margin-top: 5vh;
     }
 }

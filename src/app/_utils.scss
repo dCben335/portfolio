@@ -14,11 +14,11 @@ $basic-shadow: 0 0 2px $secondary-color-variant;
 
 
 .section {
-    min-height: 45rem;
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    padding-top: 5vh;
+    padding: 5rem $website-padding;
+
 }
 
 .underlineAnim {
@@ -49,7 +49,6 @@ $basic-shadow: 0 0 2px $secondary-color-variant;
     .grid {
         display: grid;
         gap: 5rem 3vw;
-        padding: 3rem 0;
 
         figure img {
             border-radius: 50%;

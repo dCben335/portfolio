@@ -9,7 +9,6 @@ interface SliderProps {
 
 const Slider = ({ children }: SliderProps) => {
     const slidesContainer = useRef<HTMLDivElement>(null)
-
     const [slider, setSlider] = useState({
         slideWidth: 0,
         currentSlide: 0,
@@ -17,14 +16,6 @@ const Slider = ({ children }: SliderProps) => {
     })
 
 
-    const setWidth = () => {
-        if (slidesContainer.current) {
-            setSlider((prev) => ({
-                ...prev, 
-                slideWidth: slidesContainer.current?.clientWidth || 0
-            }))
-        }
-    }
 
     const prevSlide = () => {
         setSlider((prev) => ({
@@ -51,23 +42,39 @@ const Slider = ({ children }: SliderProps) => {
     }
 
     useEffect(() => {
+        const setWidth = () => {
+            if (slidesContainer.current) {
+                setSlider((prev) => ({
+                    ...prev, 
+                    slideWidth: slidesContainer.current?.clientWidth || 0
+                }))
+            }
+        }
+        
         setWidth();
         window.addEventListener('resize', setWidth)
         return () => window.removeEventListener('resize', setWidth);
     }, [])
 
     useEffect(() => {
-        if (slider.auto !== -1) {
+        if (slider.auto === -1) return;
 
-            const test = setInterval(() => {
-                slider.currentSlide < children.length - 1 ? nextSlide(): toSlide(0);
-                setSlider((prev) => ({...prev, auto: prev.auto + 1}))
-            }, 5000);
+        const automation = setInterval(() => {
+            setSlider((prev) => {
+                const currentSlide =  slider.currentSlide < children.length - 1 
+                    ? prev.currentSlide < children.length - 1 
+                        ? prev.currentSlide + 1 : prev.currentSlide
+                    : 0
+                return {
+                    ...prev, 
+                    currentSlide,
+                    auto: prev.auto + 1
+                }
+            });
+        }, 5000);
 
-
-            return () => clearInterval(test);
-        } 
-    }, [slider.auto])
+        return () => clearInterval(automation);
+    }, [children.length, slider.auto, slider.currentSlide])
 
     return (         
         <div className={styles.slider}>
@@ -104,7 +111,5 @@ const Slider = ({ children }: SliderProps) => {
         </div>
     )
 }
-
-Slider.displayName = 'Slider';
 
 export default Slider;

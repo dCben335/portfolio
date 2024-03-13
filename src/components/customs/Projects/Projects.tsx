@@ -57,7 +57,7 @@ const Projects = ({ className, nbOfRows = 2, isCategories, isPaginate, isSearchf
     }) 
 
     const { postPerPage } = params;
-    
+
     const { gridColumnWidths } = useGridCalculation(projectWrapper);
     const categories= useCategories(projects, isCategories); 
 
@@ -113,16 +113,16 @@ const Projects = ({ className, nbOfRows = 2, isCategories, isPaginate, isSearchf
     }, [gridColumnWidths, projectWrapper, nbOfRows, postPerPage])
 
 
-    return (
-        <section className={className} {...props}>
+    return (    
+        <div className={className} {...props}>
             {(categories || isSearchfield) && (      
                 <nav className={styles.navigation}>
                    
                     {isSearchfield && (
                          <form>
                              <FormGroup 
-                                 groupForm={searchfieldProps}
-                                 changed={(e : ChangeEvent<HTMLTextAreaElement | HTMLInputElement>) => handleResearch(e)}
+                                groupForm={searchfieldProps}
+                                changed={(e : ChangeEvent<HTMLTextAreaElement | HTMLInputElement>) => handleResearch(e)}
                              />
                          </form>
                     )}
@@ -146,7 +146,7 @@ const Projects = ({ className, nbOfRows = 2, isCategories, isPaginate, isSearchf
                     paginate={handlePaginationClick}
                 />
             )}
-        </section>
+        </div>
     )
 }
 

@@ -2,13 +2,11 @@
     gap: 7.5rem;
 
     section {
-        min-height: 45rem;
-        display: grid;
-        align-items: center;
-        align-content: center;
+        @extend .section;
 
         &.hero {
             min-height: 100vh;
+            justify-content: center;
         
             h1 {
                 strong:nth-child(2){
@@ -27,7 +25,6 @@
 
         &.work {
             min-height: initial;
-
         }
         
         &.contact > div {
@@ -40,10 +37,8 @@
 
         .link {
             margin-left: auto;
-            width: -moz-fit-content;
-            width: fit-content;
+            display: flex;
         }
     }
-
 }
 
