@@ -6,8 +6,8 @@ import { useState } from "react"
 
 type ProjectCategoriesProps = {
     categories: string[],
-    clicked: Function,
-    activeCategory: number
+    activeCategory: number,
+    clicked: (categoryIndex: number) => void,
 }
 
 const ProjectCategories = ({ categories, clicked, activeCategory } : ProjectCategoriesProps) => {
@@ -23,11 +23,11 @@ const ProjectCategories = ({ categories, clicked, activeCategory } : ProjectCate
         <div className={styles.categories}>
             <Button onClick={() => handleClick()} active={activeCategory !== undefined}>filters</Button>
 
-            <ul className={opened ? styles.opened : ''}>
+            <ul className={ opened ? styles.opened : ''}>
                 {categories.sort().map((category, idx) => 
                     <li key={idx}>
                         <Button 
-                            onClick={() => clicked && clicked(idx)} 
+                            onClick={() => clicked(idx)} 
                             active={activeCategory === idx}
                             style={activeCategory === idx ? {backgroundColor : categoriesColors[idx]} : {}}
                         >

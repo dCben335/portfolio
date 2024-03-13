@@ -7,11 +7,37 @@ import ProjectCategories from "@/components/customs/Projects/Categories/Categori
 import Pagination from "@/components/customs/Projects/Pagination/Pagination";
 
 import FormGroup from "@/components/customs/Form/Group/Group";
-import ProjectCard from "@/components/customs/Projects/Card/Card";
 import Wrapper from "./Wrapper/Wrapper";
+import useCategories from "@/hooks/useCategories";
+import data from "@/contents/projects.json";
+import { accentsTidy } from "@/libs/utils";
+import useGridCalculation from "@/hooks/useGridCalculation";
 
 
+interface ProjectWrapperProps extends React.HTMLAttributes<HTMLDivElement> {
+    isCategories: boolean,
+    isPaginate: boolean,
+    isSearchfield: boolean,
+    nbOfRows?: number,
+}
 
+interface ProjectsParams {
+    postPerPage: number,
+    pageNumber: number,
+    filteredProjects: Project[],
+    currentProjects: Project[],
+    activeCategory: number,
+}
+
+type setProjectsParamsProps = {
+    filteredProjects: Project[],
+    start?: number,
+    pageNumber?: number,
+    activeCategory?: number
+}
+
+
+const projects: Project[] = [...data];
 const searchfieldProps = {
     label: "",
     placeholder: "project_name",
@@ -19,169 +45,103 @@ const searchfieldProps = {
     name: "project_name"
 }
 
-type ProjectWrapperProps = {
-    projects: Project[],
-    categorieFilters?: boolean,
-    rowLimit?: boolean,
-    pagination?: boolean,
-    nbOfRows?: number,
-    searchfield?: boolean
-}
+const Projects = ({ className, nbOfRows = 2, isCategories, isPaginate, isSearchfield, ...props } : ProjectWrapperProps) => { 
+    const projectWrapper = useRef<HTMLDivElement>(null);
+
+    const { gridColumnWidths } = useGridCalculation(projectWrapper);
+    const categories= useCategories(projects, isCategories); 
+    
+    const [params, setParams] = useState<ProjectsParams>({
+        postPerPage: -1,
+        pageNumber: -1,
+        filteredProjects: [],
+        currentProjects: [],
+        activeCategory: -1,
+    }) 
 
 
-export default function ProjectWrapper({ projects, categorieFilters, rowLimit, pagination, nbOfRows = 1, searchfield } : ProjectWrapperProps) {
-    const projectWrapper = useRef<any>()
-
-    const [projectList, setProjectList] = useState<Project[]>([...projects])
-    const [currentProjects, setCurrentProjects] = useState<Project[]>();
-    const [activeCategory, setActiveCategory]:any = useState<number>();
-    const [currentPage, setCurrentPage] = useState<number>(1);
-    const [nbOfProjectPerPages, setNbOfProjectPerPages] = useState<number>()
-
-    const categories:string[]|null = useMemo(() => {
-        if (!categorieFilters) return null;
-        return projects
-            .flatMap((project) => project.categories)
-            .filter((item, idx, arr) => arr.indexOf(item) == idx);
-    }, [projects, categorieFilters]);
-
-
-    const handleClick: ((index: number) => void) = useCallback((index: number) => {
-        if (categories && activeCategory !== index) {
-            setProjectList(projects.filter((project) => project.categories.includes(categories[index])));
-            setActiveCategory(index);
-            pagination && setCurrentPage(1);
-
-        } else {
-            setProjectList(projects);
-            setActiveCategory(undefined);
-
-            if (pagination) {
-                setCurrentPage(1);
-                handlePagination();
+    const handleSetParams = ({filteredProjects, start = 0, pageNumber = 1, activeCategory } : setProjectsParamsProps) => {
+        const currentProjects = filteredProjects.slice(start, params.postPerPage + start);
+        setParams((prev) => {
+            return {
+                ...prev,
+                filteredProjects: filteredProjects,
+                currentProjects: currentProjects,
+                pageNumber: pageNumber,
+                activeCategory: activeCategory !== undefined ? activeCategory : prev.activeCategory
             }
-        }
-        },[activeCategory, projects, categories, pagination]
-    );
-
-    const handleRows = useCallback(() => {
-        if (projectWrapper.current && projectWrapper.current.children[0]) {
-            const nbOfProjectPerRow = Math.min(
-            Math.floor(
-                projectWrapper.current.clientWidth 
-                / Number(projectWrapper.current.children[0].offsetWidth)),
-            4
-            );
-            nbOfProjectPerRow !== 0
-                ? setNbOfProjectPerPages(nbOfProjectPerRow * nbOfRows)
-                : setNbOfProjectPerPages(1 * nbOfRows);
-        }
-    }, [projectWrapper.current?.children, nbOfRows]);
-
-    const handleResearch = (e: ChangeEvent<HTMLTextAreaElement | HTMLInputElement>) => {
-        setCurrentProjects(projects.filter((project) => project.name.toLowerCase().includes(e.target.value.toLowerCase())))
-    } 
-
-    const handlePaginationClick = (pageNumber: number) => {
-        setCurrentPage(pageNumber);
+        })
     }
 
-    const handlePagination = useCallback(() => {
-        if (nbOfProjectPerPages) {
-            const indexOfLastPost = currentPage * nbOfProjectPerPages;
-            const indexOfFirstPost = indexOfLastPost - nbOfProjectPerPages;
-            setCurrentProjects(projectList.slice(indexOfFirstPost, indexOfLastPost));
+    const handleFilterClick = (categoryIndex: number) => {
+        if (categoryIndex === params.activeCategory) {
+            return handleSetParams({filteredProjects: projects, activeCategory: -1})
         }
-    }, [nbOfProjectPerPages, currentPage, projectList]);
+        const categoryProjects = projects.filter((project) => project.categories.includes(categories[categoryIndex])) 
+        handleSetParams({ filteredProjects: categoryProjects, activeCategory: categoryIndex})
+    }
 
-    useEffect(() => {
-        if (nbOfProjectPerPages && currentPage) {
-            if(pagination) {
-                handlePagination() 
-            } else if(rowLimit) setCurrentProjects(projects.filter((_project, idx) => idx < nbOfProjectPerPages ));
-        }
-    }, [nbOfProjectPerPages, currentPage, pagination, rowLimit, projects, handlePagination]);
+    const handlePaginationClick = (pageNumber: number) => {
+        const start = params.postPerPage * (pageNumber - 1);
+        handleSetParams({filteredProjects: params.filteredProjects, start: start, pageNumber: pageNumber})
+    }
 
-
-    useEffect(() => {
-        setCurrentProjects(projects)
-        if (rowLimit || pagination) {
-            handleRows()
-
-            const handleResize = () => {
-                handleRows();
-                setCurrentPage(1);
-            };
-        
-            window.addEventListener('resize', handleResize);
-            return () => {
-                window.removeEventListener('resize', handleResize);
-            };
-        }
-    }, [projectWrapper, nbOfRows, rowLimit, pagination, handleRows, projects]);
+    const handleResearch = (e : ChangeEvent<HTMLTextAreaElement | HTMLInputElement>) => {
+        const filteredProjects = projects.filter((project) => accentsTidy(project.name).includes(e.target.value.toLowerCase()));
+        handleSetParams({filteredProjects: filteredProjects, activeCategory: -1})
+    }
 
 
     useEffect(() => {
-        pagination || rowLimit && nbOfProjectPerPages ? handlePagination() : setCurrentProjects(projectList);
-    }, [projectList, pagination, rowLimit, nbOfProjectPerPages, handlePagination]);
-    
+        if (projectWrapper.current && gridColumnWidths !== 0) {
+            const projectPerLines = Math.floor(projectWrapper.current.clientWidth / gridColumnWidths);
+            const postPerPage = projectPerLines * nbOfRows;
+            
+            setParams((prev) => {
+                return {
+                    ...prev,
+                    postPerPage: postPerPage,
+                    filteredProjects: projects,
+                    currentProjects: projects.slice(0, postPerPage),
+                    pageNumber: 1,
+                }
+            })   
+        }
+    }, [gridColumnWidths, projectWrapper, nbOfRows])
+
 
     return (
-        <div>
-            {(categories || searchfield) && (      
+        <section className={className} {...props}>
+            {(categories || isSearchfield) && (      
                 <nav className={styles.navigation}>
-                    {searchfield && (
+                    {isCategories && (
                         <FormGroup 
-                            groupForm={{
-                                label: "",
-                                placeholder: "project_name",
-                                type: "text",
-                                name: "project_name"
-                            }}
+                            groupForm={searchfieldProps}
                             changed={(e : ChangeEvent<HTMLTextAreaElement | HTMLInputElement>) => handleResearch(e)}
                         />
                     )}
                     {categories && (
                         <ProjectCategories 
                             categories={categories}
-                            activeCategory={activeCategory}
-                            clicked={handleClick}
+                            activeCategory={params.activeCategory}
+                            clicked={handleFilterClick}
                         />
                     )}
                 </nav>
             )}
+            
+            <Wrapper currentProjects={params.currentProjects} ref={projectWrapper}/>        
 
-            <div>
-                <div className={styles.wrapper} ref={projectWrapper}>
-                    {(currentProjects ?? []).map((project, idx) => 
-                        <ProjectCard      
-                            key={project.name.split(' ').join('_')}
-                            path={`my-work/${project.name.split(' ').join('_')}`}
-                            image={{
-                                path: project.images[0].path,
-                                alt: project.images[0].alt,
-                            }}
-                            title={project.name}
-                        />
-                    )}  
-                </div>
-            </div>
-
-            {/* <div>
-                {currentProjects && (
-                    <Wrapper currentProjects={currentProjects} ref={projectWrapper}/>
-                )}
-            </div> */}
-
-
-            {pagination && nbOfProjectPerPages && projectList &&
+            {isPaginate && params.pageNumber !== -1 && (
                 <Pagination 
-                    postsPerPage={nbOfProjectPerPages}
-                    totalPosts={projectList.length}
+                    postsPerPage={params.postPerPage}
+                    totalPosts={params.filteredProjects.length}
+                    activePage={params.pageNumber}
                     paginate={handlePaginationClick}
-                    activePage={currentPage}
-                />  
-            }
-        </div>
+                />
+            )}
+        </section>
     )
 }
+
+export default Projects

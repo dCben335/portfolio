@@ -1,14 +1,13 @@
-"use client"
 import styles from './page.module.scss'
-import { useEffect, useState } from "react";
 
 import ThreeDText from "@/components/ui/3dText/ThreeDText";
 import ProgLanguages from "@/app/(public)/_components/ProgLanguages/ProgLanguages";
 import Skills from '@/app/(public)/_components/Skills/Skills';
 
 import { frameworks, CMS, nativeLanguages, others } from "@/components/Icons/PL/PL";
-import { fetching } from "@/libs/utils";
 import { ProgrammingLanguagesProps } from '@/types/types';
+
+import skills from "@/contents/skills.json";
 
 
 const programmingLanguages: ProgrammingLanguagesProps[] = [
@@ -31,14 +30,6 @@ const programmingLanguages: ProgrammingLanguagesProps[] = [
 ]
 
 export default function About() {
-    const [skills, setSkills] = useState<{ [key: string]: {[key: string] : string}[]}>()
-
-
-    useEffect(() => {
-        (async function getProjects() {
-            setSkills(await fetching('/assets/contents/skills.json'))
-        })()
-    }, [])
 
     return (
         <main className={styles.about}>
@@ -81,7 +72,7 @@ export default function About() {
                 <section>
                     <h2>Mon portfolio de compétences</h2>
                     <div className={styles["programming-languages"]}>
-                        <Skills skills={skills}/>
+                        <Skills skills={skills} />
                     </div>
                 </section> 
             }

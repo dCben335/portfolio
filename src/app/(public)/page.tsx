@@ -9,12 +9,8 @@ import Button from '@/components/ui/Button/Button';
 
 import { frameworks } from '@/components/Icons/PL/PL';
 import TypeScript from '@/components/Icons/PL/TypeScript/TypeScript';
-
-import { useEffect, useState } from 'react';
-import { fetching } from '@/libs/utils';
-
-import { Project } from '@/types/types';
 import { GroupForm } from "@/types/types";
+import Projects from '@/components/customs/Projects/Projects';
 
 const formDatas: GroupForm[] = [
   {
@@ -44,14 +40,6 @@ const formDatas: GroupForm[] = [
 ]
 
 export default function Home() {
-  const [projects, setProject] = useState<Project[]>()
-
-  useEffect(() => {
-    (async function getProjects() {
-      setProject(await fetching('/assets/contents/project.json'))
-    })()
-  }, [])
-
 
   return (
     <main className={styles.main}>
@@ -81,22 +69,19 @@ export default function Home() {
         </div>
       </section>
 
-      {projects &&
-        <section className={styles.work}>
-          <h2>Mes derniers Projets</h2>
-            <ProjectWrapper 
-              projects={projects}
-              categorieFilters={false}
-              rowLimit={true}
-              nbOfRows={2}
-              pagination={false}
-              searchfield={false}
-            />
-          <div className={styles.link}>
-            <Button renderAs="link" href="/my-work">voir plus</Button>
-          </div>
-        </section>
-      }
+      <section className={styles.work}>
+        <h2>Mes derniers Projets</h2>
+          <Projects
+            isCategories={true}
+            isPaginate={true}
+            isSearchfield={true}
+            nbOfRows={2}
+          />
+        <div className={styles.link}>
+          <Button renderAs="link" href="/my-work">voir plus</Button>
+        </div>
+      </section>
+      
 
       {formDatas &&
         <section className={styles.contact}>

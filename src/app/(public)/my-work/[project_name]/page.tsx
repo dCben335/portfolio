@@ -5,17 +5,12 @@ import styles from './page.module.scss'
 import { Project }  from '@/types/types'
 import useProjects from '@/hooks/useProjects';
 import { accentsTidy } from '@/libs/utils';
-
+import data from '@/contents/projects.json';
 
 export default function Page({params} : { 
     params: {project_name : string}
 }) {
-    const { data, error, isLoading } = useProjects();
-
     const project = data?.find((el : Project) =>  accentsTidy(el.name.split(' ').join('_')) == params.project_name) as Project;
-
-    if (isLoading || !project) return <div>Loading...</div>
-    if (error || (!project)) return notFound();
     
     return (
         <main className={styles.project}>

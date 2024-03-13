@@ -5,13 +5,15 @@ type PaginationProps = {
   postsPerPage: number,
   totalPosts: number,
   activePage: number,
-  paginate: any
+  paginate: (pageNumber: number) => void
 }
 
 
 const Pagination = ({ postsPerPage, totalPosts, activePage, paginate } : PaginationProps) => {
+
   const totalPages = Math.ceil(totalPosts / postsPerPage);
   const pageNumbers = Array(totalPages).fill(0).map((_, i) => i + 1);
+  
   if (!pageNumbers.at(1)) return;
   
   return (
