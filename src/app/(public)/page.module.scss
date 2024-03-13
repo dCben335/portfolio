@@ -1,11 +1,10 @@
 .main {
-    gap: 7.5rem;
 
     section {
         @extend .section;
 
         &.hero {
-            min-height: 100vh;
+            min-height: max(55rem, 100vh);
             justify-content: center;
         
             h1 {
@@ -37,7 +36,6 @@
 
         .link {
             margin-left: auto;
-            display: flex;
         }
     }
 }

@@ -13,10 +13,9 @@ const useGridCalculation = (containerRef:  React.RefObject<HTMLElement>) => {
       const gridColumnValue = gridStyle.getPropertyValue('grid-template-columns');
       const firstColumnWidth = gridColumnValue.split(/\s+/)[0];
 
-      setGridColumnWidths(parseInt(firstColumnWidth));
+      setGridColumnWidths( parseInt(firstColumnWidth));
     };
 
-    
     const resizeObserver = new ResizeObserver((entries) => {
       for (let entry of entries) {
         if (entry.target === containerRef.current) return updateItemsPerLine();

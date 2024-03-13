@@ -3,19 +3,17 @@ import { ReactElement,  useRef, useEffect, useState } from "react";
 import Button from "@/components/ui/Button/Button";
 import styles from './Slider.module.scss'
 
-interface SliderProps {
+type SliderProps = React.HTMLAttributes<HTMLDivElement> & React.PropsWithChildren<{
     children: ReactElement[]
-}
+}>
 
-const Slider = ({ children }: SliderProps) => {
+const Slider = ({ children, className ,...props }: SliderProps) => {
     const slidesContainer = useRef<HTMLDivElement>(null)
     const [slider, setSlider] = useState({
         slideWidth: 0,
         currentSlide: 0,
         auto: 0
     })
-
-
 
     const prevSlide = () => {
         setSlider((prev) => ({
@@ -41,24 +39,26 @@ const Slider = ({ children }: SliderProps) => {
         }))
     }
 
+
     useEffect(() => {
+        if (!slidesContainer.current) return;
         const setWidth = () => {
-            if (slidesContainer.current) {
-                setSlider((prev) => ({
-                    ...prev, 
-                    slideWidth: slidesContainer.current?.clientWidth || 0
-                }))
-            }
+            setSlider((prev) => ({
+                ...prev, 
+                slideWidth: slidesContainer.current?.clientWidth || 0
+            }))
         }
         
         setWidth();
         window.addEventListener('resize', setWidth)
-        return () => window.removeEventListener('resize', setWidth);
-    }, [])
+
+        return () => {   
+            window.removeEventListener('resize', setWidth);
+        }
+    }, [slidesContainer])
 
     useEffect(() => {
         if (slider.auto === -1) return;
-
         const automation = setInterval(() => {
             setSlider((prev) => {
                 const currentSlide =  slider.currentSlide < children.length - 1 
@@ -76,10 +76,13 @@ const Slider = ({ children }: SliderProps) => {
         return () => clearInterval(automation);
     }, [children.length, slider.auto, slider.currentSlide])
 
+
     return (         
-        <div className={styles.slider}>
+        <div className={`${styles.slider} ${className ? className : ""}`} {...props}>
             <div>
-                <div className={styles.sliderWrapper} ref={slidesContainer} 
+                <div 
+                    ref={slidesContainer} 
+                    className={styles.sliderWrapper} 
                     style={{'--translateX': `-${slider.currentSlide * slider.slideWidth}px`} as React.CSSProperties}>
                         
                     {children.map((child, idx) => 
@@ -97,15 +100,15 @@ const Slider = ({ children }: SliderProps) => {
             </div>
             <nav>
                 <ul>
-                {children && children[0] && children.map((_, number) => (
-                    <li key={number} className='page-item'>
-                        <Button 
-                            onClick={() => toSlide(number)} 
-                            active={number === slider.currentSlide}
-                            title={`go to slide ${number}`}
-                        ></Button>
-                    </li>
-                ))}
+                    {children && children[0] && children.map((_, number) => (
+                        <li key={number} className='page-item'>
+                            <Button 
+                                onClick={() => toSlide(number)} 
+                                active={number === slider.currentSlide}
+                                title={`go to slide ${number}`}
+                            ></Button>
+                        </li>
+                    ))}
                 </ul>
             </nav>
         </div>

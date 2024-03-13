@@ -17,7 +17,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="fr">
-      <body className={`${inter.className}`}>
+      <body className={`${inter?.className ? inter.className : "" }`}>
         <QueryClientProvider client={queryClient}>
           {children}
         </QueryClientProvider>      

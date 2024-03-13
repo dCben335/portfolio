@@ -63,10 +63,8 @@ export default function Home() {
               languages={{...frameworks, "TypeScript": <TypeScript />}}
             />
           </div>
-        </div>
-        <div className={styles.link}>
-          <Button renderAs='link' href="/about">voir plus</Button>
-        </div>
+        </div>    
+        <Button renderAs='link' href="/about" className={styles.link}>voir plus</Button> 
       </section>
 
       <section className={styles.work}>
@@ -77,9 +75,7 @@ export default function Home() {
             isSearchfield={false}
             nbOfRows={2}
           />
-        <div className={styles.link}>
-          <Button renderAs="link" href="/my-work">voir plus</Button>
-        </div>
+        <Button renderAs="link" href="/my-work" className={styles.link}>voir plus</Button>
       </section>
       
 
