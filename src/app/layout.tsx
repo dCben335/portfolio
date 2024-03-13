@@ -1,14 +1,14 @@
+"use client"
+
 import './globals.scss'
 import { Inter } from 'next/font/google'
 import { ReactNode } from 'react'
 
+import { QueryClientProvider } from '@tanstack/react-query'
+import { QueryClient } from '@tanstack/react-query'
 
 const inter = Inter({ subsets: ['latin'] })
-
-export const metadata = {
-  title: 'CABOCEL Benoit portfolio',
-  description: 'Discover me with my skills and projects',
-}
+const queryClient = new QueryClient();
 
 export default function RootLayout({
   children,
@@ -18,7 +18,9 @@ export default function RootLayout({
   return (
     <html lang="fr">
       <body className={`${inter.className}`}>
-        {children}
+        <QueryClientProvider client={queryClient}>
+          {children}
+        </QueryClientProvider>      
       </body>
     </html>
   )

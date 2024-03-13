@@ -1,13 +1,12 @@
-"use client"
-
 import Header from '@/components/customs/Header/Header'
 import Footer from '@/components/customs/Footer/Footer'
 import routes from './routes'
 import { ReactNode } from 'react'
-import { QueryClientProvider } from '@tanstack/react-query'
-import { QueryClient } from '@tanstack/react-query'
 
-const queryClient = new QueryClient();
+export const metadata = {
+  title: 'CABOCEL Benoit portfolio',
+  description: 'Discover me with my skills and projects',
+}
 
 export default function Layout({
   children,
@@ -16,13 +15,11 @@ export default function Layout({
 }) {
   return (
     <>
-      <QueryClientProvider client={queryClient}>
         <div className={`layout`}>
             <Header routes={routes} admin={false}/>
             {children}
         </div>
         <Footer />
-      </QueryClientProvider>
     </>
   )
 }

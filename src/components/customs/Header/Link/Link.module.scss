@@ -1,3 +1,13 @@
+
+@mixin smaller() {
+    padding: 0;
+
+    span {
+        width: 0;
+        margin-left: 0;
+    }    
+}
+
 a.headerLink {
     transform: skewX(0);
     width: 100%;
@@ -21,18 +31,17 @@ a.headerLink {
     
     svg {
         padding: .5rem;
-        width: clamp(35px, 5vw, 50px);
+        width: clamp(40px, 5vw, 50px);
         fill: $secondary-color;
         stroke-width: .5;
     }     
     
-    
     &.smaller { 
-        padding: 0;
+        @include smaller();
+    }
 
-        span {
-            width: 0;
-            margin-left: 0;
-        }    
+    
+    @media screen and (max-width: 750px) {
+        @include smaller();
     }
 }

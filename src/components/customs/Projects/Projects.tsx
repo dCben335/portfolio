@@ -5,7 +5,6 @@ import { Project } from "@/types/types"
 import styles from "./Projects.module.scss"
 import ProjectCategories from "@/components/customs/Projects/Categories/Categories";
 import Pagination from "@/components/customs/Projects/Pagination/Pagination";
-
 import FormGroup from "@/components/customs/Form/Group/Group";
 import Wrapper from "./Wrapper/Wrapper";
 import useCategories from "@/hooks/useCategories";
@@ -46,11 +45,9 @@ const searchfieldProps = {
 }
 
 const Projects = ({ className, nbOfRows = 2, isCategories, isPaginate, isSearchfield, ...props } : ProjectWrapperProps) => { 
+
     const projectWrapper = useRef<HTMLDivElement>(null);
 
-    const { gridColumnWidths } = useGridCalculation(projectWrapper);
-    const categories= useCategories(projects, isCategories); 
-    
     const [params, setParams] = useState<ProjectsParams>({
         postPerPage: -1,
         pageNumber: -1,
@@ -59,6 +56,10 @@ const Projects = ({ className, nbOfRows = 2, isCategories, isPaginate, isSearchf
         activeCategory: -1,
     }) 
 
+    const { postPerPage } = params;
+    
+    const { gridColumnWidths } = useGridCalculation(projectWrapper);
+    const categories= useCategories(projects, isCategories); 
 
     const handleSetParams = ({filteredProjects, start = 0, pageNumber = 1, activeCategory } : setProjectsParamsProps) => {
         const currentProjects = filteredProjects.slice(start, params.postPerPage + start);
@@ -95,32 +96,37 @@ const Projects = ({ className, nbOfRows = 2, isCategories, isPaginate, isSearchf
     useEffect(() => {
         if (projectWrapper.current && gridColumnWidths !== 0) {
             const projectPerLines = Math.floor(projectWrapper.current.clientWidth / gridColumnWidths);
-            const postPerPage = projectPerLines * nbOfRows;
+            const newPostPerPage = projectPerLines * nbOfRows;
+                 
+            if (newPostPerPage === 0 || newPostPerPage === postPerPage) return;
             
             setParams((prev) => {
                 return {
                     ...prev,
-                    postPerPage: postPerPage,
+                    postPerPage: newPostPerPage,
                     filteredProjects: projects,
-                    currentProjects: projects.slice(0, postPerPage),
+                    currentProjects: projects.slice(0, newPostPerPage),
                     pageNumber: 1,
                 }
             })   
         }
-    }, [gridColumnWidths, projectWrapper, nbOfRows])
+    }, [gridColumnWidths, projectWrapper, nbOfRows, postPerPage])
 
 
     return (
         <section className={className} {...props}>
             {(categories || isSearchfield) && (      
                 <nav className={styles.navigation}>
-                    {isCategories && (
-                        <FormGroup 
-                            groupForm={searchfieldProps}
-                            changed={(e : ChangeEvent<HTMLTextAreaElement | HTMLInputElement>) => handleResearch(e)}
-                        />
+                   
+                    {isSearchfield && (
+                         <form>
+                             <FormGroup 
+                                 groupForm={searchfieldProps}
+                                 changed={(e : ChangeEvent<HTMLTextAreaElement | HTMLInputElement>) => handleResearch(e)}
+                             />
+                         </form>
                     )}
-                    {categories && (
+                    {isCategories && (
                         <ProjectCategories 
                             categories={categories}
                             activeCategory={params.activeCategory}
@@ -132,7 +138,7 @@ const Projects = ({ className, nbOfRows = 2, isCategories, isPaginate, isSearchf
             
             <Wrapper currentProjects={params.currentProjects} ref={projectWrapper}/>        
 
-            {isPaginate && params.pageNumber !== -1 && (
+            {isPaginate && params.pageNumber !== -1 && params.filteredProjects.length > 0 && params.postPerPage > 0 && (
                 <Pagination 
                     postsPerPage={params.postPerPage}
                     totalPosts={params.filteredProjects.length}

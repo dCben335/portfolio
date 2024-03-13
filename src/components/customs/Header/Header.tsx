@@ -14,7 +14,6 @@ type HeaderProps = {
 }
 
 const Header = ({ routes, admin } :  HeaderProps) => {
-
     const [smallMenu, setSmallMenu] = useState<boolean>(!admin)    
 
     const handleClick = () => {

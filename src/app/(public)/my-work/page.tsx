@@ -16,11 +16,10 @@ export default function Page () {
                 <Projects
                     isCategories={true}
                     isPaginate={true}
-                    isSearchfield={true}
+                    isSearchfield={false}
                     nbOfRows={2}
                 />
             </section>
-            
         </main>
     )
 }

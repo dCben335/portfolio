@@ -3,8 +3,11 @@
     justify-content: space-between;
     flex-wrap: wrap;
 
-    & > :first-child {
-        width: 100%;
+
+
+    & > form{
+        width: auto;
+        min-width: min(300px, 100%);
     }
 
     & > :last-child {
@@ -25,4 +28,6 @@
             grid-template-columns: repeat(4, 1fr);
         }
     }
+
+
 }

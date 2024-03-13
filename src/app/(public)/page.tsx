@@ -72,9 +72,9 @@ export default function Home() {
       <section className={styles.work}>
         <h2>Mes derniers Projets</h2>
           <Projects
-            isCategories={true}
-            isPaginate={true}
-            isSearchfield={true}
+            isCategories={false}
+            isPaginate={false}
+            isSearchfield={false}
             nbOfRows={2}
           />
         <div className={styles.link}>

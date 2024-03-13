@@ -4,30 +4,30 @@ const useGridCalculation = (containerRef:  React.RefObject<HTMLElement>) => {
   const [gridColumnWidths, setGridColumnWidths] = useState<number>(0);
 
   useEffect(() => {
+    if (!containerRef.current) return;
+
     const updateItemsPerLine = () => {
-      if (containerRef.current) {
-        const gridStyle = window.getComputedStyle(containerRef.current);
-        const gridColumnValue = gridStyle.getPropertyValue('grid-template-columns');
-        const gridColumnValues = gridColumnValue.split(' ');
-        
-        const gridColumnWidths = gridColumnValues.map(value => {
-            if (value.includes('minmax')) {
-                const match = value.match(/minmax\(([^)]+)\)/);
-                const minMaxValues = match ? match[1].split(',') : [];
-                return parseInt(minMaxValues[0]);
-            }
-            return parseInt(value);
-        });
-        
-        setGridColumnWidths(gridColumnWidths[0]);
-      }
+      if (!containerRef.current) return;
+
+      const gridStyle = window.getComputedStyle(containerRef.current);
+      const gridColumnValue = gridStyle.getPropertyValue('grid-template-columns');
+      const firstColumnWidth = gridColumnValue.split(/\s+/)[0];
+
+      setGridColumnWidths(parseInt(firstColumnWidth));
     };
 
-    window.addEventListener('resize', updateItemsPerLine);
+    
+    const resizeObserver = new ResizeObserver((entries) => {
+      for (let entry of entries) {
+        if (entry.target === containerRef.current) return updateItemsPerLine();
+      }
+    });
+
+    resizeObserver.observe(containerRef.current);
     updateItemsPerLine();
 
     return () => {
-      window.removeEventListener('resize', updateItemsPerLine);
+      resizeObserver.disconnect();
     };
   }, [containerRef]);
 
