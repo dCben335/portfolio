@@ -1,5 +1,3 @@
-"use client"
-
 import ThreeDText from '@/components/ui/3dText/ThreeDText';
 import styles from './page.module.scss';
 import Projects from '@/components/customs/Projects/Projects';

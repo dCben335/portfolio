@@ -1,9 +1,6 @@
-"use client"
-import { notFound } from 'next/navigation';
 import Slider from '@/components/customs/Slider/Slider'
 import styles from './page.module.scss'
 import { Project }  from '@/types/types'
-import useProjects from '@/hooks/useProjects';
 import { accentsTidy } from '@/libs/utils';
 import data from '@/contents/projects.json';
 

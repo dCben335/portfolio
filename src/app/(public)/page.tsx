@@ -1,7 +1,4 @@
-"use client"
 import styles from './page.module.scss';
-
-import ProjectWrapper from '@/components/customs/Projects/Projects';
 import ProgLanguages from '@/app/(public)/_components/ProgLanguages/ProgLanguages';
 import ThreeDText from '@/components/ui/3dText/ThreeDText';
 import Form from '@/app/(public)/_components/Form/Form';
@@ -92,6 +89,8 @@ export default function Home() {
           </div>
         </section>  
       }
+        <Button renderAs="link" href="/yes" className={styles.link}>voir plus</Button>
+
     </main>
   )
 }
