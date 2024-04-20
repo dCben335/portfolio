@@ -89,7 +89,6 @@ export default function Home() {
           </div>
         </section>  
       }
-        <Button renderAs="link" href="/yes" className={styles.link}>voir plus</Button>
 
     </main>
   )

@@ -97,7 +97,7 @@ const Projects = ({ className, nbOfRows = 2, isCategories, isPaginate, isSearchf
         if (projectWrapper.current && gridColumnWidths !== 0) {
             const projectPerLines = Math.floor(projectWrapper.current.clientWidth / gridColumnWidths);
             const newPostPerPage = projectPerLines * nbOfRows;
-                 
+
             if (newPostPerPage === 0 || newPostPerPage === postPerPage) return;
             
             setParams((prev) => {
@@ -117,14 +117,13 @@ const Projects = ({ className, nbOfRows = 2, isCategories, isPaginate, isSearchf
         <div className={className} {...props}>
             {(categories || isSearchfield) && (      
                 <nav className={styles.navigation}>
-                   
                     {isSearchfield && (
-                         <form>
-                             <FormGroup 
-                                groupForm={searchfieldProps}
-                                changed={(e : ChangeEvent<HTMLTextAreaElement | HTMLInputElement>) => handleResearch(e)}
-                             />
-                         </form>
+                        <form>
+                            <FormGroup 
+                            groupForm={searchfieldProps}
+                            changed={(e : ChangeEvent<HTMLTextAreaElement | HTMLInputElement>) => handleResearch(e)}
+                            />
+                        </form>
                     )}
                     {isCategories && (
                         <ProjectCategories 
