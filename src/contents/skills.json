@@ -4,36 +4,36 @@
             "ac" : "AC34.01",
             "label": "Développer à l’aide d’un framework de développement côté client",
             "status": "Acquis",
-            "description" : "Depuis le début de ma formation en BUT MMI, j'ai créé de nombreux sites internet dans lesquels les pages sont responsives; c'est à dire que le site est adapté à n'importe quel type d'appareil. J'ai pu apprendre cette compétence lors de la création de mon premier site internet (SAE 105) et je continue évidemment d'utiliser ses pratiques. En effet, comme vous pouvez le constater, ce site est également utilisable sur la plupart des appareils comme votre téléphone, tablette ou ordinateur.",
-            "link": "/my-work/mon_premier_site_web"
+            "description" : "Durant cette année de formation, j'ai pu développer diverses sites web avec une des interfaces client en utilisant des frameworks de développement côté client. J'ai notamment utilisé Next.js lors de mon alternance ou même lors du projet Pokédex pour développer des sites web dynamiques et performants.",
+            "link": "/my-work/pokedex"
         },
         {
             "ac" : "AC34.02",
             "label": "Développer à l’aide d’un framework de développement côté serveur",
             "status": "Acquis",
-            "description" : "Cette année, j'ai produit un site internet pour le projet Sherlock dans lequel j'ai utilisé les technologies Php et MySql afin de réaliser un back-office. En effet, j'ai mis en place un système de compte avec inscription et connexion. Par la suite, je réalise un système d'achat de ticket pour l'événement (argent fictif). Un utilisateur pouvait alors acheter un ticket et le retrouve un QRcode de celui-ci dans la page de son compte puisqu'il était stocké dans une base de données.",
-            "link": "/my-work/sherlock_event"
+            "description" : "Durant cette année d'alternance chez IOTA Solutions, j'ai pu développer une application de gestion de sites en Next.js (Projet Websites Manager) dans laquelle j'ai conçu des API REST et des server actions en Node.js à l'aide de Prisma afin de pouvoir communiquer avec la base de données PostgreSQL.",
+            "link": "/my-work/websites_manager_for_iota_solutions"
         },
         {
             "ac" : "AC34.03",
             "label": "Développer des dispositifs interactifs sophistiqués",
             "status": "Acquis",
-            "description" : "Dans la Ressource R312, j'ai créé un site web en intégrant des maquettes et des fonctionnalités interactives telles que des 'sliders'' et un menu hamburger pour se rendre sur les différentes parties du site. J'ai intégré une carte interactive dans laquelle on peut situer les cinémas situé proche de vous. Vous pouvez cliquer sur le cinéma afin d'obtenir davantage d'informations. Dans la dernière partie du site, j'ai développé des interactions au clique sur un acteur du film permettant alors d'afficher des informations sur celui-ci. Ce projet n'a pas été le seul qui a contribué à cette compétence. En effet de nombreux projets tels que ce portfolio sont en relation avec cette compétence.",
-            "link": "/my-work/site_dune"
+            "description" : "Conception et Developpement de fonctionnalités complexe telles que des systèmes de filtres de recherches avancés réalisés côté backend en Java Spring Boot lors du Projet Pokédex conçu dans le cadre de la formation.", 
+            "link": "/my-work/pokedex"
         },
         {
             "ac" : "AC34.04",
             "label": "Concevoir et développer des composants logiciels, plugins ou extensions",
             "status": "Acquis",
-            "description" : "La refonte du site web de Iota-Solutions avait pour but de produire un site web hautement optimisé que ce soit en temps de chargement, mais également en référencement. Dans cette optique, j'ai utilisé le framework Nuxt permettant un rendu très rapides des pages et facilite la gestion des méta-datas (qui contribue au référencement). Il facilite également l'indexation du site via la génération d'un sitemap et le préchargement de données. De plus, pour optimiser davantage ce site, j'ai écrit un code performant, maintenable et facilement modifiable en prenant en compte des meilleures pratiques.",
-            "link": "/my-work/iota-solutions"
+            "description" : "Comme dit précédemment, j'ai développé des applications en Next.js dans lesquelles j'ai conçu des composants réutilisables comme des 'cards', des boutons, des carrousels, et bien d'autres plus complexes comme des formulaires, des systèmes de filtres de recherches avancés et pagination ainsi que des systèmes de gestion de contenu dynamique.",
+            "link": "/my-work/websites_manager_for_iota_solutions"
         },
         {
             "ac" : "AC34.05",
             "label": "Maitriser l’hébergement et le déploiement d’applications",
             "status": "Acquis",
-            "description" : "Le projet de refonte du site Web Iota-Solutions lors de mon stage avait pour but d'être éco-responsable et performant pour n'importe quels utilisateurs dans le monde. C'est pourquoi, j'ai finalement configuré son hébergement sur CloudFlare (via son Wrangler en ligne de commande) qui permet d'utiliser des serveurs écologiques et permet également, puisqu’il dispose d'un réseau mondial de serveurs, de distribuer le contenu de manière optimale, d'accélérer le chargement des pages et de réduire les temps d'attente.",
-            "link": "/my-work/iota-solutions"
+            "description" : "Lors de mon alternance chez IOTA Solutions, j'ai été amené à déployer Airbyte sur un VPS Ubuntu. J'ai donc dû installer Docker et Docker-compose pour pouvoir déployer l'application. J'ai également dû configurer un reverse proxy avec Nginx pour pouvoir accéder à l'application via un nom de domaine. J'ai également dû configurer un certificat SSL pour sécuriser les échanges entre le client et le serveur.",
+            "link": "/my-work/installation_de_airbyte_sur_vps"
         }
     ],
 
@@ -42,22 +42,22 @@
             "ac" : "AC35.01",
             "label": "Piloter un produit, un service ou une équipe",
             "status": "Acquis",
-            "description" : "Lors de mon stage et plus précisément le projet de refonte du site de l'entreprise, j'ai développé le site avec des technologies et méthodes permettant un amélioration continue du site. En effet, à l'aide de la technologie Nuxt, j'ai été capable de réaliser des composants comme des 'cards', des boutons, des carrousels qui sont réutilisable très facilement via l'interface du Headless CMS StoryBlook permettant à n'importe qui de créer des pages sur le sites. Le site est de ce fait très flexible et peut être modifié n'importe quand par un membre de la société Iota-Solutions, et ce, sans devoir retoucher au code du site. De plus, j'ai utilisé Git lors du développement du projet ce qui permet à l'entreprise de reprendre également le code de l'application facilement.",
+            "description": "Durant cette année d'alternance chez IOTA Solutions, j'ai régulièrement participé à la gestion de projets. J'ai été impliqué activement dans le pilotage des projets, de la conception à la livraison. J'ai également pris part à des réunions avec les clients pour discuter des avancées réalisées.",
             "link": "/my-work/iota-solutions"
         },
         {
             "ac" : "AC35.02",
             "label": "Maîtriser la qualité en projet Web ou multimédia",
-            "status": "En cours d'acquisition",
-            "description" : "Durant mon stage, j'ai généré une petite cartographie de l'entreprise. J'ai également pris connaissance de leur poste et rôle au sein de l'entreprise Iota-Solutions.",
+            "status": "Acquis",
+            "description": "Lors de mon alternance chez IOTA Solutions, j'ai participé activement à la gestion et au développement de projets Web, en m'assurant de la qualité des livrables. J'ai utilisé BitBucket pour la gestion du code source, en appliquant des revues de code systématiques pour maintenir des standards élevés. ClickUp a été utilisé pour le suivi des tâches, la planification des sprints, et la gestion des délais. Ces outils m'ont permis de garantir un travail collaboratif efficace et de respecter les exigences techniques et fonctionnelles des projets.",
             "link": "/my-work/iota-solutions"
         },
         {
             "ac" : "AC35.03",
             "label": " Concevoir un projet d’entreprise innovante en définissant le nom, l’identité, la forme juridique et le ton de la marque",
             "status": "Acquis",
-            "description" : "Pendant le quatrième semestre de ma formation, j'ai effectué un stage de 3 mois dans l'entreprise Iota-Solutions située à Couternon, proche de Dijon. J'ai alors pu commencer à constituer un réseau professionnel en faisant la rencontre de M.Ollivier Romain et M.Imbeaux Alix en travaillant quotidiennement avec eux pendant mon stage.",
-            "link": "/my-work/iota-solutions"
+            "description" : "Au 5ème semestre de ma formation, j'ai participé à un projet de création d'entreprise. Nous avons créé une Brasserie fictive nommée 'À la table des nains'. On a défini le nom, l'identité, la forme juridique et le ton de la marque. Nous avons également réalisés des visuels pour la brasserie tels qu'un logo, des affiches et un site internet.",
+            "link": "/my-work/a_la_table_des_nains"
         },
         {
             "ac" : "AC35.04",

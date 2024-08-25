@@ -66,7 +66,7 @@ export default function About() {
                 </section>
             }
             {skills && 
-                <section>
+                <section id='ac'>
                     <h2>Mon portfolio de compétences</h2>
                     <div className={styles["programming-languages"]}>
                         <Skills skills={skills} />

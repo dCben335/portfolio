@@ -1,8 +1,5 @@
-"use client"
-
 import styles from './not-found.module.scss'
 import Button from '@/components/ui/Button/Button'
-import { redirect } from 'next/navigation'
 import ThreeDText from '@/components/ui/3dText/ThreeDText'
 
 export default function Custom404() {
@@ -14,7 +11,7 @@ export default function Custom404() {
                 <div>
                     <p>La page que vous recherchez n&apos;existe pas</p>
                     <div className={styles.flex}>
-                        <Button onClick={() => redirect('/')}>go home</Button>  
+                        <Button href='/' renderAs='link'>go home</Button>  
                     </div>
                 </div>
             </section>

@@ -4,12 +4,16 @@ import { Project }  from '@/types/types'
 import { accentsTidy } from '@/libs/utils';
 import data from '@/contents/projects.json';
 import parse from 'html-react-parser';
+import { notFound } from 'next/navigation';
 
 
 export default function Page({params} : { 
     params: {project_name : string}
 }) {
-    const project = data?.find((el : Project) =>  accentsTidy(el.name.split(' ').join('_')) == params.project_name) as Project;
+    const project = data?.find((el : Project) =>  accentsTidy(el.name.split(' ').join('_')) == params.project_name);
+
+    if (!project) 
+        return notFound();
     
     return (
         <main className={styles.project}>
