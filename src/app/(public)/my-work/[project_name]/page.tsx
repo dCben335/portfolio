@@ -3,6 +3,8 @@ import styles from './page.module.scss'
 import { Project }  from '@/types/types'
 import { accentsTidy } from '@/libs/utils';
 import data from '@/contents/projects.json';
+import parse from 'html-react-parser';
+
 
 export default function Page({params} : { 
     params: {project_name : string}
@@ -22,7 +24,7 @@ export default function Page({params} : {
                         </Slider>
                     }
                     <div>
-                        <p>{project.desciption}</p>
+                        {parse(project.desciption)}
                     </div>
                 </div>
             </section>

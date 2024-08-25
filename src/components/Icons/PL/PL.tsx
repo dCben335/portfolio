@@ -16,37 +16,36 @@ import { ProgrammingLanguages } from "@/types/types"
 
 const frameworks: ProgrammingLanguages  = {
     "React" : <React />,
-    "Nuxt" : <Nuxt />,
+    // "Nuxt" : <Nuxt />,
     "Next" : <Next />,
 }
 
 const nativeLanguages: ProgrammingLanguages  = {
-    "Html": <Html />,
-    "Css" : <Css />,
-    "JavaScript" : <JavaScript />,
-    "Php" : <Php />,
-    "JQuery" : <JQuery />,
+    Html: <Html />,
+    Css : <Css />,
+    JavaScript : <JavaScript />,
+    Php : <Php />,
+    JQuery : <JQuery />,
 }
 
 const CMS: ProgrammingLanguages  = {
-    "WordPress" : <WordPress />,
-    "StoryBlok" : <StoryBlok />,
+    WordPress : <WordPress />,
+    StoryBlok : <StoryBlok />,
 }
 
 const others: ProgrammingLanguages = {
-    "SQL" : <SQL />,
-    "Sass" : <Sass />,
-    "TailWind" : <TailWind />,
-    "TypeScript" : <TypeScript />,
-
+    SQL : <SQL />,
+    Sass : <Sass />,
+    TailWind : <TailWind />,
+    TypeScript : <TypeScript />,
 }
+
 const PL: ProgrammingLanguages = {
     ...nativeLanguages,
     ...others,
     ...frameworks,
     ...CMS,
 }
-
 
 export {
     PL,
